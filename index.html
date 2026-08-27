@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dorrachai | Full-Stack Developer & Software Engineer</title>
+  <meta name="description" content="Personal portfolio, resume, projects, and technical blog of Dorrachai - Full-Stack Developer & Software Engineer.">
+  <meta name="keywords" content="Software Engineer, Full-Stack Developer, Web Development, Portfolio, Resume, Blog, TypeScript, React, Node.js">
+  <meta name="author" content="Dorrachai">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dorrachai | Full-Stack Developer & Software Engineer">
+  <meta property="og:description" content="Explore my portfolio, resume, featured projects, and technical blog posts.">
+  <meta property="og:image" content="assets/images/avatar.svg">
+
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Theme Script (Synchronous to prevent flash) -->
+  <script src="js/theme.js"></script>
+</head>
+<body>
+
+  <!-- Background Ambient Glow -->
+  <div class="ambient-glow" aria-hidden="true"></div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#home" class="brand-logo" aria-label="Dorrachai Home">
+        <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+        <span>Dorrachai<span style="color: var(--accent-primary);">.</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#resume" class="nav-link">Resume</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#blog" class="nav-link">Blog</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <button class="btn-icon-only theme-toggle-btn" aria-label="Toggle dark/light mode" title="Toggle theme">
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+
+        <a href="#contact" class="btn btn-sm btn-primary" style="display: none;">Let's Talk</a>
+
+        <!-- Mobile Drawer Hamburger Toggle -->
+        <button class="mobile-toggle-btn" id="mobile-toggle-btn" aria-label="Open mobile menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <aside class="mobile-nav-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+    <div>
+      <div class="mobile-nav-header">
+        <span class="brand-logo">
+          <span>Dorrachai<span style="color: var(--accent-primary);">.</span></span>
+        </span>
+        <button class="btn-icon-only" id="mobile-drawer-close" aria-label="Close menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="#home" class="mobile-nav-link">Home</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#resume" class="mobile-nav-link">Resume</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+        <li><a href="#blog" class="mobile-nav-link">Blog</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <a href="#contact" class="btn btn-primary" style="width: 100%;">Get In Touch</a>
+    </div>
+  </aside>
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge reveal-on-scroll">
+            <span class="status-dot"></span>
+            <span>Available for new projects & opportunities</span>
+          </div>
+
+          <h1 class="hero-title reveal-on-scroll reveal-delay-1">
+            Hi, I'm <span class="gradient-text">Dorrachai</span>
+          </h1>
+
+          <div class="hero-subtitle reveal-on-scroll reveal-delay-2">
+            <span>I'm a </span>
+            <span id="typewriter-text" class="typewriter-text"></span>
+            <span class="typewriter-cursor">|</span>
+          </div>
+
+          <p class="hero-description reveal-on-scroll reveal-delay-3">
+            I craft high-performance web applications, resilient backend architectures, and delightful digital experiences. Welcome to my personal corner of the web.
+          </p>
+
+          <div class="hero-cta-group reveal-on-scroll">
+            <a href="#projects" class="btn btn-primary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              Explore Projects
+            </a>
+            <a href="#resume" class="btn btn-secondary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+              View Resume
+            </a>
+          </div>
+
+          <div class="social-links-row reveal-on-scroll">
+            <a href="https://github.com/Dorrachai" target="_blank" rel="noopener noreferrer" class="btn-icon-only" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn-icon-only" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="mailto:dorrachai.dev@gmail.com" class="btn-icon-only" aria-label="Email Me">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Visual / Interactive Avatar Card -->
+        <div class="hero-visual reveal-on-scroll">
+          <div class="avatar-card">
+            <!-- Floating Stat Badges -->
+            <div class="floating-stat-badge badge-top-left">
+              <div class="stat-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+              </div>
+              <div class="stat-info">
+                <div class="stat-number">3+ Years</div>
+                <div class="stat-text">Experience</div>
+              </div>
+            </div>
+
+            <div class="floating-stat-badge badge-bottom-right">
+              <div class="stat-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              </div>
+              <div class="stat-info">
+                <div class="stat-number">20+ Projects</div>
+                <div class="stat-text">Shipped</div>
+              </div>
+            </div>
+
+            <div class="avatar-img-wrapper">
+              <img src="assets/images/avatar.svg" alt="Dorrachai Avatar" width="140" height="140">
+            </div>
+            <h2 class="avatar-name">Dorrachai</h2>
+            <p class="avatar-role">Full-Stack Engineer</p>
+            <div class="avatar-chips">
+              <span class="skill-chip">TypeScript</span>
+              <span class="skill-chip">React</span>
+              <span class="skill-chip">Node.js</span>
+              <span class="skill-chip">Cloud</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About & Skills Section -->
+    <section id="about" class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Passionate About Building Things That Matter</h2>
+          <p class="section-subtitle">A glimpse into my background, engineering philosophy, and technical skill set.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Story / Bio Card -->
+          <div class="card reveal-on-scroll">
+            <h3 style="font-size: 1.4rem; margin-bottom: 16px;">Engineering with Purpose</h3>
+            <p style="margin-bottom: 16px;">
+              I specialize in architecting responsive web frontends, resilient microservices, and automated developer tooling. I believe software should not only be feature-rich, but also accessible, maintainable, and remarkably fast.
+            </p>
+            <p style="margin-bottom: 24px;">
+              When I'm not writing code, I enjoy exploring new AI research, optimizing web performance benchmarks, and contributing to open-source software communities.
+            </p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding-top: 20px; border-top: 1px solid var(--border-color);">
+              <div>
+                <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600;">Location</div>
+                <div style="font-weight: 600;">Available Remote / Global</div>
+              </div>
+              <div>
+                <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600;">Focus</div>
+                <div style="font-weight: 600;">Full-Stack & Cloud Architecture</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skills Card -->
+          <div class="card reveal-on-scroll" id="skills-container">
+            <!-- Dynamic skills rendered by js/resume.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume & Experience Section -->
+    <section id="resume" class="section">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Career & Education</span>
+          <h2 class="section-title">Resume & Professional Journey</h2>
+          <p class="section-subtitle">Track record of building production software and continuous learning.</p>
+        </div>
+
+        <div class="resume-section-wrapper">
+          <!-- Experience Column -->
+          <div>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px;">
+              <h3 style="font-size: 1.4rem; display: flex; align-items: center; gap: 10px;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                Work Experience
+              </h3>
+            </div>
+            <div class="timeline" id="experience-timeline">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+
+          <!-- Education & Certifications Column -->
+          <div>
+            <div style="margin-bottom: 40px;">
+              <h3 style="font-size: 1.4rem; display: flex; align-items: center; gap: 10px; margin-bottom: 24px;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                Education
+              </h3>
+              <div class="timeline" id="education-timeline">
+                <!-- Rendered dynamically -->
+              </div>
+            </div>
+
+            <div class="card reveal-on-scroll">
+              <h3 style="font-size: 1.2rem; display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                Certifications
+              </h3>
+              <div id="certifications-list">
+                <!-- Rendered dynamically -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Portfolio</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">A curated collection of web applications, developer tools, and cloud platforms.</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="filter-tabs reveal-on-scroll">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="ai">AI & ML</button>
+          <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+          <button class="filter-btn" data-filter="web">Web Apps</button>
+          <button class="filter-btn" data-filter="tools">Developer Tools</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-grid">
+          <!-- Rendered dynamically by js/projects.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Articles & Insights</span>
+          <h2 class="section-title">Latest Blog Posts</h2>
+          <p class="section-subtitle">Thoughts on web architecture, performance engineering, and AI developer workflows.</p>
+        </div>
+
+        <!-- Search input for blog -->
+        <div style="max-width: 460px; margin: 0 auto 40px auto;" class="reveal-on-scroll">
+          <input type="text" id="blog-search-input" class="form-control" placeholder="🔍 Search articles by topic or keyword..." aria-label="Search articles">
+        </div>
+
+        <!-- Blog Grid -->
+        <div class="blog-grid" id="blog-grid">
+          <!-- Rendered dynamically by js/blog.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">Have an exciting project, freelance opportunity, or just want to say hi?</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info -->
+          <div class="card reveal-on-scroll">
+            <h3 style="font-size: 1.4rem; margin-bottom: 12px;">Contact Details</h3>
+            <p style="margin-bottom: 24px;">Feel free to reach out directly via email or connect through professional networks.</p>
+
+            <div class="contact-info-list">
+              <div class="contact-info-item">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div>
+                  <div class="contact-label">Email Address</div>
+                  <div class="contact-val">dorrachai.dev@gmail.com</div>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div>
+                  <div class="contact-label">Location</div>
+                  <div class="contact-val">Available Worldwide (Remote)</div>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                </div>
+                <div>
+                  <div class="contact-label">Response Time</div>
+                  <div class="contact-val">Within 24 Hours</div>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border-color);">
+              <button id="copy-email-btn" class="btn btn-secondary btn-sm" style="width: 100%;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                Copy Email to Clipboard
+              </button>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="card reveal-on-scroll">
+            <h3 style="font-size: 1.4rem; margin-bottom: 20px;">Send a Direct Message</h3>
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Your Name</label>
+                <input type="text" id="contact-name" class="form-control" placeholder="Alex Morgan" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Your Email</label>
+                <input type="email" id="contact-email" class="form-control" placeholder="alex@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Your Message</label>
+                <textarea id="contact-message" class="form-control" placeholder="Hi Dorrachai, I'd like to discuss a project..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <a href="#home" class="brand-logo">
+          <span>Dorrachai<span style="color: var(--accent-primary);">.</span></span>
+        </a>
+        <div class="social-links-row">
+          <a href="https://github.com/Dorrachai" target="_blank" rel="noopener noreferrer" class="btn-icon-only" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn-icon-only" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+          <a href="mailto:dorrachai.dev@gmail.com" class="btn-icon-only" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>Designed & Built by Dorrachai • Open Source</div>
+        <div>© <span id="current-year">2026</span> All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- Project Detail Modal -->
+  <div class="modal-overlay" id="project-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title" id="project-modal-title">Project Details</h3>
+        <button class="modal-close-btn" id="project-modal-close" aria-label="Close modal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="modal-body" id="project-modal-body">
+        <!-- Content inserted dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Blog Article Reader Modal -->
+  <div class="modal-overlay" id="blog-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="blog-modal-title">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title" id="blog-modal-title">Article</h3>
+        <button class="modal-close-btn" id="blog-modal-close" aria-label="Close article">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="modal-body" id="blog-modal-body">
+        <!-- Article markdown parsed content inserted dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

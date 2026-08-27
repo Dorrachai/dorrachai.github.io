@@ -1,0 +1,29 @@
+[
+  {
+    "id": "mastering-modern-web-performance",
+    "title": "Mastering Core Web Vitals: How to Achieve Sub-Second Load Times",
+    "date": "Aug 20, 2026",
+    "readTime": "5 min read",
+    "tags": ["Performance", "Web Dev", "Architecture"],
+    "summary": "Practical techniques to optimize Largest Contentful Paint (LCP) and Interaction to Next Paint (INP) without complicating your stack.",
+    "content": "### Introduction\n\nWeb performance isn't just a vanity metric—it directly impacts user engagement, SEO rankings, and conversion rates. In this post, we explore practical ways to make web apps blazing fast without over-engineering.\n\n### 1. Optimize the Critical Rendering Path\n\nThe most frequent bottleneck in modern websites is excessive JavaScript execution blocking the main thread.\n\n* **Minimize render-blocking CSS:** In-line critical styles and defer non-critical style sheets.\n* **Modern image formats:** Always serve images in `AVIF` or `WebP` formats with explicit `width` and `height` dimensions to eliminate layout shifts (CLS).\n* **Fetch Priority:** Use `<link rel=\"preload\" fetchpriority=\"high\">` for hero images and primary fonts.\n\n```html\n<!-- High-priority hero image preloading -->\n<link rel=\"preload\" as=\"image\" href=\"assets/hero.webp\" fetchpriority=\"high\">\n```\n\n### 2. Taming INP (Interaction to Next Paint)\n\nInteraction to Next Paint measures overall page responsiveness throughout the entire user lifecycle. Avoid running long-running tasks on the main thread during click or input handlers.\n\n* Break long tasks using `scheduler.yield()` or `requestAnimationFrame()`.\n* Offload CPU-heavy parsing or calculations to Web Workers.\n\n### Conclusion\n\nBy keeping your dependencies lightweight, optimizing assets proactively, and respecting the browser's main thread, you can consistently achieve 95+ performance scores."
+  },
+  {
+    "id": "zero-build-static-sites-power",
+    "title": "The Renaissance of Zero-Build Static Websites",
+    "date": "Jul 15, 2026",
+    "readTime": "4 min read",
+    "tags": ["Frontend", "JavaScript", "Minimalism"],
+    "summary": "Why vanilla modern HTML5, CSS custom properties, and native ES modules are more capable than ever for portfolios and documentation.",
+    "content": "### The Shift Towards Simplicity\n\nFor years, the standard approach for any web project—even a simple blog or portfolio—was setting up massive bundlers, complex dependency trees, and thousands of `node_modules` packages.\n\nToday, modern web standards have evolved to provide out-of-the-box superpowers that previously required third-party libraries.\n\n### What Native Web Standards Give Us Today\n\n1. **CSS Custom Properties & Nesting:** Native design tokens and clean hierarchy without Sass or PostCSS.\n2. **CSS Grid & Container Queries:** Truly responsive component-level styling.\n3. **Native ES Modules (`import`/`export`):** Modular, structured JavaScript directly in all evergreen browsers.\n4. **Fetch & Web Storage APIs:** Lightweight state persistence and asynchronous data loading.\n\n```javascript\n// Modern native module loading - zero bundler needed!\nimport { loadData } from './modules/api.js';\n\ndocument.addEventListener('DOMContentLoaded', async () => {\n  const data = await loadData();\n  renderDashboard(data);\n});\n```\n\n### Benefits of Going Zero-Build on GitHub Pages\n\n* **Zero Deployment Friction:** Push code to Git, and your changes are live within seconds.\n* **No Broken CI Dependencies:** No `npm audit` vulnerabilities or broken build scripts 2 years later.\n* **Near-Instant Load Times:** Browsers download raw, clean assets directly from CDNs.\n\nSimplicity isn't a compromise—it's a deliberate design advantage."
+  },
+  {
+    "id": "building-effective-ai-developer-agents",
+    "title": "Architecting Autonomous AI Agents: Patterns and Lessons Learned",
+    "date": "Jun 02, 2026",
+    "readTime": "6 min read",
+    "tags": ["AI", "Architecture", "Engineering"],
+    "summary": "Key architectural principles for building reliable, agentic AI workflows with structured tool calling and reactive event loops.",
+    "content": "### Introduction to Agentic Workflows\n\nTraditional LLM integrations rely on simple prompt-and-response mechanisms. Autonomous AI developer agents, however, operate in interactive feedback loops: observing environments, calling tools, validating results, and correcting course dynamically.\n\n### Core Tenets of Robust Agent Systems\n\n* **Deterministic Tool Signatures:** Provide strict JSON schemas and descriptive tool summaries to minimize ambiguity.\n* **Self-Healing Error Handling:** When a tool call or build fails, feed the compiler output and stack trace directly back into the agent context.\n* **Planning & Verification Separation:** Separate the research/planning phase from the execution phase to avoid premature destructive edits.\n\n```\n[User Request] ➔ [Research & Plan] ➔ [User Approval] ➔ [Execute & Self-Heal] ➔ [Verify]\n```\n\n### The Role of Context Management\n\nContext windows are finite resources. Storing structured transcripts and utilizing subagents for deep research allows the primary orchestrator to maintain focus without getting overwhelmed by noisy logs."
+  }
+]

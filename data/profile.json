@@ -1,0 +1,20 @@
+{
+  "name": "Dorrachai",
+  "title": "Full-Stack Developer & Software Engineer",
+  "bio": "I build modern, scalable web applications, distributed systems, and intuitive user experiences. Passionate about clean code, developer tooling, and modern web architecture.",
+  "location": "Available Worldwide / Remote",
+  "email": "dorrachai.dev@gmail.com",
+  "availability": "Open to new opportunities",
+  "socials": {
+    "github": "https://github.com/Dorrachai",
+    "linkedin": "https://linkedin.com/in/",
+    "twitter": "https://x.com/",
+    "email": "mailto:dorrachai.dev@gmail.com"
+  },
+  "stats": [
+    { "label": "Years Experience", "value": "3+" },
+    { "label": "Projects Completed", "value": "20+" },
+    { "label": "Articles Written", "value": "12" },
+    { "label": "Open Source Contributions", "value": "100+" }
+  ]
+}

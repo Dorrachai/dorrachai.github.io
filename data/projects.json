@@ -1,0 +1,98 @@
+[
+  {
+    "id": "project-ai-dashboard",
+    "title": "Nova - AI Analytics & Insight Dashboard",
+    "description": "An intelligent analytics dashboard that processes telemetry and user interactions with real-time AI summarization and anomaly detection.",
+    "category": "ai",
+    "featured": true,
+    "tags": ["AI / LLM", "TypeScript", "React", "TailwindCSS", "FastAPI"],
+    "github": "https://github.com/Dorrachai",
+    "demo": "https://example.com/demo",
+    "image": "ai-dashboard.svg",
+    "highlights": [
+      "Real-time streaming charts with WebSockets",
+      "Automated insight generation powered by Gemini models",
+      "Interactive query filtering and customizable widget layouts"
+    ]
+  },
+  {
+    "id": "project-cloud-vault",
+    "title": "CloudVault - Secure File Storage & Sharing",
+    "description": "End-to-end encrypted cloud storage platform with instant shareable links, version history, and role-based workspace permissions.",
+    "category": "fullstack",
+    "featured": true,
+    "tags": ["Full-Stack", "Node.js", "PostgreSQL", "Google Cloud", "Web Crypto API"],
+    "github": "https://github.com/Dorrachai",
+    "demo": "https://example.com/demo",
+    "image": "cloud-vault.svg",
+    "highlights": [
+      "Client-side encryption using AES-GCM and Web Crypto API",
+      "Chunked multi-part upload engine handling files up to 10GB",
+      "Granular file permission management and expiring share links"
+    ]
+  },
+  {
+    "id": "project-dev-flow",
+    "title": "DevFlow - CLI Task & Workflow Automator",
+    "description": "A developer-first command-line tool to automate project scaffolding, git hooks, environment configurations, and continuous delivery.",
+    "category": "tools",
+    "featured": true,
+    "tags": ["Developer Tooling", "Go / Rust", "CLI", "GitHub Actions", "Docker"],
+    "github": "https://github.com/Dorrachai",
+    "demo": "https://github.com/Dorrachai",
+    "image": "dev-flow.svg",
+    "highlights": [
+      "Over 1,200+ stars on GitHub and active community contributions",
+      "Cross-platform binary support for macOS, Linux, and Windows",
+      "Extensible plugin architecture with YAML declarative configurations"
+    ]
+  },
+  {
+    "id": "project-pulse-commerce",
+    "title": "Pulse - Modern Headless E-Commerce",
+    "description": "Blazing-fast e-commerce storefront with instantaneous page transitions, multi-currency support, and optimized checkout funnel.",
+    "category": "web",
+    "featured": false,
+    "tags": ["E-Commerce", "Next.js", "Stripe API", "GraphQL", "Tailwind CSS"],
+    "github": "https://github.com/Dorrachai",
+    "demo": "https://example.com/demo",
+    "image": "ecommerce.svg",
+    "highlights": [
+      "Sub-second page load times with server-side caching",
+      "Dynamic cart synchronization with optimistic UI updates",
+      "Integrated Stripe Elements checkout with 3D Secure verification"
+    ]
+  },
+  {
+    "id": "project-markdown-notes",
+    "title": "ZenNote - Offline-First Markdown Studio",
+    "description": "Distraction-free markdown editor with live split-screen preview, LaTeX math typesetting, mind map generation, and local sync.",
+    "category": "web",
+    "featured": false,
+    "tags": ["Web App", "JavaScript", "IndexedDB", "PWA", "KaTeX"],
+    "github": "https://github.com/Dorrachai",
+    "demo": "https://example.com/demo",
+    "image": "notes.svg",
+    "highlights": [
+      "100% offline functionality as an installable Progressive Web App",
+      "Automatic bidirectional link graph visualization",
+      "Instant export to PDF, HTML, and presentation slides"
+    ]
+  },
+  {
+    "id": "project-rest-inspector",
+    "title": "RestLens - API Debugger & Mock Server",
+    "description": "Lightweight in-browser API client and mock server generator to simulate latency, error responses, and OAuth token flows.",
+    "category": "tools",
+    "featured": false,
+    "tags": ["Open Source", "TypeScript", "Service Workers", "Web Standards"],
+    "github": "https://github.com/Dorrachai",
+    "demo": "https://example.com/demo",
+    "image": "api-tool.svg",
+    "highlights": [
+      "Zero-install web client using Service Worker request interception",
+      "Dynamic OpenAPI / Swagger specification import and generation",
+      "Auto-generated mock response engines for rapid frontend prototyping"
+    ]
+  }
+]
