@@ -969,23 +969,198 @@ body::before {
   transform: translateY(0);
 }
 
-/* Responsive */
+/* ==========================================================================
+   Comprehensive Mobile & Tablet Responsive Optimizations
+   ========================================================================== */
+
 @media (max-width: 900px) {
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 32px;
   }
   .split-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
-  .capability-item {
-    grid-template-columns: 1fr;
-    gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 18px;
   }
-  .capability-tags {
-    justify-content: flex-start;
+
+  /* Header & Navigation */
+  .nav {
+    height: 56px;
   }
   .nav-links {
+    gap: 10px;
+  }
+  .nav-links li:not(:last-child):not(:nth-last-child(2)) {
+    display: none; /* Keep 'Get in touch' and Theme Toggle on mobile */
+  }
+  .nav-cta {
+    padding: 5px 12px;
+    font-size: 0.75rem;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding-top: 88px;
+    padding-bottom: 40px;
+  }
+  .hero-headline {
+    font-size: clamp(1.6rem, 6.5vw, 2.3rem);
+    line-height: 1.25;
+  }
+  .hero-bio {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+  .hero-actions {
+    gap: 8px;
+  }
+  .hero-actions .btn {
+    flex: 1 1 calc(50% - 8px);
+    padding: 9px 12px;
+    font-size: 0.75rem;
+    justify-content: center;
+  }
+  .hero-actions .btn:first-child {
+    flex: 1 1 100%;
+  }
+  .aquarium-slot {
+    min-height: auto;
+  }
+
+  /* Section Spacing & Headers */
+  .section {
+    padding: 56px 0;
+  }
+  .section-header {
+    margin-bottom: 28px;
+    gap: 12px;
+  }
+  .section-title {
+    font-size: 1.75rem;
+  }
+  .section-subtitle {
+    font-size: 0.86rem;
+  }
+
+  /* Stack Grid on Phones */
+  .stack-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .stack-category {
+    padding: 16px 18px;
+  }
+  .stack-badge {
+    padding: 5px 10px;
+    font-size: 0.76rem;
+    touch-action: manipulation;
+  }
+
+  /* Trajectory & Route */
+  .info-card {
+    padding: 22px 18px;
+  }
+  .trajectory-route {
+    padding: 10px 8px;
+    gap: 4px;
+  }
+  .route-node-code {
+    font-size: 0.88rem;
+  }
+  .route-node-inst {
+    font-size: 0.62rem;
+    max-width: 105px;
+  }
+  .route-arrow {
+    font-size: 0.7rem;
+  }
+
+  /* CTA & Footer */
+  .cta-section {
+    padding: 64px 0 48px 0;
+  }
+  .cta-headline {
+    font-size: 1.85rem;
+  }
+  .cta-sub {
+    font-size: 0.92rem;
+    margin-bottom: 24px;
+  }
+  .cta-buttons {
+    flex-direction: column;
+  }
+  .cta-buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .footer {
+    padding: 32px 0;
+  }
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+  .toast {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    text-align: center;
+  }
+}
+
+/* Picture-in-Picture on Phone Screens */
+@media (max-width: 640px) {
+  .aquarium-card.is-pip {
+    bottom: 12px;
+    right: 12px;
+    width: 190px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8), 0 0 0 1px var(--ember);
+  }
+  .aquarium-card.is-pip .aquarium-viewport {
+    height: 95px;
+  }
+  .aquarium-card.is-pip .aquarium-header {
+    padding: 5px 8px;
+    font-size: 0.6rem;
+  }
+  .aquarium-card.is-pip .aqua-tip {
     display: none;
+  }
+  .aquarium-card.is-pip .aquarium-footer {
+    padding: 4px 8px;
+    font-size: 0.58rem;
+  }
+  .aquarium-card.is-pip .aqua-action-btn {
+    font-size: 0.6rem;
+    padding: 2px 6px;
+  }
+  .aquarium-card.is-pip .aqua-notification {
+    font-size: 0.6rem;
+    padding: 2px 6px;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    padding: 0 14px;
+  }
+  .brand-badge {
+    display: none;
+  }
+  .brand {
+    font-size: 0.82rem;
+  }
+  .status-pill {
+    font-size: 0.68rem;
+    padding: 3px 8px;
   }
 }
