@@ -3,42 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Theodore Reangpusri | Software Engineer</title>
-  <meta name="description" content="Personal portfolio and technical capabilities of Theodore Reangpusri — Software Engineer specializing in Full-Stack Development, CI/CD Pipelines, and AI Developer Platforms.">
+  <title>Theodore Reangpusri — Software Engineer</title>
+  <meta name="description" content="Software Engineer specializing in developer platforms, CI/CD automation, distributed observability, and full-stack systems.">
   <meta name="author" content="Theodore Reangpusri">
 
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 
-  <!-- Google Fonts: Fraunces & Plus Jakarta Sans -->
+  <!-- Fonts: Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/main.css">
 
   <script>
-    // Immediate theme setup
-    const savedTheme = localStorage.getItem('theme-pref') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    if (savedTheme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    const savedTheme = localStorage.getItem('theme-pref') || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    if (savedTheme === 'light') document.documentElement.setAttribute('data-theme', 'light');
   </script>
 </head>
 <body>
 
-  <!-- Sticky Navigation -->
-  <header class="site-nav">
-    <div class="container nav-wrapper">
-      <a href="#home" class="nav-brand">
-        <span>Theodore</span><span class="nav-brand-dot">.</span>
-      </a>
-      <nav>
+  <div class="ambient-glow" aria-hidden="true"></div>
+
+  <!-- Sticky Editorial Nav -->
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="#hero" class="brand">
+          <span>theo<span class="brand-dot">.</span>reangpusri</span>
+          <span class="brand-badge">SWE / PLATFORMS</span>
+        </a>
         <ul class="nav-links">
-          <li><a href="#capabilities" class="nav-link">Capabilities</a></li>
-          <li><a href="#background" class="nav-link">Education & Research</a></li>
-          <li><a href="#blog" class="nav-link">Blog & Essays</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="#stack" class="nav-link"><span class="nav-num">01</span>Stack</a></li>
+          <li><a href="#background" class="nav-link"><span class="nav-num">02</span>Trajectory</a></li>
+          <li><a href="#projects" class="nav-link"><span class="nav-num">03</span>Projects</a></li>
+          <li><a href="#contact" class="nav-link nav-cta">Get in touch</a></li>
           <li>
-            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light mode">
-              <span>🌓</span>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" title="Toggle color mode">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
             </button>
           </li>
         </ul>
@@ -46,612 +48,804 @@
     </div>
   </header>
 
-  <main class="container">
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-      <div class="hero-grid">
-        <div>
-          <div class="hero-badge">
-            <span class="hero-dot"></span>
-            <span>☕ Software Engineer • BTH Graduate</span>
+  <main>
+    
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="status-pill">
+          <div class="lofi-equalizer" aria-hidden="true">
+            <span class="lofi-bar"></span>
+            <span class="lofi-bar"></span>
+            <span class="lofi-bar"></span>
+            <span class="lofi-bar"></span>
+            <span class="lofi-bar"></span>
           </div>
-          <h1 class="hero-title">
-            Hi, I'm <span class="hero-title-accent">Theodore</span>.
-          </h1>
-          <div class="hero-subtitle">Software Engineer — Full-Stack, CI/CD & AI Platforms</div>
-          <p class="hero-bio">
-            Software Engineering graduate from Blekinge Institute of Technology (BTH) in Sweden with exchange studies at The University of Electro-Communications in Japan. I specialize in building full-stack systems, automated CI/CD pipelines, observability tools, and AI developer platforms.
-          </p>
-          <div class="hero-cta-row">
-            <a href="mailto:Theodore.Reangpusri@outlook.com" class="btn btn-primary">
-              <span>Get in Touch</span>
-            </a>
-            <a href="https://www.linkedin.com/in/theodore-reangpusri-a61b30162/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-              <span>LinkedIn ↗</span>
-            </a>
-            <a href="https://github.com/Dorrachai" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-              <span>GitHub ↗</span>
-            </a>
-          </div>
+          <span>Available for software engineering roles</span>
         </div>
 
-        <!-- Author Card -->
-        <div class="author-card">
-          <div class="avatar-circle">
-            <div class="avatar-inner">T</div>
+        <div class="hero-grid">
+          <div>
+            <h1 class="hero-headline">
+              Welcome to my hobby site, I would like to keep it formal but that is <em>not my vibe.</em>
+            </h1>
+            <p class="hero-bio">
+              Software engineer with a focus on internal developer tooling, automated release pipelines, distributed observability, and AI agent platforms. B.Sc. in Software Engineering from <strong>Blekinge Institute of Technology</strong> with international exchange studies at <strong>The University of Electro-Communications</strong> in Tokyo.
+            </p>
+            <div class="hero-actions">
+              <a href="mailto:Theodore.Reangpusri@outlook.com" class="btn btn-primary">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <span>Direct Inquiries</span>
+              </a>
+              <button id="copy-email-hero-btn" class="btn btn-secondary">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <span>Copy Work Email</span>
+              </button>
+              <a href="https://www.linkedin.com/in/theodore-reangpusri-a61b30162/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://github.com/Dorrachai" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                <span>GitHub</span>
+              </a>
+            </div>
           </div>
-          <div class="author-name">Theodore Reangpusri</div>
-          <div class="author-role">Karlskrona, Sweden</div>
-          <div class="author-chips">
-            <span class="skill-chip">AI Platforms</span>
-            <span class="skill-chip">CI/CD</span>
-            <span class="skill-chip">Go & Python</span>
-            <span class="skill-chip">Observability</span>
-            <span class="skill-chip">TDD</span>
+
+          <!-- Lofi Pixel Aquarium Widget & PiP Slot -->
+          <div class="aquarium-slot" id="aquarium-slot">
+            <div class="aquarium-card" id="aquarium-container">
+              <div class="aquarium-header">
+                <div class="aquarium-status">
+                  <span class="aqua-dot"></span>
+                  <span>LOFI AQUARIUM &bull; <span id="fish-count">4</span> FISH</span>
+                </div>
+                <div class="aquarium-header-actions">
+                  <span class="aqua-tip">[TAP TANK TO FEED]</span>
+                  <button id="aqua-scroll-top" class="aqua-pip-top-btn" title="Back to Hero">&uarr; Top</button>
+                </div>
+              </div>
+              <div class="aquarium-viewport" id="aquarium-viewport">
+                <canvas id="aquarium-canvas"></canvas>
+                <div id="aquarium-notification" class="aqua-notification"></div>
+              </div>
+              <div class="aquarium-footer">
+                <span id="latest-fish-label">Current: Goldfish, Tetra, Koi, Betta</span>
+                <button id="aqua-feed-btn" class="aqua-action-btn" title="Drop food">Feed</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Interactive Capabilities & What I Can Do -->
-    <section id="capabilities" class="section">
-      <span class="section-tag">Expertise</span>
-      <div class="section-header">
-        <h2 class="section-title">What I Can Do & Build</h2>
-        <p class="section-desc">Click any capability or skill below to explore technical details and execution workflows.</p>
-      </div>
-
-      <!-- Quick Interactive Skill Pills Cloud -->
-      <div style="margin-bottom: 24px;">
-        <div style="font-size: 0.85rem; font-weight: 600; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">
-          Filter / Explore Technologies:
-        </div>
-        <div class="skill-pills-cloud">
-          <button class="skill-pill-btn active" data-target="all">All Capabilities</button>
-          <button class="skill-pill-btn" data-target="ai-engineering">🤖 AI Platforms & Agents</button>
-          <button class="skill-pill-btn" data-target="cicd-devops">⚡ CI/CD & Delivery</button>
-          <button class="skill-pill-btn" data-target="observability">📊 Observability & Metrics</button>
-          <button class="skill-pill-btn" data-target="fullstack-backend">💻 Full-Stack & APIs</button>
-          <button class="skill-pill-btn" data-target="quality-testing">🧪 Quality & TDD</button>
-        </div>
-      </div>
-
-      <!-- Capabilities Cards List -->
-      <div class="capabilities-grid" id="capabilities-container">
-        
-        <!-- 1. AI Engineering -->
-        <article class="capability-card active" data-capability="ai-engineering">
-          <div class="capability-header">
-            <div class="capability-title-group">
-              <div class="capability-icon">🤖</div>
-              <div>
-                <h3 class="capability-title">AI Engineering & Developer Platforms</h3>
-                <div style="font-size: 0.82rem; color: var(--accent); font-weight: 600;">Click to toggle details</div>
-              </div>
-            </div>
-            <span class="capability-toggle-arrow">▼</span>
+    <!-- 01 // TECH STACK SECTION -->
+    <section class="section reveal" id="stack">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-tag">01 // Tech Stack</div>
+            <h2 class="section-title">Technologies & Tools.</h2>
           </div>
-          <p class="capability-summary">
-            Architecting internal AI developer platforms, Go-based developer CLIs, and automated LLM-assisted software workflows.
+          <p class="section-subtitle">
+            Languages, platforms, and tools I use to build systems and developer tooling.
           </p>
-          <div class="capability-details-box">
-            <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-main); text-transform: uppercase; letter-spacing: 0.05em;">Key Execution & Deliverables:</div>
-            <ul class="details-list">
-              <li>Developing and maintaining AI developer platforms and Go-based CLI utilities for resource and lifecycle management.</li>
-              <li>Building automated CI/CD workflows for validating, versioning, publishing, updating, and removing AI agents and reusable skills.</li>
-              <li>Designing empirical prompt engineering patterns to assist developers in test creation and code refinement.</li>
-            </ul>
-            <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px;">
-              <span class="skill-chip">Go</span>
-              <span class="skill-chip">Python</span>
-              <span class="skill-chip">AI Agent Platforms</span>
-              <span class="skill-chip">Prompt Engineering</span>
-              <span class="skill-chip">CLI Tools</span>
-              <span class="skill-chip">Automated AI Workflows</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- 2. CI/CD & Delivery -->
-        <article class="capability-card" data-capability="cicd-devops">
-          <div class="capability-header">
-            <div class="capability-title-group">
-              <div class="capability-icon">⚡</div>
-              <div>
-                <h3 class="capability-title">CI/CD Pipelines & Cloud Delivery</h3>
-                <div style="font-size: 0.82rem; color: var(--accent); font-weight: 600;">Click to toggle details</div>
-              </div>
-            </div>
-            <span class="capability-toggle-arrow">▼</span>
-          </div>
-          <p class="capability-summary">
-            Designing automated delivery pipelines, containerized deployments, and robust release workflows.
-          </p>
-          <div class="capability-details-box">
-            <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-main); text-transform: uppercase; letter-spacing: 0.05em;">Key Execution & Deliverables:</div>
-            <ul class="details-list">
-              <li>Delivering CI/CD workflow improvements for validating, packaging, and releasing software and AI assets.</li>
-              <li>Managing development and deployment across Kubernetes, Jenkins, Gerrit, and GitLab CI/CD environments.</li>
-              <li>Implementing automated test gates and release versioning pipelines.</li>
-            </ul>
-            <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px;">
-              <span class="skill-chip">GitLab CI/CD</span>
-              <span class="skill-chip">Jenkins</span>
-              <span class="skill-chip">Kubernetes</span>
-              <span class="skill-chip">Gerrit</span>
-              <span class="skill-chip">Azure DevOps</span>
-              <span class="skill-chip">Docker</span>
-              <span class="skill-chip">Git</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- 3. Observability -->
-        <article class="capability-card" data-capability="observability">
-          <div class="capability-header">
-            <div class="capability-title-group">
-              <div class="capability-icon">📊</div>
-              <div>
-                <h3 class="capability-title">Pipeline Observability & Monitoring</h3>
-                <div style="font-size: 0.82rem; color: var(--accent); font-weight: 600;">Click to toggle details</div>
-              </div>
-            </div>
-            <span class="capability-toggle-arrow">▼</span>
-          </div>
-          <p class="capability-summary">
-            Full-stack pipeline observability, distributed tracing, metrics visualization, and automated failure notifications.
-          </p>
-          <div class="capability-details-box">
-            <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-main); text-transform: uppercase; letter-spacing: 0.05em;">Key Execution & Deliverables:</div>
-            <ul class="details-list">
-              <li>Delivering full-stack pipeline observability solutions, improving visibility into CI/CD execution and environment health.</li>
-              <li>Implementing automated monitoring and notification flows for pipeline failures, reducing manual status checking.</li>
-              <li>Instrumenting OpenTelemetry traces, metrics, and dashboards to detect regressions and latency bottlenecks.</li>
-            </ul>
-            <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px;">
-              <span class="skill-chip">OpenTelemetry</span>
-              <span class="skill-chip">Distributed Traces</span>
-              <span class="skill-chip">Metrics & Logs</span>
-              <span class="skill-chip">Health Dashboards</span>
-              <span class="skill-chip">Automated Alerts</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- 4. Full-Stack & Backend -->
-        <article class="capability-card" data-capability="fullstack-backend">
-          <div class="capability-header">
-            <div class="capability-title-group">
-              <div class="capability-icon">💻</div>
-              <div>
-                <h3 class="capability-title">Full-Stack & Backend Services</h3>
-                <div style="font-size: 0.82rem; color: var(--accent); font-weight: 600;">Click to toggle details</div>
-              </div>
-            </div>
-            <span class="capability-toggle-arrow">▼</span>
-          </div>
-          <p class="capability-summary">
-            High-performance backend services in Go and Python paired with accessible, responsive React interfaces.
-          </p>
-          <div class="capability-details-box">
-            <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-main); text-transform: uppercase; letter-spacing: 0.05em;">Key Execution & Deliverables:</div>
-            <ul class="details-list">
-              <li>Building robust REST APIs, microservices, and CLI utilities in Go and Python.</li>
-              <li>Crafting responsive, clean user interfaces in React with a focus on interaction design.</li>
-              <li>Integrating database layers, C#/.NET, Kotlin, and Swift cross-platform tooling.</li>
-            </ul>
-            <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px;">
-              <span class="skill-chip">Python</span>
-              <span class="skill-chip">Go</span>
-              <span class="skill-chip">JavaScript / TypeScript</span>
-              <span class="skill-chip">React</span>
-              <span class="skill-chip">C#</span>
-              <span class="skill-chip">Swift</span>
-              <span class="skill-chip">Kotlin</span>
-              <span class="skill-chip">REST APIs & Databases</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- 5. Quality & TDD -->
-        <article class="capability-card" data-capability="quality-testing">
-          <div class="capability-header">
-            <div class="capability-title-group">
-              <div class="capability-icon">🧪</div>
-              <div>
-                <h3 class="capability-title">Quality Engineering & Test-Driven Development (TDD)</h3>
-                <div style="font-size: 0.82rem; color: var(--accent); font-weight: 600;">Click to toggle details</div>
-              </div>
-            </div>
-            <span class="capability-toggle-arrow">▼</span>
-          </div>
-          <p class="capability-summary">
-            Test-Driven Development (TDD), automated test suites, QA leadership, and system verification.
-          </p>
-          <div class="capability-details-box">
-            <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-main); text-transform: uppercase; letter-spacing: 0.05em;">Key Execution & Deliverables:</div>
-            <ul class="details-list">
-              <li>Authored bachelor's research thesis investigating AI prompt engineering for automated TDD unit test creation.</li>
-              <li>Leading QA processes, creating automated test suites in Azure DevOps, and performing thorough system verification.</li>
-              <li>Implementing automated testing across Jest, Cypress, and NUnit to ensure regression-free releases.</li>
-            </ul>
-            <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px;">
-              <span class="skill-chip">Test-Driven Development (TDD)</span>
-              <span class="skill-chip">Jest</span>
-              <span class="skill-chip">Cypress</span>
-              <span class="skill-chip">NUnit</span>
-              <span class="skill-chip">Automated Testing</span>
-              <span class="skill-chip">System Verification</span>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- Education, Research & Languages -->
-    <section id="background" class="section">
-      <span class="section-tag">Background</span>
-      <div class="section-header">
-        <h2 class="section-title">Education & Academic Research</h2>
-        <p class="section-desc">University degree, international exchange studies, and published thesis.</p>
-      </div>
-
-      <div class="card" style="margin-bottom: 24px;">
-        <div class="timeline">
-          <!-- BTH Degree -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-meta">2021 – 2025 • Karlskrona, Sweden</div>
-            <h3 class="timeline-title">B.Sc. in Software Engineering</h3>
-            <div class="timeline-sub">Blekinge Institute of Technology (BTH)</div>
-            <p class="timeline-desc">
-              Relevant studies included software engineering projects, usability and interaction design, web development and databases, system verification, and algorithms and data structures in C++.
-            </p>
-          </div>
-
-          <!-- UEC Japan Exchange -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-meta">2024 – 2025 • Tokyo, Japan</div>
-            <h3 class="timeline-title">Exchange Studies in Computer Science</h3>
-            <div class="timeline-sub">The University of Electro-Communications (UEC)</div>
-            <p class="timeline-desc">
-              Completed advanced computing studies with an <strong>Average Grade of A</strong>. Completed Japanese language studies at the JLPT N3 level.
-            </p>
-          </div>
-
-          <!-- Thesis -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-meta">2024 – 2025 • Bachelor's Thesis</div>
-            <h3 class="timeline-title">Test-Driven Development: Exploring Prompt Engineering</h3>
-            <div class="timeline-sub">Blekinge Institute of Technology • Co-authored with Cassandra Flur</div>
-            <p class="timeline-desc">
-              Investigated how prompt engineering can support developers during Test-Driven Development (TDD), including the use of AI to assist with test creation, refinement, and software-development activities. Published on the DiVA academic archive.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Spoken Languages & Community Grid -->
-      <div class="card-grid-2">
-        <div class="card">
-          <h3 style="font-size: 1.25rem; margin-bottom: 14px;">Spoken Languages</h3>
-          <div style="display: flex; flex-direction: column; gap: 10px;">
-            <div style="display: flex; justify-content: space-between; font-size: 0.95rem; border-bottom: 1px solid var(--border); padding-bottom: 6px;">
-              <span><strong>Swedish</strong></span>
-              <span style="color: var(--accent); font-weight: 600;">Native</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; font-size: 0.95rem; border-bottom: 1px solid var(--border); padding-bottom: 6px;">
-              <span><strong>English</strong></span>
-              <span style="color: var(--accent); font-weight: 600;">Fluent</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; font-size: 0.95rem; border-bottom: 1px solid var(--border); padding-bottom: 6px;">
-              <span><strong>Japanese</strong></span>
-              <span style="color: var(--accent); font-weight: 600;">Conversational (JLPT N3)</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; font-size: 0.95rem;">
-              <span><strong>Thai</strong></span>
-              <span style="color: var(--text-light); font-weight: 500;">Beginner</span>
-            </div>
-          </div>
         </div>
 
-        <div class="card">
-          <h3 style="font-size: 1.25rem; margin-bottom: 14px;">Leadership & Outreach</h3>
-          <ul class="details-list" style="margin: 0;">
-            <li><strong>GenNext Organizer:</strong> Organizing professional and social events for the local early-career engineering community.</li>
-            <li><strong>BTH Student Ambassador:</strong> Presenting at education fairs, answering programme questions, and supporting prospective students.</li>
-            <li><strong>Blekinge Student Union:</strong> Managed café procurement and sales, trained staff, organized events, and led orientation activities.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Dedicated Interactive Blog Section -->
-    <section id="blog" class="section">
-      <span class="section-tag">Articles & Notes</span>
-      <div class="section-header">
-        <h2 class="section-title">Technical Blog & Research</h2>
-        <p class="section-desc">Click any article to expand and read the full essay inline.</p>
-      </div>
-
-      <div class="blog-stack">
-        
-        <!-- Article 1: TDD & Prompt Engineering -->
-        <article class="blog-article-card active expanded" data-article="1">
-          <div class="blog-meta-row">
-            <span class="blog-tag-badge">TDD & AI Research</span>
-            <span>June 2025</span>
-            <span>• 6 min read</span>
-          </div>
-          <h3 class="blog-article-title">Exploring Test-Driven Development with AI Prompt Engineering</h3>
-          <p class="blog-summary-text">
-            Key insights from our BTH degree thesis investigating how structured prompt engineering can make Test-Driven Development more accessible and effective.
-          </p>
-          <div class="blog-read-trigger">
-            <span class="read-btn-text">Collapse Article ▲</span>
-          </div>
+        <div class="stack-grid">
           
-          <!-- Full Expandable Content -->
-          <div class="blog-full-content">
-            <h3>Background & Motivation</h3>
-            <p>
-              Test-Driven Development (TDD) is renowned for yielding clean, modular, and maintainable software. Yet in practice, developers—especially those early in their careers—often struggle with the discipline of writing concise tests before writing production code.
-            </p>
-            <p>
-              In our thesis research at <strong>Blekinge Institute of Technology (BTH)</strong>, we explored how generative AI and structured prompt engineering can act as a catalyst for TDD adoption.
-            </p>
-
-            <h3>The Role of Prompt Engineering in TDD</h3>
-            <p>
-              Rather than asking an LLM to generate entire codebases end-to-end, our research found that the most effective AI collaboration happens at the <strong>unit test boundary</strong>:
-            </p>
-            <ul>
-              <li><strong>Specification Decomposition:</strong> Formulating user requirements into small, testable behavior specifications.</li>
-              <li><strong>Edge-Case Brainstorming:</strong> Prompting the model to challenge assumptions and identify boundary edge cases before implementation.</li>
-              <li><strong>Test-First Scaffolding:</strong> Generating isolated, mock-free test assertions that define the expected contract.</li>
-            </ul>
-
-            <pre><code>// Example of AI-assisted test-first boundary specification
-describe('PipelineHealthMonitor', () => {
-  it('should trigger alert when failure rate exceeds threshold over 5m window', () => {
-    const monitor = new PipelineHealthMonitor({ failureThreshold: 0.1 });
-    const status = monitor.evaluateEvents(mockPipelineEvents);
-    expect(status.alertTriggered).toBe(true);
-  });
-});</code></pre>
-
-            <h3>Key Findings</h3>
-            <p>
-              Structured prompts with explicit input/output contracts dramatically reduce hallucinations. Developers practicing TDD with prompt-assisted test scaffolding reported higher confidence and better test coverage.
-            </p>
-          </div>
-        </article>
-
-        <!-- Article 2: CI/CD Observability -->
-        <article class="blog-article-card" data-article="2">
-          <div class="blog-meta-row">
-            <span class="blog-tag-badge">CI/CD & Observability</span>
-            <span>October 2025</span>
-            <span>• 5 min read</span>
-          </div>
-          <h3 class="blog-article-title">Pipeline Observability: Automated Health & Alerting with OpenTelemetry</h3>
-          <p class="blog-summary-text">
-            Why internal delivery pipelines deserve first-class telemetry, distributed tracing, and automated failure detection.
-          </p>
-          <div class="blog-read-trigger">
-            <span class="read-btn-text">Read Full Article ▼</span>
+          <div class="stack-category">
+            <div class="stack-cat-title">Languages</div>
+            <div class="stack-tags">
+              <span class="stack-badge" data-tech="Go">Go</span>
+              <span class="stack-badge" data-tech="Python">Python</span>
+              <span class="stack-badge" data-tech="TypeScript">TypeScript</span>
+              <span class="stack-badge" data-tech="JavaScript">JavaScript</span>
+              <span class="stack-badge" data-tech="C#">C#</span>
+              <span class="stack-badge" data-tech="PHP">PHP</span>
+              <span class="stack-badge" data-tech="Swift">Swift</span>
+              <span class="stack-badge" data-tech="Kotlin">Kotlin</span>
+              <span class="stack-badge" data-tech="SQL">SQL</span>
+            </div>
           </div>
 
-          <div class="blog-full-content">
-            <h3>The Hidden Cost of Opaque Pipelines</h3>
-            <p>
-              Modern software delivery relies heavily on complex CI/CD environments with multi-stage build matrices, test executions, and automated deployments. Yet when a pipeline fails or slows down, developers often spend hours digging through thousands of lines of unformatted console logs.
-            </p>
-
-            <h3>Treating CI/CD as a Distributed System</h3>
-            <p>
-              By applying observability best practices to our delivery infrastructure, we gain instantaneous visibility into execution health:
-            </p>
-            <ul>
-              <li><strong>Distributed Tracing for Builds:</strong> Modeling each pipeline stage, container initialization, and test runner as spans in an OpenTelemetry trace.</li>
-              <li><strong>Automated Failure Fingerprinting:</strong> Parsing failure traces to automatically categorize flaky tests, environment timeouts, or genuine code regressions.</li>
-              <li><strong>Real-Time Notification Flows:</strong> Routing rich context notifications directly to engineering channels so teams can remediate issues before blocking releases.</li>
-            </ul>
-
-            <pre><code># OpenTelemetry trace instrumentation snippet for pipeline steps
-- name: Run Test Suite with Telemetry
-  env:
-    OTEL_EXPORTER_OTLP_ENDPOINT: "http://collector:4317"
-    OTEL_SERVICE_NAME: "ci-pipeline-runner"
-  run: |
-    ./run-tests-with-telemetry.sh</code></pre>
-
-            <p>
-              Observability transforms CI/CD from a black box into an intelligent, self-monitoring delivery platform.
-            </p>
-          </div>
-        </article>
-
-        <!-- Article 3: AI Developer Platforms -->
-        <article class="blog-article-card" data-article="3">
-          <div class="blog-meta-row">
-            <span class="blog-tag-badge">AI Platforms & Go</span>
-            <span>January 2026</span>
-            <span>• 5 min read</span>
-          </div>
-          <h3 class="blog-article-title">Architecting Developer-First AI Platforms & Go CLI Tooling</h3>
-          <p class="blog-summary-text">
-            Building automated workflows for validating, versioning, and publishing reusable AI agents and skills.
-          </p>
-          <div class="blog-read-trigger">
-            <span class="read-btn-text">Read Full Article ▼</span>
+          <div class="stack-category">
+            <div class="stack-cat-title">Cloud &amp; DevOps</div>
+            <div class="stack-tags">
+              <span class="stack-badge" data-tech="GitLab CI">GitLab CI/CD</span>
+              <span class="stack-badge" data-tech="Docker">Docker</span>
+              <span class="stack-badge" data-tech="Kubernetes">Kubernetes</span>
+              <span class="stack-badge" data-tech="Jenkins">Jenkins</span>
+              <span class="stack-badge" data-tech="Gerrit">Gerrit</span>
+              <span class="stack-badge" data-tech="Linux">Linux / Bash</span>
+            </div>
           </div>
 
-          <div class="blog-full-content">
-            <h3>Moving Beyond Ad-Hoc Prompts</h3>
-            <p>
-              As AI capabilities integrate deeper into engineering workflows, managing agent configurations, custom skills, and prompt templates in unstructured files quickly becomes unmaintainable.
-            </p>
-            <p>
-              To scale AI tools across teams, we need developer platforms that treat AI resources with the same rigor as production code:
-            </p>
-            <ul>
-              <li><strong>Declarative Schemas:</strong> Defining AI agent capabilities, allowed tool groups, and system prompts in validated YAML/JSON specifications.</li>
-              <li><strong>Automated CI Validation:</strong> Running automated verification pipelines to lint prompt schemas, check model version compatibility, and run regression evals on every commit.</li>
-              <li><strong>Go-Based Developer CLI:</strong> Providing engineers with a blazing-fast, cross-platform CLI tool for scaffolding, testing, and publishing agents to a central registry.</li>
-            </ul>
-
-            <pre><code># Example CLI command for validating and publishing an AI skill
-$ ai-platform skill validate ./skills/code-review
-✔ Schema valid
-✔ 12 test evaluations passed
-$ ai-platform skill publish ./skills/code-review --version v1.2.0</code></pre>
-          </div>
-        </article>
-
-        <!-- Article 4: Web Craft -->
-        <article class="blog-article-card" data-article="4">
-          <div class="blog-meta-row">
-            <span class="blog-tag-badge">Web Standards</span>
-            <span>February 2026</span>
-            <span>• 4 min read</span>
-          </div>
-          <h3 class="blog-article-title">The Renaissance of Zero-Build Static Web Craftsmanship</h3>
-          <p class="blog-summary-text">
-            Why returning to semantic HTML5, modern CSS custom properties, and native ES modules brings joy and performance back to the web.
-          </p>
-          <div class="blog-read-trigger">
-            <span class="read-btn-text">Read Full Article ▼</span>
+          <div class="stack-category">
+            <div class="stack-cat-title">Observability &amp; AI</div>
+            <div class="stack-tags">
+              <span class="stack-badge" data-tech="OpenTelemetry">OpenTelemetry</span>
+              <span class="stack-badge" data-tech="Distributed Tracing">Distributed Tracing</span>
+              <span class="stack-badge" data-tech="Metrics">Metrics &amp; Alerts</span>
+              <span class="stack-badge" data-tech="AI Agents">AI Agent Platforms</span>
+              <span class="stack-badge" data-tech="Prompt Engineering">Prompt Engineering</span>
+            </div>
           </div>
 
-          <div class="blog-full-content">
-            <h3>The Power of Simplicity</h3>
-            <p>
-              For years, the default expectation for creating any website was configuring complex bundlers, node_modules with thousands of transitive dependencies, and brittle build scripts.
-            </p>
-            <p>
-              Today, modern web standards provide everything needed for building stunning, highly responsive websites out of the box with zero runtime overhead, instant loading times, and permanent longevity.
-            </p>
+          <div class="stack-category">
+            <div class="stack-cat-title">Full-Stack &amp; Client</div>
+            <div class="stack-tags">
+              <span class="stack-badge" data-tech="React">React</span>
+              <span class="stack-badge" data-tech="REST APIs">REST APIs</span>
+              <span class="stack-badge" data-tech="iOS Swift">iOS (Swift)</span>
+              <span class="stack-badge" data-tech="Android Kotlin">Android (Kotlin)</span>
+              <span class="stack-badge" data-tech="Tailwind">Tailwind CSS</span>
+            </div>
           </div>
-        </article>
+
+          <div class="stack-category">
+            <div class="stack-cat-title">Quality &amp; Testing</div>
+            <div class="stack-tags">
+              <span class="stack-badge" data-tech="TDD">Test-Driven Development (TDD)</span>
+              <span class="stack-badge" data-tech="Jest">Jest</span>
+              <span class="stack-badge" data-tech="Cypress">Cypress</span>
+              <span class="stack-badge" data-tech="NUnit">NUnit</span>
+              <span class="stack-badge" data-tech="Azure DevOps">Azure DevOps</span>
+            </div>
+          </div>
+
+        </div>
 
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-      <div class="contact-card">
-        <span class="section-tag">Say Hello</span>
-        <h2 class="section-title">Get in Touch</h2>
-        <p>Feel free to reach out for software engineering opportunities, collaborations, or discussions on CI/CD and AI platforms.</p>
-        
-        <div>
-          <a href="mailto:Theodore.Reangpusri@outlook.com" class="contact-email-link">Theodore.Reangpusri@outlook.com</a>
+    <!-- 02 // TRAJECTORY & RESEARCH SECTION -->
+    <section class="section reveal" id="background">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-tag">02 // Background & Research</div>
+            <h2 class="section-title">Education & Academic Foundation.</h2>
+          </div>
+          <p class="section-subtitle">
+            Formal engineering grounding spanning Sweden and Japan, accompanied by published empirical research.
+          </p>
         </div>
 
-        <div class="contact-actions-row">
+        <div class="split-grid">
+          
+          <!-- Card 1: Academic Trajectory -->
+          <div class="info-card">
+            <div>
+              <div class="card-label">Academic Path</div>
+              <h3 class="card-title">International Degree & Exchange</h3>
+              
+              <div class="trajectory-route">
+                <div>
+                  <div class="route-node-code">BTH</div>
+                  <div class="route-node-inst">Blekinge Institute of Technology</div>
+                </div>
+                <div class="route-arrow">&lt;---&gt;</div>
+                <div>
+                  <div class="route-node-code">UEC</div>
+                  <div class="route-node-inst">Univ. of Electro-Communications</div>
+                </div>
+              </div>
+
+              <p style="font-size: 0.9rem; color: var(--text-dim); line-height: 1.6; margin-bottom: 16px;">
+                B.Sc. in Software Engineering from <strong>Blekinge Institute of Technology</strong> (2021 – 2025). Advanced computer science exchange studies at <strong>The University of Electro-Communications</strong> in Tokyo (Average Grade: A, JLPT N3 level).
+              </p>
+
+              <div class="thesis-box">
+                <div class="thesis-title">Published Thesis: Test-Driven Development & Prompt Engineering</div>
+                <div class="thesis-meta">Archived on DiVA Portal &bull; Co-authored with Cassandra Flur</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Languages & Leadership -->
+          <div class="info-card">
+            <div>
+              <div class="card-label">Communication & Community</div>
+              <h3 class="card-title">Languages & Leadership</h3>
+
+              <table class="lang-table">
+                <tbody>
+                  <tr>
+                    <td><strong>Swedish</strong></td>
+                    <td class="lang-badge">NATIVE</td>
+                  </tr>
+                  <tr>
+                    <td><strong>English</strong></td>
+                    <td class="lang-badge">FLUENT / C2</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Japanese</strong></td>
+                    <td class="lang-badge">CONVERSATIONAL / JLPT N3</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Thai</strong></td>
+                    <td class="lang-badge" style="color: var(--text-muted);">ELEMENTARY</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <ul class="leadership-list">
+                <li><strong>GenNext Organizer:</strong> Professional events and network building for early-career developers.</li>
+                <li><strong>BTH Student Ambassador:</strong> Education outreach, university representation, and mentoring.</li>
+                <li><strong>Student Union Leadership:</strong> Resource procurement, event coordination, and student orientation.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 // PROJECTS -->
+    <section class="section reveal" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-tag">03 // Projects</div>
+            <h2 class="section-title">Projects.</h2>
+          </div>
+          <p class="section-subtitle">
+            Selected systems, open-source tools, and applications.
+          </p>
+        </div>
+
+        <div class="lab-container" style="text-align: center; padding: 48px 24px; border: 1px dashed var(--line-strong); background: var(--bg-surface); border-radius: 10px;">
+          <div style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--text-muted);">
+            [Empty for now — projects will be published here]
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 // CONTACT / CTA -->
+    <section class="cta-section reveal" id="contact">
+      <div class="container">
+        <div class="section-tag" style="justify-content: center; margin-bottom: 16px;">04 // Contact</div>
+        <h2 class="cta-headline">Connect with me</h2>
+        <p class="cta-sub">
+          Open for always learning something new.
+        </p>
+        <div class="cta-buttons">
+          <a href="mailto:Theodore.Reangpusri@outlook.com" class="btn btn-primary">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>Theodore.Reangpusri@outlook.com</span>
+          </a>
           <button id="copy-email-btn" class="btn btn-secondary">
-            <span>📋 Copy Email</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            <span>Copy Email</span>
           </button>
-          <a href="https://www.linkedin.com/in/theodore-reangpusri-a61b30162/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-            <span>LinkedIn Profile ↗</span>
-          </a>
-          <a href="https://github.com/Dorrachai" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-            <span>GitHub Profile ↗</span>
+          <a href="https://www.linkedin.com/in/theodore-reangpusri-a61b30162/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            <span>LinkedIn &rarr;</span>
           </a>
         </div>
       </div>
     </section>
+
   </main>
 
-  <footer class="site-footer">
+  <!-- Clean Footer -->
+  <footer class="footer">
     <div class="container">
-      <div>Theodore Reangpusri • Software Engineer</div>
+      <div class="footer-inner">
+        <div>THEODORE REANGPUSRI</div>
+        <div>&copy; 2026</div>
+      </div>
     </div>
   </footer>
 
-  <!-- Interactive Capabilities & Blog Accordion Script -->
-  <script>
-    // 1. Theme Toggle
-    const toggleBtn = document.getElementById('theme-toggle');
-    const root = document.documentElement;
+  <!-- Toast Notification -->
+  <div id="copy-toast" class="toast">Copied Theodore.Reangpusri@outlook.com to clipboard</div>
 
-    toggleBtn.addEventListener('click', () => {
-      const isDark = root.getAttribute('data-theme') === 'dark';
-      if (isDark) {
+  <!-- Interactive Logic & Lofi Aquarium Engine -->
+  <script>
+    // 1. Copy Email with Toast
+    function showCopyToast() {
+      const email = 'Theodore.Reangpusri@outlook.com';
+      navigator.clipboard.writeText(email).then(() => {
+        const toast = document.getElementById('copy-toast');
+        toast.style.display = 'block';
+        setTimeout(() => { toast.style.display = 'none'; }, 2200);
+      });
+    }
+
+    const copyBtn = document.getElementById('copy-email-btn');
+    if (copyBtn) copyBtn.addEventListener('click', showCopyToast);
+
+    const copyHeroBtn = document.getElementById('copy-email-hero-btn');
+    if (copyHeroBtn) copyHeroBtn.addEventListener('click', showCopyToast);
+
+    // 2. Theme Toggle
+    const themeBtn = document.getElementById('theme-toggle');
+    themeBtn.addEventListener('click', () => {
+      const root = document.documentElement;
+      const isLight = root.getAttribute('data-theme') === 'light';
+      if (isLight) {
         root.removeAttribute('data-theme');
-        localStorage.setItem('theme-pref', 'light');
-      } else {
-        root.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme-pref', 'dark');
+      } else {
+        root.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme-pref', 'light');
       }
     });
 
-    // 2. Interactive Capabilities Cards & Skill Filter Buttons
-    const capabilityCards = document.querySelectorAll('.capability-card');
-    const skillPillBtns = document.querySelectorAll('.skill-pill-btn');
-
-    capabilityCards.forEach(card => {
-      card.addEventListener('click', () => {
-        card.classList.toggle('active');
+    // 3. Scroll Reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
       });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => revealObserver.observe(el));
+
+    // ==========================================================================
+    // 4. Lofi Pixel Aquarium Canvas Engine + Alphabet Easter Egg
+    // ==========================================================================
+    const canvas = document.getElementById('aquarium-canvas');
+    const ctx = canvas.getContext('2d');
+    const fishCountEl = document.getElementById('fish-count');
+    const latestFishLabel = document.getElementById('latest-fish-label');
+    const aquaNotify = document.getElementById('aquarium-notification');
+    const feedBtn = document.getElementById('aqua-feed-btn');
+    const viewport = document.getElementById('aquarium-viewport');
+
+    let width = 0;
+    let height = 0;
+    let isVisible = true;
+
+    function resizeCanvas() {
+      const rect = viewport.getBoundingClientRect();
+      width = rect.width || 360;
+      height = rect.height || 200;
+      canvas.width = width;
+      canvas.height = height;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    // Alphabet Fish Dictionary
+    const FISH_DICTIONARY = {
+      'A': { name: 'Angelfish', color: '#cbd5e1', accent: '#38bdf8', size: 13, speed: 0.8 },
+      'B': { name: 'Betta', color: '#6366f1', accent: '#ec4899', size: 12, speed: 0.9 },
+      'C': { name: 'Clownfish', color: '#f97316', accent: '#ffffff', size: 10, speed: 1.1 },
+      'D': { name: 'Danio', color: '#38bdf8', accent: '#f43f5e', size: 8, speed: 1.4 },
+      'E': { name: 'Emperor Tetra', color: '#eab308', accent: '#10b981', size: 9, speed: 1.2 },
+      'F': { name: 'Firefish', color: '#ef4444', accent: '#f59e0b', size: 10, speed: 1.3 },
+      'G': { name: 'Goldfish', color: '#d97736', accent: '#fed7aa', size: 12, speed: 0.7 },
+      'H': { name: 'Hatchetfish', color: '#94a3b8', accent: '#2dd4bf', size: 9, speed: 1.0 },
+      'I': { name: 'Icefish', color: '#67e8f9', accent: '#e0f2fe', size: 11, speed: 0.9 },
+      'J': { name: 'Jellyfish', color: '#c084fc', accent: '#f472b6', size: 14, speed: 0.5 },
+      'K': { name: 'Koi', color: '#f8fafc', accent: '#ea580c', size: 14, speed: 0.8 },
+      'L': { name: 'Lionfish', color: '#fb923c', accent: '#7c2d12', size: 13, speed: 0.7 },
+      'M': { name: 'Molly', color: '#1e293b', accent: '#f59e0b', size: 9, speed: 1.1 },
+      'N': { name: 'Neon Tetra', color: '#06b6d4', accent: '#ef4444', size: 7, speed: 1.3 },
+      'O': { name: 'Oscar', color: '#c2410c', accent: '#fbbf24', size: 13, speed: 0.75 },
+      'P': { name: 'Pufferfish', color: '#84cc16', accent: '#fef08a', size: 12, speed: 0.6 },
+      'Q': { name: 'Queen Danio', color: '#a855f7', accent: '#fbbf24', size: 10, speed: 1.2 },
+      'R': { name: 'Ray', color: '#10b981', accent: '#064e3b', size: 15, speed: 0.6 },
+      'S': { name: 'Swordtail', color: '#f43f5e', accent: '#fde047', size: 11, speed: 1.2 },
+      'T': { name: 'Tetra', color: '#2dd4bf', accent: '#f43f5e', size: 8, speed: 1.3 },
+      'U': { name: 'Unicornfish', color: '#0284c7', accent: '#e0f2fe', size: 12, speed: 0.9 },
+      'V': { name: 'Viperfish', color: '#4338ca', accent: '#38bdf8', size: 11, speed: 1.0 },
+      'W': { name: 'Wrasse', color: '#14b8a6', accent: '#f43f5e', size: 10, speed: 1.1 },
+      'X': { name: 'X-Ray Tetra', color: '#e2e8f0', accent: '#eab308', size: 8, speed: 1.2 },
+      'Y': { name: 'Yellow Tang', color: '#eab308', accent: '#fef9c3', size: 11, speed: 1.0 },
+      'Z': { name: 'Zebrafish', color: '#0284c7', accent: '#f8fafc', size: 8, speed: 1.4 }
+    };
+
+    // State
+    const fishes = [];
+    const bubbles = [];
+    const foods = [];
+    const particles = [];
+    let recentFishNames = [];
+    let activeShark = null;
+
+    // Trigger Shark Attack (PHP Easter Egg)
+    function triggerSharkPurge() {
+      if (activeShark) return;
+
+      aquaNotify.textContent = '⚠️ PHP IN THE TANK: SHARK PURGE! 🦈';
+      aquaNotify.classList.add('show');
+
+      activeShark = {
+        x: -90,
+        y: height * 0.45,
+        vx: 4.8,
+        vy: 0,
+        size: 36,
+        wigglePhase: 0,
+        chompPhase: 0,
+        active: true
+      };
+    }
+
+    // Create Initial Fish
+    function addFish(char, sourceTech) {
+      if (sourceTech === 'PHP') {
+        triggerSharkPurge();
+        return;
+      }
+
+      const key = (char || 'G').toUpperCase();
+      const spec = FISH_DICTIONARY[key] || FISH_DICTIONARY['G'];
+      
+      const dir = Math.random() > 0.5 ? 1 : -1;
+      const newFish = {
+        name: spec.name,
+        sourceTech: sourceTech || spec.name,
+        x: dir === 1 ? -20 : width + 20,
+        y: Math.random() * (height - 60) + 25,
+        vx: (spec.speed * (0.8 + Math.random() * 0.4)) * dir,
+        vy: (Math.random() - 0.5) * 0.4,
+        size: spec.size,
+        color: spec.color,
+        accent: spec.accent,
+        wigglePhase: Math.random() * Math.PI * 2,
+        wiggleSpeed: 0.15 + Math.random() * 0.1
+      };
+
+      fishes.push(newFish);
+      if (fishes.length > 25) fishes.shift();
+
+      fishCountEl.textContent = fishes.length;
+      recentFishNames.push(spec.name);
+      if (recentFishNames.length > 4) recentFishNames.shift();
+      latestFishLabel.textContent = `Current: ${recentFishNames.join(', ')}`;
+
+      // Show Notification
+      if (sourceTech) {
+        aquaNotify.textContent = `+ ${spec.name} (from "${sourceTech}")`;
+        aquaNotify.classList.add('show');
+        clearTimeout(aquaNotify._timer);
+        aquaNotify._timer = setTimeout(() => {
+          aquaNotify.classList.remove('show');
+        }, 1800);
+      }
+    }
+
+    // Initial Starter Fish
+    ['G', 'T', 'K', 'B'].forEach((letter, i) => {
+      setTimeout(() => addFish(letter), i * 150);
     });
 
-    skillPillBtns.forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        skillPillBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+    // Bubbles
+    for (let i = 0; i < 16; i++) {
+      bubbles.push({
+        x: Math.random() * 400,
+        y: Math.random() * 200,
+        r: Math.random() * 2 + 1,
+        speed: Math.random() * 0.6 + 0.3,
+        drift: (Math.random() - 0.5) * 0.2
+      });
+    }
 
-        const target = btn.getAttribute('data-target');
-        capabilityCards.forEach(card => {
-          if (target === 'all') {
-            card.style.display = 'block';
-          } else if (card.getAttribute('data-capability') === target) {
-            card.style.display = 'block';
-            card.classList.add('active');
-            card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-          } else {
-            card.style.display = 'none';
-          }
+    // Food Dropper
+    function dropFood(x, y) {
+      for (let i = 0; i < 4; i++) {
+        foods.push({
+          x: x + (Math.random() - 0.5) * 16,
+          y: (y || 10) + (Math.random() * 6),
+          vy: Math.random() * 0.5 + 0.4,
+          eaten: false
         });
-      });
+      }
+    }
+
+    viewport.addEventListener('click', (e) => {
+      const rect = viewport.getBoundingClientRect();
+      dropFood(e.clientX - rect.left, e.clientY - rect.top);
     });
 
-    // 3. Interactive Blog Accordion Reader
-    const blogCards = document.querySelectorAll('.blog-article-card');
-    blogCards.forEach(card => {
-      card.addEventListener('click', () => {
-        const isExpanded = card.classList.contains('expanded');
-        const triggerText = card.querySelector('.read-btn-text');
-        
-        if (isExpanded) {
-          card.classList.remove('expanded');
-          if (triggerText) triggerText.textContent = 'Read Full Article ▼';
+    if (feedBtn) {
+      feedBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropFood(width / 2 + (Math.random() - 0.5) * 60, 15);
+      });
+    }
+
+    // Tech Badge Click Easter Egg
+    document.querySelectorAll('.stack-badge').forEach(badge => {
+      badge.addEventListener('click', () => {
+        const techName = badge.getAttribute('data-tech') || badge.textContent.trim();
+        if (techName === 'PHP') {
+          triggerSharkPurge();
         } else {
-          card.classList.add('expanded');
-          if (triggerText) triggerText.textContent = 'Collapse Article ▲';
+          const firstLetter = techName.charAt(0);
+          addFish(firstLetter, techName);
         }
       });
     });
 
-    // 4. Copy Email Feedback
-    const copyBtn = document.getElementById('copy-email-btn');
-    if (copyBtn) {
-      copyBtn.addEventListener('click', () => {
-        const email = 'Theodore.Reangpusri@outlook.com';
-        navigator.clipboard.writeText(email).then(() => {
-          const orig = copyBtn.innerHTML;
-          copyBtn.innerHTML = '<span>✔ Copied to Clipboard</span>';
-          setTimeout(() => { copyBtn.innerHTML = orig; }, 2000);
-        }).catch(() => {
-          alert('Email: ' + email);
-        });
+    // Draw Pixel Shark
+    function drawPixelShark(s) {
+      ctx.save();
+      ctx.translate(s.x, s.y);
+      s.wigglePhase += 0.3;
+      s.chompPhase += 0.2;
+      const tailWiggle = Math.sin(s.wigglePhase) * 5;
+      const jawGap = Math.abs(Math.sin(s.chompPhase)) * 6;
+
+      // Shark Main Body
+      ctx.fillStyle = '#475569';
+      ctx.fillRect(-20, -12, 42, 22);
+
+      // Snout / Upper Head
+      ctx.fillRect(22, -10, 14, 12);
+      ctx.fillRect(36, -8, 6, 8);
+
+      // Light Underbelly
+      ctx.fillStyle = '#94a3b8';
+      ctx.fillRect(-16, 2, 38, 8);
+
+      // Lower Jaw (Chomping)
+      ctx.fillStyle = '#334155';
+      ctx.fillRect(20, 2 + jawGap, 16, 8);
+
+      // Razor Teeth (White pixels)
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(24, 0, 3, 3);
+      ctx.fillRect(30, 0, 3, 3);
+      ctx.fillRect(26, 2 + jawGap, 3, 3);
+
+      // Menacing Red Eye
+      ctx.fillStyle = '#ef4444';
+      ctx.fillRect(24, -6, 4, 4);
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(26, -5, 2, 2);
+
+      // Dorsal Fin (Top)
+      ctx.fillStyle = '#334155';
+      ctx.fillRect(-4, -24, 12, 14);
+      ctx.fillRect(0, -28, 6, 6);
+
+      // Pectoral Fin (Bottom)
+      ctx.fillRect(4, 10, 10, 10);
+
+      // Tail & Caudal Fins
+      ctx.fillRect(-32 + tailWiggle * 0.4, -8, 14, 16);
+      ctx.fillRect(-42 + tailWiggle, -20, 10, 16); // Upper lobe
+      ctx.fillRect(-40 + tailWiggle, 6, 8, 14);   // Lower lobe
+
+      ctx.restore();
+    }
+
+    // Render Loop
+    function drawPixelFish(f) {
+      ctx.save();
+      ctx.translate(f.x, f.y);
+      const facing = f.vx >= 0 ? 1 : -1;
+      ctx.scale(facing, 1);
+
+      f.wigglePhase += f.wiggleSpeed;
+      const tailWiggle = Math.sin(f.wigglePhase) * 2.5;
+
+      const s = f.size;
+      const halfS = s / 2;
+
+      // Pixel Body
+      ctx.fillStyle = f.color;
+      ctx.fillRect(-halfS, -halfS * 0.6, s, s * 1.2);
+
+      // Pixel Head / Nose
+      ctx.fillRect(halfS, -halfS * 0.3, s * 0.3, s * 0.6);
+
+      // Pixel Eye
+      ctx.fillStyle = '#0f172a';
+      ctx.fillRect(halfS * 0.3, -halfS * 0.3, 2, 2);
+
+      // Accent stripe / fin
+      ctx.fillStyle = f.accent;
+      ctx.fillRect(-halfS * 0.2, -halfS * 0.6, s * 0.3, s * 1.2);
+
+      // Top Fin
+      ctx.fillRect(-halfS * 0.4, -halfS * 0.9, s * 0.5, s * 0.3);
+
+      // Wiggling Pixel Tail
+      ctx.fillRect(-s * 0.8 + tailWiggle * 0.5, -halfS * 0.5, s * 0.4, s);
+      ctx.fillRect(-s * 1.1 + tailWiggle, -halfS * 0.8, s * 0.3, s * 1.6);
+
+      ctx.restore();
+    }
+
+    function render() {
+      if (!isVisible) {
+        requestAnimationFrame(render);
+        return;
+      }
+
+      ctx.clearRect(0, 0, width, height);
+
+      // Draw bottom sand/plants
+      ctx.fillStyle = '#0a141d';
+      ctx.fillRect(0, height - 12, width, 12);
+      ctx.fillStyle = '#0d1d2b';
+      ctx.fillRect(0, height - 6, width, 6);
+
+      // Seaweed pixel stems
+      const time = Date.now() * 0.002;
+      for (let x = 20; x < width; x += 45) {
+        const sway = Math.sin(time + x) * 4;
+        ctx.fillStyle = '#065f46';
+        ctx.fillRect(x + sway, height - 35, 3, 25);
+        ctx.fillStyle = '#047857';
+        ctx.fillRect(x + sway * 1.4, height - 48, 3, 16);
+      }
+
+      // Update & Draw Bubbles
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.25)';
+      bubbles.forEach(b => {
+        b.y -= b.speed;
+        b.x += b.drift;
+        if (b.y < -5) {
+          b.y = height + 5;
+          b.x = Math.random() * width;
+        }
+        ctx.fillRect(b.x, b.y, b.r, b.r);
+      });
+
+      // Update & Draw Food
+      for (let i = foods.length - 1; i >= 0; i--) {
+        const fd = foods[i];
+        fd.y += fd.vy;
+        ctx.fillStyle = '#d97736';
+        ctx.fillRect(fd.x, fd.y, 2.5, 2.5);
+
+        // Remove fallen food
+        if (fd.y > height - 10) {
+          foods.splice(i, 1);
+        }
+      }
+
+      // Update & Draw Particles
+      for (let i = particles.length - 1; i >= 0; i--) {
+        const p = particles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+        p.life -= 0.03;
+        ctx.fillStyle = p.color;
+        ctx.fillRect(p.x, p.y, p.size, p.size);
+        if (p.life <= 0) particles.splice(i, 1);
+      }
+
+      // Shark Logic (PHP Easter Egg)
+      if (activeShark) {
+        activeShark.x += activeShark.vx;
+        activeShark.y += Math.sin(activeShark.x * 0.03) * 0.8;
+
+        // Chomp nearby fish
+        for (let i = fishes.length - 1; i >= 0; i--) {
+          const f = fishes[i];
+          const dist = Math.hypot(f.x - (activeShark.x + 20), f.y - activeShark.y);
+          if (dist < 42) {
+            // Fish devoured! Particle splash
+            for (let k = 0; k < 6; k++) {
+              particles.push({
+                x: f.x,
+                y: f.y,
+                vx: (Math.random() - 0.5) * 4,
+                vy: (Math.random() - 0.5) * 4,
+                color: Math.random() > 0.5 ? f.color : '#ef4444',
+                size: Math.random() * 3 + 2,
+                life: 1.0
+              });
+            }
+            fishes.splice(i, 1);
+            fishCountEl.textContent = fishes.length;
+          }
+        }
+
+        drawPixelShark(activeShark);
+
+        // Shark Exits Screen
+        if (activeShark.x > width + 100) {
+          activeShark = null;
+          fishes.length = 0;
+          recentFishNames = [];
+          fishCountEl.textContent = '0';
+          latestFishLabel.textContent = 'Purged by PHP (click any tech to repopulate)';
+          aquaNotify.textContent = 'Aquarium sanitized by PHP.';
+          clearTimeout(aquaNotify._timer);
+          aquaNotify._timer = setTimeout(() => {
+            aquaNotify.classList.remove('show');
+          }, 2400);
+        }
+      }
+
+      // Update & Draw Fishes
+      fishes.forEach(f => {
+        // Flee from active shark
+        if (activeShark) {
+          const sDist = Math.hypot(f.x - activeShark.x, f.y - activeShark.y);
+          if (sDist < 120) {
+            f.vx = 2.5; // frantic escape swim
+            f.vy = (f.y > activeShark.y ? 1 : -1) * 1.5;
+          }
+        } else if (foods.length > 0) {
+          // Seek Food
+          let closestFood = null;
+          let minDist = 180;
+          foods.forEach(fd => {
+            const dist = Math.hypot(fd.x - f.x, fd.y - f.y);
+            if (dist < minDist) {
+              minDist = dist;
+              closestFood = fd;
+            }
+          });
+
+          if (closestFood) {
+            const angle = Math.atan2(closestFood.y - f.y, closestFood.x - f.x);
+            f.vx += Math.cos(angle) * 0.05;
+            f.vy += Math.sin(angle) * 0.05;
+
+            // Eat food
+            if (minDist < 8) {
+              const idx = foods.indexOf(closestFood);
+              if (idx > -1) foods.splice(idx, 1);
+            }
+          }
+        }
+
+        // Clamp speed
+        const speed = Math.hypot(f.vx, f.vy);
+        const maxSpeed = activeShark ? 3.0 : 1.8;
+        if (speed > maxSpeed) {
+          f.vx = (f.vx / speed) * maxSpeed;
+          f.vy = (f.vy / speed) * maxSpeed;
+        }
+
+        f.x += f.vx;
+        f.y += f.vy;
+
+        // Soft vertical bounds
+        if (f.y < 20) f.vy += 0.08;
+        if (f.y > height - 35) f.vy -= 0.08;
+
+        // Wrap around horizontally
+        if (!activeShark) {
+          if (f.vx > 0 && f.x > width + 30) f.x = -30;
+          if (f.vx < 0 && f.x < -30) f.x = width + 30;
+        }
+
+        drawPixelFish(f);
+      });
+
+      requestAnimationFrame(render);
+    }
+
+    // 5. Picture-in-Picture Floating Mode when Scrolled Past Hero
+    const aquaSlot = document.getElementById('aquarium-slot');
+    const aquaContainer = document.getElementById('aquarium-container');
+    const aquaScrollTopBtn = document.getElementById('aqua-scroll-top');
+
+    const pipObserver = new IntersectionObserver((entries) => {
+      const heroSlotVisible = entries[0].isIntersecting;
+      if (!heroSlotVisible) {
+        aquaContainer.classList.add('is-pip');
+        resizeCanvas();
+      } else {
+        aquaContainer.classList.remove('is-pip');
+        resizeCanvas();
+      }
+    }, { threshold: 0.05 });
+
+    if (aquaSlot) pipObserver.observe(aquaSlot);
+
+    if (aquaScrollTopBtn) {
+      aquaScrollTopBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     }
+
+    requestAnimationFrame(render);
   </script>
 </body>
 </html>
