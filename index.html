@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Theodore Reangpusri | Software Engineer</title>
-  <meta name="description" content="Personal portfolio, resume, and research of Theodore Reangpusri — Software Engineer from Blekinge Institute of Technology (BTH).">
+  <meta name="description" content="Personal portfolio and technical capabilities of Theodore Reangpusri — Software Engineer specializing in Full-Stack Development, CI/CD Pipelines, and AI Developer Platforms.">
   <meta name="author" content="Theodore Reangpusri">
 
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
@@ -12,12 +12,12 @@
   <!-- Google Fonts: Fraunces & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/main.css">
 
   <script>
-    // Immediate lightweight theme setup
+    // Immediate theme setup
     const savedTheme = localStorage.getItem('theme-pref') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     if (savedTheme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
   </script>
@@ -32,13 +32,12 @@
       </a>
       <nav>
         <ul class="nav-links">
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#journey" class="nav-link">Journey</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#writing" class="nav-link">Writing</a></li>
+          <li><a href="#capabilities" class="nav-link">Capabilities</a></li>
+          <li><a href="#background" class="nav-link">Education & Research</a></li>
+          <li><a href="#blog" class="nav-link">Blog & Essays</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
           <li>
-            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light mode">
               <span>🌓</span>
             </button>
           </li>
@@ -54,17 +53,17 @@
         <div>
           <div class="hero-badge">
             <span class="hero-dot"></span>
-            <span>☕ Software Engineer • BTH Sweden Graduate</span>
+            <span>☕ Software Engineer • BTH Graduate</span>
           </div>
           <h1 class="hero-title">
             Hi, I'm <span class="hero-title-accent">Theodore</span>.
           </h1>
-          <div class="hero-subtitle">Software Engineer & Builder</div>
+          <div class="hero-subtitle">Software Engineer — Full-Stack, CI/CD & AI Platforms</div>
           <p class="hero-bio">
-            Software engineering graduate from Blekinge Institute of Technology (BTH) in Sweden. Focused on Test-Driven Development (TDD), prompt engineering, and building resilient web software.
+            Software Engineering graduate from Blekinge Institute of Technology (BTH) in Sweden with exchange studies at The University of Electro-Communications in Japan. I specialize in building full-stack systems, automated CI/CD pipelines, observability tools, and AI developer platforms.
           </p>
           <div class="hero-cta-row">
-            <a href="mailto:theodore.reangpusri@outlook.com" class="btn btn-primary">
+            <a href="mailto:Theodore.Reangpusri@outlook.com" class="btn btn-primary">
               <span>Get in Touch</span>
             </a>
             <a href="https://www.linkedin.com/in/theodore-reangpusri-a61b30162/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
@@ -82,211 +81,463 @@
             <div class="avatar-inner">T</div>
           </div>
           <div class="author-name">Theodore Reangpusri</div>
-          <div class="author-role">B.Sc. Software Engineering</div>
+          <div class="author-role">Karlskrona, Sweden</div>
           <div class="author-chips">
+            <span class="skill-chip">AI Platforms</span>
+            <span class="skill-chip">CI/CD</span>
+            <span class="skill-chip">Go & Python</span>
+            <span class="skill-chip">Observability</span>
             <span class="skill-chip">TDD</span>
-            <span class="skill-chip">Prompt Eng</span>
-            <span class="skill-chip">TypeScript</span>
-            <span class="skill-chip">React</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About & Specialty -->
-    <section id="about" class="section">
-      <span class="section-tag">About Me</span>
+    <!-- Interactive Capabilities & What I Can Do -->
+    <section id="capabilities" class="section">
+      <span class="section-tag">Expertise</span>
       <div class="section-header">
-        <h2 class="section-title">Crafting Software with Care</h2>
-        <p class="section-desc">Background, academic research, and engineering philosophy.</p>
+        <h2 class="section-title">What I Can Do & Build</h2>
+        <p class="section-desc">Click any capability or skill below to explore technical details and execution workflows.</p>
       </div>
 
-      <div class="card-grid-2">
-        <div class="card">
-          <h3 style="font-size: 1.35rem; margin-bottom: 12px;">Engineering & Research</h3>
-          <p style="margin-bottom: 14px;">
-            I hold a Bachelor of Science in Software Engineering from <strong>Blekinge Institute of Technology (BTH)</strong>. My thesis explored how structured prompt engineering can enhance developer adoption and execution of <em>Test-Driven Development (TDD)</em>.
-          </p>
-          <p>
-            I believe software should be well-tested, maintainable, and calm to use. I also served on the board of the Blekinge Student Union, advocating for academic quality and student welfare.
-          </p>
+      <!-- Quick Interactive Skill Pills Cloud -->
+      <div style="margin-bottom: 24px;">
+        <div style="font-size: 0.85rem; font-weight: 600; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">
+          Filter / Explore Technologies:
         </div>
+        <div class="skill-pills-cloud">
+          <button class="skill-pill-btn active" data-target="all">All Capabilities</button>
+          <button class="skill-pill-btn" data-target="ai-engineering">🤖 AI Platforms & Agents</button>
+          <button class="skill-pill-btn" data-target="cicd-devops">⚡ CI/CD & Delivery</button>
+          <button class="skill-pill-btn" data-target="observability">📊 Observability & Metrics</button>
+          <button class="skill-pill-btn" data-target="fullstack-backend">💻 Full-Stack & APIs</button>
+          <button class="skill-pill-btn" data-target="quality-testing">🧪 Quality & TDD</button>
+        </div>
+      </div>
 
-        <div class="card">
-          <h3 style="font-size: 1.35rem; margin-bottom: 12px;">Technical Tools</h3>
-          <p style="margin-bottom: 14px;">A curated list of technologies and practices I work with regularly:</p>
-          <div class="skill-list">
-            <span class="skill-chip">Test-Driven Development (TDD)</span>
-            <span class="skill-chip">Prompt Engineering & LLMs</span>
-            <span class="skill-chip">TypeScript & JavaScript</span>
-            <span class="skill-chip">React & Modern UI</span>
-            <span class="skill-chip">Node.js & APIs</span>
-            <span class="skill-chip">Clean Architecture</span>
-            <span class="skill-chip">Automated Testing (Jest / Vitest)</span>
-            <span class="skill-chip">Git & CI/CD</span>
+      <!-- Capabilities Cards List -->
+      <div class="capabilities-grid" id="capabilities-container">
+        
+        <!-- 1. AI Engineering -->
+        <article class="capability-card active" data-capability="ai-engineering">
+          <div class="capability-header">
+            <div class="capability-title-group">
+              <div class="capability-icon">🤖</div>
+              <div>
+                <h3 class="capability-title">AI Engineering & Developer Platforms</h3>
+                <div style="font-size: 0.82rem; color: var(--accent); font-weight: 600;">Click to toggle details</div>
+              </div>
+            </div>
+            <span class="capability-toggle-arrow">▼</span>
           </div>
-        </div>
+          <p class="capability-summary">
+            Architecting internal AI developer platforms, Go-based developer CLIs, and automated LLM-assisted software workflows.
+          </p>
+          <div class="capability-details-box">
+            <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-main); text-transform: uppercase; letter-spacing: 0.05em;">Key Execution & Deliverables:</div>
+            <ul class="details-list">
+              <li>Developing and maintaining AI developer platforms and Go-based CLI utilities for resource and lifecycle management.</li>
+              <li>Building automated CI/CD workflows for validating, versioning, publishing, updating, and removing AI agents and reusable skills.</li>
+              <li>Designing empirical prompt engineering patterns to assist developers in test creation and code refinement.</li>
+            </ul>
+            <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px;">
+              <span class="skill-chip">Go</span>
+              <span class="skill-chip">Python</span>
+              <span class="skill-chip">AI Agent Platforms</span>
+              <span class="skill-chip">Prompt Engineering</span>
+              <span class="skill-chip">CLI Tools</span>
+              <span class="skill-chip">Automated AI Workflows</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. CI/CD & Delivery -->
+        <article class="capability-card" data-capability="cicd-devops">
+          <div class="capability-header">
+            <div class="capability-title-group">
+              <div class="capability-icon">⚡</div>
+              <div>
+                <h3 class="capability-title">CI/CD Pipelines & Cloud Delivery</h3>
+                <div style="font-size: 0.82rem; color: var(--accent); font-weight: 600;">Click to toggle details</div>
+              </div>
+            </div>
+            <span class="capability-toggle-arrow">▼</span>
+          </div>
+          <p class="capability-summary">
+            Designing automated delivery pipelines, containerized deployments, and robust release workflows.
+          </p>
+          <div class="capability-details-box">
+            <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-main); text-transform: uppercase; letter-spacing: 0.05em;">Key Execution & Deliverables:</div>
+            <ul class="details-list">
+              <li>Delivering CI/CD workflow improvements for validating, packaging, and releasing software and AI assets.</li>
+              <li>Managing development and deployment across Kubernetes, Jenkins, Gerrit, and GitLab CI/CD environments.</li>
+              <li>Implementing automated test gates and release versioning pipelines.</li>
+            </ul>
+            <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px;">
+              <span class="skill-chip">GitLab CI/CD</span>
+              <span class="skill-chip">Jenkins</span>
+              <span class="skill-chip">Kubernetes</span>
+              <span class="skill-chip">Gerrit</span>
+              <span class="skill-chip">Azure DevOps</span>
+              <span class="skill-chip">Docker</span>
+              <span class="skill-chip">Git</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. Observability -->
+        <article class="capability-card" data-capability="observability">
+          <div class="capability-header">
+            <div class="capability-title-group">
+              <div class="capability-icon">📊</div>
+              <div>
+                <h3 class="capability-title">Pipeline Observability & Monitoring</h3>
+                <div style="font-size: 0.82rem; color: var(--accent); font-weight: 600;">Click to toggle details</div>
+              </div>
+            </div>
+            <span class="capability-toggle-arrow">▼</span>
+          </div>
+          <p class="capability-summary">
+            Full-stack pipeline observability, distributed tracing, metrics visualization, and automated failure notifications.
+          </p>
+          <div class="capability-details-box">
+            <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-main); text-transform: uppercase; letter-spacing: 0.05em;">Key Execution & Deliverables:</div>
+            <ul class="details-list">
+              <li>Delivering full-stack pipeline observability solutions, improving visibility into CI/CD execution and environment health.</li>
+              <li>Implementing automated monitoring and notification flows for pipeline failures, reducing manual status checking.</li>
+              <li>Instrumenting OpenTelemetry traces, metrics, and dashboards to detect regressions and latency bottlenecks.</li>
+            </ul>
+            <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px;">
+              <span class="skill-chip">OpenTelemetry</span>
+              <span class="skill-chip">Distributed Traces</span>
+              <span class="skill-chip">Metrics & Logs</span>
+              <span class="skill-chip">Health Dashboards</span>
+              <span class="skill-chip">Automated Alerts</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. Full-Stack & Backend -->
+        <article class="capability-card" data-capability="fullstack-backend">
+          <div class="capability-header">
+            <div class="capability-title-group">
+              <div class="capability-icon">💻</div>
+              <div>
+                <h3 class="capability-title">Full-Stack & Backend Services</h3>
+                <div style="font-size: 0.82rem; color: var(--accent); font-weight: 600;">Click to toggle details</div>
+              </div>
+            </div>
+            <span class="capability-toggle-arrow">▼</span>
+          </div>
+          <p class="capability-summary">
+            High-performance backend services in Go and Python paired with accessible, responsive React interfaces.
+          </p>
+          <div class="capability-details-box">
+            <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-main); text-transform: uppercase; letter-spacing: 0.05em;">Key Execution & Deliverables:</div>
+            <ul class="details-list">
+              <li>Building robust REST APIs, microservices, and CLI utilities in Go and Python.</li>
+              <li>Crafting responsive, clean user interfaces in React with a focus on interaction design.</li>
+              <li>Integrating database layers, C#/.NET, Kotlin, and Swift cross-platform tooling.</li>
+            </ul>
+            <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px;">
+              <span class="skill-chip">Python</span>
+              <span class="skill-chip">Go</span>
+              <span class="skill-chip">JavaScript / TypeScript</span>
+              <span class="skill-chip">React</span>
+              <span class="skill-chip">C#</span>
+              <span class="skill-chip">Swift</span>
+              <span class="skill-chip">Kotlin</span>
+              <span class="skill-chip">REST APIs & Databases</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. Quality & TDD -->
+        <article class="capability-card" data-capability="quality-testing">
+          <div class="capability-header">
+            <div class="capability-title-group">
+              <div class="capability-icon">🧪</div>
+              <div>
+                <h3 class="capability-title">Quality Engineering & Test-Driven Development (TDD)</h3>
+                <div style="font-size: 0.82rem; color: var(--accent); font-weight: 600;">Click to toggle details</div>
+              </div>
+            </div>
+            <span class="capability-toggle-arrow">▼</span>
+          </div>
+          <p class="capability-summary">
+            Test-Driven Development (TDD), automated test suites, QA leadership, and system verification.
+          </p>
+          <div class="capability-details-box">
+            <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-main); text-transform: uppercase; letter-spacing: 0.05em;">Key Execution & Deliverables:</div>
+            <ul class="details-list">
+              <li>Authored bachelor's research thesis investigating AI prompt engineering for automated TDD unit test creation.</li>
+              <li>Leading QA processes, creating automated test suites in Azure DevOps, and performing thorough system verification.</li>
+              <li>Implementing automated testing across Jest, Cypress, and NUnit to ensure regression-free releases.</li>
+            </ul>
+            <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px;">
+              <span class="skill-chip">Test-Driven Development (TDD)</span>
+              <span class="skill-chip">Jest</span>
+              <span class="skill-chip">Cypress</span>
+              <span class="skill-chip">NUnit</span>
+              <span class="skill-chip">Automated Testing</span>
+              <span class="skill-chip">System Verification</span>
+            </div>
+          </div>
+        </article>
+
       </div>
     </section>
 
-    <!-- Journey & Timeline -->
-    <section id="journey" class="section">
+    <!-- Education, Research & Languages -->
+    <section id="background" class="section">
       <span class="section-tag">Background</span>
       <div class="section-header">
-        <h2 class="section-title">Experience & Education</h2>
-        <p class="section-desc">Timeline of degree studies, academic publications, and governance.</p>
+        <h2 class="section-title">Education & Academic Research</h2>
+        <p class="section-desc">University degree, international exchange studies, and published thesis.</p>
       </div>
 
-      <div class="card">
+      <div class="card" style="margin-bottom: 24px;">
         <div class="timeline">
           <!-- BTH Degree -->
           <div class="timeline-item">
             <div class="timeline-dot"></div>
-            <div class="timeline-meta">2021 – 2025 • Sweden</div>
+            <div class="timeline-meta">2021 – 2025 • Karlskrona, Sweden</div>
             <h3 class="timeline-title">B.Sc. in Software Engineering</h3>
             <div class="timeline-sub">Blekinge Institute of Technology (BTH)</div>
             <p class="timeline-desc">
-              Completed studies with deep focus on software architecture, distributed systems, algorithms, empirical software engineering, and software verification.
+              Relevant studies included software engineering projects, usability and interaction design, web development and databases, system verification, and algorithms and data structures in C++.
+            </p>
+          </div>
+
+          <!-- UEC Japan Exchange -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-meta">2024 – 2025 • Tokyo, Japan</div>
+            <h3 class="timeline-title">Exchange Studies in Computer Science</h3>
+            <div class="timeline-sub">The University of Electro-Communications (UEC)</div>
+            <p class="timeline-desc">
+              Completed advanced computing studies with an <strong>Average Grade of A</strong>. Completed Japanese language studies at the JLPT N3 level.
             </p>
           </div>
 
           <!-- Thesis -->
           <div class="timeline-item">
             <div class="timeline-dot"></div>
-            <div class="timeline-meta">2024 – 2025 • Research Thesis</div>
+            <div class="timeline-meta">2024 – 2025 • Bachelor's Thesis</div>
             <h3 class="timeline-title">Test-Driven Development: Exploring Prompt Engineering</h3>
-            <div class="timeline-sub">Published on DiVA Academic Portal • Co-authored with Cassandra Flur</div>
+            <div class="timeline-sub">Blekinge Institute of Technology • Co-authored with Cassandra Flur</div>
             <p class="timeline-desc">
-              Conducted empirical research investigating how AI prompt engineering can scaffold unit tests and lower the barrier of entry for Test-Driven Development (TDD).
-            </p>
-            <div style="margin-top: 8px;">
-              <a href="https://diva-portal.org" target="_blank" rel="noopener noreferrer" class="project-link-btn">
-                View on DiVA Archive ↗
-              </a>
-            </div>
-          </div>
-
-          <!-- Student Union -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-meta">2023 – 2024 • Leadership</div>
-            <h3 class="timeline-title">Board Member & Student Representative</h3>
-            <div class="timeline-sub">Blekinge Studentkår (Student Union) • Karlskrona, Sweden</div>
-            <p class="timeline-desc">
-              Elected representative managing student governance, representing technical students on university councils, and organizing academic events.
+              Investigated how prompt engineering can support developers during Test-Driven Development (TDD), including the use of AI to assist with test creation, refinement, and software-development activities. Published on the DiVA academic archive.
             </p>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-      <span class="section-tag">Portfolio</span>
-      <div class="section-header">
-        <h2 class="section-title">Selected Projects & Research</h2>
-        <p class="section-desc">A selection of software tools, research, and applications.</p>
-      </div>
-
-      <div class="card-stack">
-        <!-- Project 1 -->
-        <article class="card">
-          <div class="project-card-header">
-            <h3 class="project-title">TDD & Prompt Engineering Framework</h3>
-            <span class="project-badge">AI & Research</span>
-          </div>
-          <p class="project-desc">
-            Empirical tooling and prompt workflows designed to streamline test-first development and automated test generation with LLMs.
-          </p>
-          <ul class="project-highlights">
-            <li>Empirical prompt engineering patterns for automated unit test generation</li>
-            <li>Evaluated test suite quality, coverage, and code correctness</li>
-            <li>Archived and published on the Swedish academic DiVA portal</li>
-          </ul>
-          <div class="project-footer">
-            <div class="skill-list" style="margin-top: 0;">
-              <span class="skill-chip">TDD</span>
-              <span class="skill-chip">Prompt Eng</span>
-              <span class="skill-chip">Testing</span>
-            </div>
-            <a href="https://github.com/Dorrachai" target="_blank" rel="noopener noreferrer" class="project-link-btn">Source Code ↗</a>
-          </div>
-        </article>
-
-        <!-- Project 2 -->
-        <article class="card">
-          <div class="project-card-header">
-            <h3 class="project-title">CloudVault — Secure File Storage</h3>
-            <span class="project-badge">Full-Stack</span>
-          </div>
-          <p class="project-desc">
-            End-to-end encrypted storage platform with instant shareable links, version history, and role-based workspace permissions.
-          </p>
-          <ul class="project-highlights">
-            <li>Client-side encryption using AES-GCM and Web Crypto API</li>
-            <li>Multi-part upload engine handling large files seamlessly</li>
-          </ul>
-          <div class="project-footer">
-            <div class="skill-list" style="margin-top: 0;">
-              <span class="skill-chip">Node.js</span>
-              <span class="skill-chip">PostgreSQL</span>
-              <span class="skill-chip">Web Crypto API</span>
-            </div>
-            <a href="https://github.com/Dorrachai" target="_blank" rel="noopener noreferrer" class="project-link-btn">Source Code ↗</a>
-          </div>
-        </article>
-
-        <!-- Project 3 -->
-        <article class="card">
-          <div class="project-card-header">
-            <h3 class="project-title">DevFlow — CLI Task Automator</h3>
-            <span class="project-badge">Developer Tooling</span>
-          </div>
-          <p class="project-desc">
-            A developer-first command-line tool to automate project scaffolding, git hooks, environment configurations, and continuous delivery.
-          </p>
-          <div class="project-footer">
-            <div class="skill-list" style="margin-top: 0;">
-              <span class="skill-chip">CLI</span>
-              <span class="skill-chip">GitHub Actions</span>
-              <span class="skill-chip">Docker</span>
-            </div>
-            <a href="https://github.com/Dorrachai" target="_blank" rel="noopener noreferrer" class="project-link-btn">Source Code ↗</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Writing / Essays -->
-    <section id="writing" class="section">
-      <span class="section-tag">Writing</span>
-      <div class="section-header">
-        <h2 class="section-title">Essays & Articles</h2>
-        <p class="section-desc">Reflections on Test-Driven Development, AI workflows, and web craft.</p>
-      </div>
-
+      <!-- Spoken Languages & Community Grid -->
       <div class="card-grid-2">
-        <article class="article-card">
-          <div class="article-meta">
-            <span class="article-tag">Thesis Insights</span>
-            <span>June 2025</span>
+        <div class="card">
+          <h3 style="font-size: 1.25rem; margin-bottom: 14px;">Spoken Languages</h3>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div style="display: flex; justify-content: space-between; font-size: 0.95rem; border-bottom: 1px solid var(--border); padding-bottom: 6px;">
+              <span><strong>Swedish</strong></span>
+              <span style="color: var(--accent); font-weight: 600;">Native</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.95rem; border-bottom: 1px solid var(--border); padding-bottom: 6px;">
+              <span><strong>English</strong></span>
+              <span style="color: var(--accent); font-weight: 600;">Fluent</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.95rem; border-bottom: 1px solid var(--border); padding-bottom: 6px;">
+              <span><strong>Japanese</strong></span>
+              <span style="color: var(--accent); font-weight: 600;">Conversational (JLPT N3)</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.95rem;">
+              <span><strong>Thai</strong></span>
+              <span style="color: var(--text-light); font-weight: 500;">Beginner</span>
+            </div>
           </div>
-          <h3 class="article-title">Exploring Test-Driven Development with AI Prompt Engineering</h3>
-          <p class="project-desc">
-            Key findings from our BTH research on how structured prompt engineering can assist developers in defining unit test boundaries and improving code quality.
+        </div>
+
+        <div class="card">
+          <h3 style="font-size: 1.25rem; margin-bottom: 14px;">Leadership & Outreach</h3>
+          <ul class="details-list" style="margin: 0;">
+            <li><strong>GenNext Organizer:</strong> Organizing professional and social events for the local early-career engineering community.</li>
+            <li><strong>BTH Student Ambassador:</strong> Presenting at education fairs, answering programme questions, and supporting prospective students.</li>
+            <li><strong>Blekinge Student Union:</strong> Managed café procurement and sales, trained staff, organized events, and led orientation activities.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dedicated Interactive Blog Section -->
+    <section id="blog" class="section">
+      <span class="section-tag">Articles & Notes</span>
+      <div class="section-header">
+        <h2 class="section-title">Technical Blog & Research</h2>
+        <p class="section-desc">Click any article to expand and read the full essay inline.</p>
+      </div>
+
+      <div class="blog-stack">
+        
+        <!-- Article 1: TDD & Prompt Engineering -->
+        <article class="blog-article-card active expanded" data-article="1">
+          <div class="blog-meta-row">
+            <span class="blog-tag-badge">TDD & AI Research</span>
+            <span>June 2025</span>
+            <span>• 6 min read</span>
+          </div>
+          <h3 class="blog-article-title">Exploring Test-Driven Development with AI Prompt Engineering</h3>
+          <p class="blog-summary-text">
+            Key insights from our BTH degree thesis investigating how structured prompt engineering can make Test-Driven Development more accessible and effective.
           </p>
+          <div class="blog-read-trigger">
+            <span class="read-btn-text">Collapse Article ▲</span>
+          </div>
+          
+          <!-- Full Expandable Content -->
+          <div class="blog-full-content">
+            <h3>Background & Motivation</h3>
+            <p>
+              Test-Driven Development (TDD) is renowned for yielding clean, modular, and maintainable software. Yet in practice, developers—especially those early in their careers—often struggle with the discipline of writing concise tests before writing production code.
+            </p>
+            <p>
+              In our thesis research at <strong>Blekinge Institute of Technology (BTH)</strong>, we explored how generative AI and structured prompt engineering can act as a catalyst for TDD adoption.
+            </p>
+
+            <h3>The Role of Prompt Engineering in TDD</h3>
+            <p>
+              Rather than asking an LLM to generate entire codebases end-to-end, our research found that the most effective AI collaboration happens at the <strong>unit test boundary</strong>:
+            </p>
+            <ul>
+              <li><strong>Specification Decomposition:</strong> Formulating user requirements into small, testable behavior specifications.</li>
+              <li><strong>Edge-Case Brainstorming:</strong> Prompting the model to challenge assumptions and identify boundary edge cases before implementation.</li>
+              <li><strong>Test-First Scaffolding:</strong> Generating isolated, mock-free test assertions that define the expected contract.</li>
+            </ul>
+
+            <pre><code>// Example of AI-assisted test-first boundary specification
+describe('PipelineHealthMonitor', () => {
+  it('should trigger alert when failure rate exceeds threshold over 5m window', () => {
+    const monitor = new PipelineHealthMonitor({ failureThreshold: 0.1 });
+    const status = monitor.evaluateEvents(mockPipelineEvents);
+    expect(status.alertTriggered).toBe(true);
+  });
+});</code></pre>
+
+            <h3>Key Findings</h3>
+            <p>
+              Structured prompts with explicit input/output contracts dramatically reduce hallucinations. Developers practicing TDD with prompt-assisted test scaffolding reported higher confidence and better test coverage.
+            </p>
+          </div>
         </article>
 
-        <article class="article-card">
-          <div class="article-meta">
-            <span class="article-tag">Web Craft</span>
-            <span>January 2026</span>
+        <!-- Article 2: CI/CD Observability -->
+        <article class="blog-article-card" data-article="2">
+          <div class="blog-meta-row">
+            <span class="blog-tag-badge">CI/CD & Observability</span>
+            <span>October 2025</span>
+            <span>• 5 min read</span>
           </div>
-          <h3 class="article-title">The Renaissance of Zero-Build Static Websites</h3>
-          <p class="project-desc">
-            Why modern HTML5, CSS custom properties, and native ES modules make zero-dependency static web pages faster, cleaner, and more resilient than ever.
+          <h3 class="blog-article-title">Pipeline Observability: Automated Health & Alerting with OpenTelemetry</h3>
+          <p class="blog-summary-text">
+            Why internal delivery pipelines deserve first-class telemetry, distributed tracing, and automated failure detection.
           </p>
+          <div class="blog-read-trigger">
+            <span class="read-btn-text">Read Full Article ▼</span>
+          </div>
+
+          <div class="blog-full-content">
+            <h3>The Hidden Cost of Opaque Pipelines</h3>
+            <p>
+              Modern software delivery relies heavily on complex CI/CD environments with multi-stage build matrices, test executions, and automated deployments. Yet when a pipeline fails or slows down, developers often spend hours digging through thousands of lines of unformatted console logs.
+            </p>
+
+            <h3>Treating CI/CD as a Distributed System</h3>
+            <p>
+              By applying observability best practices to our delivery infrastructure, we gain instantaneous visibility into execution health:
+            </p>
+            <ul>
+              <li><strong>Distributed Tracing for Builds:</strong> Modeling each pipeline stage, container initialization, and test runner as spans in an OpenTelemetry trace.</li>
+              <li><strong>Automated Failure Fingerprinting:</strong> Parsing failure traces to automatically categorize flaky tests, environment timeouts, or genuine code regressions.</li>
+              <li><strong>Real-Time Notification Flows:</strong> Routing rich context notifications directly to engineering channels so teams can remediate issues before blocking releases.</li>
+            </ul>
+
+            <pre><code># OpenTelemetry trace instrumentation snippet for pipeline steps
+- name: Run Test Suite with Telemetry
+  env:
+    OTEL_EXPORTER_OTLP_ENDPOINT: "http://collector:4317"
+    OTEL_SERVICE_NAME: "ci-pipeline-runner"
+  run: |
+    ./run-tests-with-telemetry.sh</code></pre>
+
+            <p>
+              Observability transforms CI/CD from a black box into an intelligent, self-monitoring delivery platform.
+            </p>
+          </div>
         </article>
+
+        <!-- Article 3: AI Developer Platforms -->
+        <article class="blog-article-card" data-article="3">
+          <div class="blog-meta-row">
+            <span class="blog-tag-badge">AI Platforms & Go</span>
+            <span>January 2026</span>
+            <span>• 5 min read</span>
+          </div>
+          <h3 class="blog-article-title">Architecting Developer-First AI Platforms & Go CLI Tooling</h3>
+          <p class="blog-summary-text">
+            Building automated workflows for validating, versioning, and publishing reusable AI agents and skills.
+          </p>
+          <div class="blog-read-trigger">
+            <span class="read-btn-text">Read Full Article ▼</span>
+          </div>
+
+          <div class="blog-full-content">
+            <h3>Moving Beyond Ad-Hoc Prompts</h3>
+            <p>
+              As AI capabilities integrate deeper into engineering workflows, managing agent configurations, custom skills, and prompt templates in unstructured files quickly becomes unmaintainable.
+            </p>
+            <p>
+              To scale AI tools across teams, we need developer platforms that treat AI resources with the same rigor as production code:
+            </p>
+            <ul>
+              <li><strong>Declarative Schemas:</strong> Defining AI agent capabilities, allowed tool groups, and system prompts in validated YAML/JSON specifications.</li>
+              <li><strong>Automated CI Validation:</strong> Running automated verification pipelines to lint prompt schemas, check model version compatibility, and run regression evals on every commit.</li>
+              <li><strong>Go-Based Developer CLI:</strong> Providing engineers with a blazing-fast, cross-platform CLI tool for scaffolding, testing, and publishing agents to a central registry.</li>
+            </ul>
+
+            <pre><code># Example CLI command for validating and publishing an AI skill
+$ ai-platform skill validate ./skills/code-review
+✔ Schema valid
+✔ 12 test evaluations passed
+$ ai-platform skill publish ./skills/code-review --version v1.2.0</code></pre>
+          </div>
+        </article>
+
+        <!-- Article 4: Web Craft -->
+        <article class="blog-article-card" data-article="4">
+          <div class="blog-meta-row">
+            <span class="blog-tag-badge">Web Standards</span>
+            <span>February 2026</span>
+            <span>• 4 min read</span>
+          </div>
+          <h3 class="blog-article-title">The Renaissance of Zero-Build Static Web Craftsmanship</h3>
+          <p class="blog-summary-text">
+            Why returning to semantic HTML5, modern CSS custom properties, and native ES modules brings joy and performance back to the web.
+          </p>
+          <div class="blog-read-trigger">
+            <span class="read-btn-text">Read Full Article ▼</span>
+          </div>
+
+          <div class="blog-full-content">
+            <h3>The Power of Simplicity</h3>
+            <p>
+              For years, the default expectation for creating any website was configuring complex bundlers, node_modules with thousands of transitive dependencies, and brittle build scripts.
+            </p>
+            <p>
+              Today, modern web standards provide everything needed for building stunning, highly responsive websites out of the box with zero runtime overhead, instant loading times, and permanent longevity.
+            </p>
+          </div>
+        </article>
+
       </div>
     </section>
 
@@ -295,18 +546,21 @@
       <div class="contact-card">
         <span class="section-tag">Say Hello</span>
         <h2 class="section-title">Get in Touch</h2>
-        <p>Feel free to reach out for software engineering roles, collaborations, or questions about my research.</p>
+        <p>Feel free to reach out for software engineering opportunities, collaborations, or discussions on CI/CD and AI platforms.</p>
         
         <div>
-          <a href="mailto:theodore.reangpusri@outlook.com" class="contact-email">theodore.reangpusri@outlook.com</a>
+          <a href="mailto:Theodore.Reangpusri@outlook.com" class="contact-email-link">Theodore.Reangpusri@outlook.com</a>
         </div>
 
-        <div class="contact-actions">
+        <div class="contact-actions-row">
           <button id="copy-email-btn" class="btn btn-secondary">
             <span>📋 Copy Email</span>
           </button>
           <a href="https://www.linkedin.com/in/theodore-reangpusri-a61b30162/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-            <span>Connect on LinkedIn ↗</span>
+            <span>LinkedIn Profile ↗</span>
+          </a>
+          <a href="https://github.com/Dorrachai" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            <span>GitHub Profile ↗</span>
           </a>
         </div>
       </div>
@@ -315,12 +569,13 @@
 
   <footer class="site-footer">
     <div class="container">
-      <div>Handcrafted by Theodore Reangpusri • 2026</div>
+      <div>Theodore Reangpusri • Software Engineer</div>
     </div>
   </footer>
 
+  <!-- Interactive Capabilities & Blog Accordion Script -->
   <script>
-    // Lightweight Theme Toggle
+    // 1. Theme Toggle
     const toggleBtn = document.getElementById('theme-toggle');
     const root = document.documentElement;
 
@@ -335,11 +590,59 @@
       }
     });
 
-    // Copy Email Action
+    // 2. Interactive Capabilities Cards & Skill Filter Buttons
+    const capabilityCards = document.querySelectorAll('.capability-card');
+    const skillPillBtns = document.querySelectorAll('.skill-pill-btn');
+
+    capabilityCards.forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('active');
+      });
+    });
+
+    skillPillBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        skillPillBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const target = btn.getAttribute('data-target');
+        capabilityCards.forEach(card => {
+          if (target === 'all') {
+            card.style.display = 'block';
+          } else if (card.getAttribute('data-capability') === target) {
+            card.style.display = 'block';
+            card.classList.add('active');
+            card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // 3. Interactive Blog Accordion Reader
+    const blogCards = document.querySelectorAll('.blog-article-card');
+    blogCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const isExpanded = card.classList.contains('expanded');
+        const triggerText = card.querySelector('.read-btn-text');
+        
+        if (isExpanded) {
+          card.classList.remove('expanded');
+          if (triggerText) triggerText.textContent = 'Read Full Article ▼';
+        } else {
+          card.classList.add('expanded');
+          if (triggerText) triggerText.textContent = 'Collapse Article ▲';
+        }
+      });
+    });
+
+    // 4. Copy Email Feedback
     const copyBtn = document.getElementById('copy-email-btn');
     if (copyBtn) {
       copyBtn.addEventListener('click', () => {
-        const email = 'theodore.reangpusri@outlook.com';
+        const email = 'Theodore.Reangpusri@outlook.com';
         navigator.clipboard.writeText(email).then(() => {
           const orig = copyBtn.innerHTML;
           copyBtn.innerHTML = '<span>✔ Copied to Clipboard</span>';

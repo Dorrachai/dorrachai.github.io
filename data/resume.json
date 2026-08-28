@@ -1,70 +1,108 @@
 {
-  "summary": "Software Engineer with a B.Sc. in Software Engineering from Blekinge Institute of Technology (BTH). Specializing in Test-Driven Development (TDD), prompt engineering, and modern full-stack web application development.",
-  "experience": [
+  "summary": "Software Engineer with a B.Sc. in Software Engineering from Blekinge Institute of Technology (BTH) and exchange studies at The University of Electro-Communications in Japan. Experienced in building full-stack systems, automated CI/CD pipelines, observability tools, and AI developer platforms.",
+  "capabilities": [
     {
-      "role": "Software Engineering Researcher & Degree Project",
-      "company": "Blekinge Institute of Technology (BTH)",
-      "period": "2024 - 2025",
-      "location": "Karlskrona, Sweden",
-      "description": "Authored the research thesis 'Test-Driven Development: Exploring Prompt Engineering' investigating how AI-assisted prompt design improves TDD adoption and automated test creation.",
-      "highlights": [
-        "Conducted empirical research on prompt engineering strategies for AI-assisted Test-Driven Development",
-        "Evaluated test suite quality, code correctness, and developer productivity when integrating LLMs into the TDD cycle",
-        "Archived thesis research on the DiVA academic portal"
-      ]
+      "id": "ai-engineering",
+      "title": "AI Engineering & Developer Platforms",
+      "icon": "🤖",
+      "summary": "Architecting AI agent platforms, developer CLIs, and automated LLM-assisted workflows.",
+      "details": [
+        "Developing internal AI developer platforms and Go-based CLI utilities for resource management.",
+        "Building automated workflows for validating, versioning, publishing, updating, and deploying AI agents and reusable skills.",
+        "Engineering structured prompt design frameworks to streamline automated development and test generation."
+      ],
+      "tools": ["Go", "Python", "Prompt Engineering", "LLM Workflows", "Agent & Skill Architecture", "CLI Development"]
     },
     {
-      "role": "Board Member & Student Representative",
-      "company": "Blekinge Studentkår (Student Union)",
-      "period": "2023 - 2024",
-      "location": "Karlskrona, Sweden",
-      "description": "Elected student representative managing student governance, university board communication, and student welfare initiatives.",
-      "highlights": [
-        "Represented software engineering and technical students in university board meetings and quality councils",
-        "Coordinated academic advocacy, event planning, and student body operational strategies",
-        "Collaborated with faculty to improve curriculum feedback loops"
-      ]
+      "id": "cicd-devops",
+      "title": "CI/CD Pipelines & Cloud Delivery",
+      "icon": "⚡",
+      "summary": "End-to-end automated software delivery, container orchestration, and pipeline health.",
+      "details": [
+        "Designing robust CI/CD pipelines for automated validating, packaging, and releasing software and AI resources.",
+        "Deploying and managing containerized workloads in Kubernetes-based environments.",
+        "Implementing automated gatekeeping and environment health verification."
+      ],
+      "tools": ["GitLab CI/CD", "Jenkins", "Kubernetes", "Gerrit", "Azure DevOps", "Docker", "Git"]
     },
     {
-      "role": "Full-Stack Software Developer",
-      "company": "Independent & Open Source Projects",
-      "period": "2022 - Present",
-      "location": "Sweden / Remote",
-      "description": "Architected and built web applications, developer CLI tooling, and minimal offline-first software.",
-      "highlights": [
-        "Developed full-stack web applications with modern TypeScript, React, and Node.js backend services",
-        "Applied rigorous unit testing and automated CI/CD workflows across projects",
-        "Built zero-build, accessible static web tools emphasizing performance and web standards"
-      ]
+      "id": "observability",
+      "title": "Pipeline Observability & Monitoring",
+      "icon": "📊",
+      "summary": "Comprehensive visibility into system execution, telemetry, and automated alerting.",
+      "details": [
+        "Building full-stack pipeline observability solutions to monitor CI/CD execution and environment health.",
+        "Instrumenting distributed traces, metrics, and structured logs using OpenTelemetry.",
+        "Designing automated notification flows to eliminate manual pipeline failure inspection."
+      ],
+      "tools": ["OpenTelemetry", "Metrics & Logs", "Distributed Tracing", "Health Dashboards", "Automated Alerts"]
+    },
+    {
+      "id": "fullstack-backend",
+      "title": "Full-Stack & Backend Services",
+      "icon": "💻",
+      "summary": "High-performance backend microservices paired with clean, responsive user interfaces.",
+      "details": [
+        "Building scalable REST APIs and backend services in Go and Python.",
+        "Developing responsive, accessible user interfaces in React with a focus on interaction design.",
+        "Managing relational and document database schemas with clean data layer modeling."
+      ],
+      "tools": ["Go", "Python", "React", "TypeScript", "JavaScript", "REST APIs", "Databases", "HTML/CSS"]
+    },
+    {
+      "id": "quality-testing",
+      "title": "Quality Engineering & TDD",
+      "icon": "🧪",
+      "summary": "Test-Driven Development discipline, automated test suites, and QA leadership.",
+      "details": [
+        "Specialized in Test-Driven Development (TDD) as proven by academic thesis research at BTH.",
+        "Constructing multi-tier automated test suites including unit, integration, and end-to-end testing.",
+        "Leading QA teams and establishing automated testing workflows in agile environments."
+      ],
+      "tools": ["TDD", "Jest", "Cypress", "NUnit", "System Verification", "Automated Testing"]
     }
+  ],
+  "languages": [
+    { "name": "Swedish", "level": "Native" },
+    { "name": "English", "level": "Fluent" },
+    { "name": "Japanese", "level": "Conversational (JLPT N3)" },
+    { "name": "Thai", "level": "Beginner" }
   ],
   "education": [
     {
-      "degree": "Bachelor of Science in Software Engineering",
+      "degree": "B.Sc. in Software Engineering",
       "institution": "Blekinge Institute of Technology (BTH)",
-      "period": "2021 - 2025",
-      "details": "Specialization in Software Engineering, Test-Driven Development (TDD), Distributed Systems, Algorithms, and Human-Computer Interaction."
-    }
-  ],
-  "certifications": [
+      "period": "2021 – 2025",
+      "location": "Sweden",
+      "details": "Focus on software architecture, usability and interaction design, system verification, algorithms and data structures in C++, and empirical software engineering."
+    },
     {
-      "name": "Thesis Publication: Test-Driven Development & Prompt Engineering",
-      "issuer": "DiVA Academic Archive / BTH",
-      "year": "2025"
+      "degree": "Exchange Studies in Computer Science",
+      "institution": "The University of Electro-Communications (UEC)",
+      "period": "2024 – 2025",
+      "location": "Tokyo, Japan",
+      "details": "Completed advanced computing coursework with an Average Grade of A. Attained Japanese studies at JLPT N3 level."
     }
   ],
-  "skills": {
-    "Core Engineering": [
-      "Test-Driven Development (TDD)", "Prompt Engineering & LLMs", "Unit & Integration Testing (Jest, Vitest)", "Clean Architecture", "Agile & Scrum"
-    ],
-    "Frontend": [
-      "TypeScript", "JavaScript (ES6+)", "React", "HTML5 & Semantic Web", "Modern CSS & Tailwind", "Web Performance"
-    ],
-    "Backend & Tools": [
-      "Node.js", "Express", "Python", "REST APIs", "Git & GitHub", "Docker", "CI/CD Workflows"
-    ],
-    "Communication & Research": [
-      "Empirical Research", "Technical Writing", "Student Governance & Leadership", "Cross-functional Collaboration"
-    ]
-  }
+  "thesis": {
+    "title": "Test-Driven Development: Exploring Prompt Engineering",
+    "authors": "Theodore Reangpusri, Cassandra Flur",
+    "institution": "Blekinge Institute of Technology",
+    "year": "2025",
+    "summary": "Explored how prompt engineering can support developers during Test-Driven Development, including using AI to assist with test creation, refinement, and software-development activities."
+  },
+  "leadership": [
+    {
+      "role": "Early-Career Community Event Organizer",
+      "description": "Organizing professional, networking, and technical events for local early-career engineers."
+    },
+    {
+      "role": "BTH Student Ambassador",
+      "description": "Presenting at education fairs, supporting prospective student outreach, and answering engineering program questions."
+    },
+    {
+      "role": "Blekinge Student Union Volunteer Leadership",
+      "description": "Managed café procurement and sales, trained staff, organized events, and led student orientation activities."
+    }
+  ]
 }

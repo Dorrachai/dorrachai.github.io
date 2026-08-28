@@ -1,12 +1,19 @@
 {
   "name": "Theodore Reangpusri",
-  "title": "Software Engineer",
-  "bio": "Software Engineering graduate from Blekinge Institute of Technology (BTH) in Sweden. Focused on Test-Driven Development (TDD), prompt engineering, and building resilient web software.",
-  "location": "Sweden",
-  "email": "theodore.reangpusri@outlook.com",
+  "title": "Software Engineer | Full-Stack, CI/CD & AI Platforms",
+  "bio": "Software Engineer with a B.Sc. in Software Engineering from Blekinge Institute of Technology. I build full-stack systems, CI/CD pipelines, observability tools, and AI developer platforms.",
+  "location": "Karlskrona, Sweden",
+  "email": "Theodore.Reangpusri@outlook.com",
+  "phone": "+46 73-141 56 45",
   "socials": {
     "linkedin": "https://www.linkedin.com/in/theodore-reangpusri-a61b30162/",
     "github": "https://github.com/Dorrachai",
-    "email": "mailto:theodore.reangpusri@outlook.com"
-  }
+    "email": "mailto:Theodore.Reangpusri@outlook.com"
+  },
+  "languages": [
+    { "name": "Swedish", "level": "Native" },
+    { "name": "English", "level": "Fluent" },
+    { "name": "Japanese", "level": "Conversational (JLPT N3)" },
+    { "name": "Thai", "level": "Beginner" }
+  ]
 }
