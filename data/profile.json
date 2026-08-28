@@ -1,20 +1,19 @@
 {
-  "name": "Dorrachai",
-  "title": "Full-Stack Developer & Software Engineer",
-  "bio": "I build modern, scalable web applications, distributed systems, and intuitive user experiences. Passionate about clean code, developer tooling, and modern web architecture.",
-  "location": "Available Worldwide / Remote",
-  "email": "dorrachai.dev@gmail.com",
-  "availability": "Open to new opportunities",
+  "name": "Theodore Reangpusri",
+  "title": "Software Engineer & Builder",
+  "bio": "Software Engineering graduate from Blekinge Institute of Technology (BTH) in Sweden. Passionate about clean architecture, Test-Driven Development (TDD), prompt engineering, and building thoughtful, resilient web applications.",
+  "location": "Sweden / Available Remote",
+  "email": "treangpusri8@gmail.com",
+  "availability": "Open to new engineering opportunities",
   "socials": {
     "github": "https://github.com/Dorrachai",
-    "linkedin": "https://linkedin.com/in/",
-    "twitter": "https://x.com/",
-    "email": "mailto:dorrachai.dev@gmail.com"
+    "linkedin": "https://www.linkedin.com/in/theodore-reangpusri-a61b30162/",
+    "email": "mailto:treangpusri8@gmail.com"
   },
   "stats": [
-    { "label": "Years Experience", "value": "3+" },
-    { "label": "Projects Completed", "value": "20+" },
-    { "label": "Articles Written", "value": "12" },
-    { "label": "Open Source Contributions", "value": "100+" }
+    { "label": "Degree", "value": "B.Sc. SE" },
+    { "label": "University", "value": "BTH Sweden" },
+    { "label": "Research Focus", "value": "TDD & AI" },
+    { "label": "Leadership", "value": "Student Union" }
   ]
 }

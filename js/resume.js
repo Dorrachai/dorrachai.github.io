@@ -4,69 +4,73 @@
  */
 
 const fallbackResumeData = {
-  summary: "Full-Stack Software Engineer with expertise in building responsive web applications, robust cloud backend APIs, and developer productivity tools.",
+  summary: "Software Engineer with a B.Sc. in Software Engineering from Blekinge Institute of Technology (BTH). Specializing in Test-Driven Development (TDD), prompt engineering, and modern full-stack web application development.",
   experience: [
     {
-      role: "Senior Full-Stack Developer",
-      company: "Tech Innovations Lab",
-      period: "2024 - Present",
-      location: "Remote",
-      description: "Led frontend and backend development for high-traffic SaaS applications. Spearheaded transition to modern micro-frontends and CI/CD pipelines.",
+      role: "Software Engineering Researcher & Degree Project",
+      company: "Blekinge Institute of Technology (BTH)",
+      period: "2024 - 2025",
+      location: "Karlskrona, Sweden",
+      description: "Authored the research thesis 'Test-Driven Development: Exploring Prompt Engineering' investigating how AI-assisted prompt design improves TDD adoption and automated test creation.",
       highlights: [
-        "Architected scalable web apps handling 50k+ daily active users with 99.9% uptime",
-        "Improved web performance and Core Web Vitals (LCP < 1.2s, INP < 100ms)",
-        "Mentored junior developers and established automated testing standards"
+        "Conducted empirical research on prompt engineering strategies for AI-assisted Test-Driven Development",
+        "Evaluated test suite quality, code correctness, and developer productivity when integrating LLMs into the TDD cycle",
+        "Archived thesis research on the DiVA academic portal"
       ]
     },
     {
-      role: "Frontend / Web Developer",
-      company: "Digital Solutions Studio",
-      period: "2022 - 2024",
-      location: "Hybrid",
-      description: "Designed, developed, and maintained interactive user interfaces and client web portals across multiple industries.",
+      role: "Board Member & Student Representative",
+      company: "Blekinge Studentkår (Student Union)",
+      period: "2023 - 2024",
+      location: "Karlskrona, Sweden",
+      description: "Elected student representative managing student governance, university board communication, and student welfare initiatives.",
       highlights: [
-        "Built 15+ bespoke client web applications using modern JavaScript/TypeScript and CSS systems",
-        "Integrated REST and GraphQL APIs with real-time WebSocket state management",
-        "Achieved 100/100 Google Lighthouse scores for accessibility and SEO"
+        "Represented software engineering and technical students in university board meetings and quality councils",
+        "Coordinated academic advocacy, event planning, and student body operational strategies",
+        "Collaborated with faculty to improve curriculum feedback loops"
       ]
     },
     {
-      role: "Junior Software Engineer",
-      company: "NextGen Software",
-      period: "2021 - 2022",
-      location: "On-site",
-      description: "Developed backend microservices, database schemas, and unit test suites.",
+      role: "Full-Stack Software Developer",
+      company: "Independent & Open Source Projects",
+      period: "2022 - Present",
+      location: "Sweden / Remote",
+      description: "Architected and built web applications, developer CLI tooling, and minimal offline-first software.",
       highlights: [
-        "Implemented secure authentication and role-based access control (RBAC)",
-        "Authored API documentation and automated end-to-end integration tests"
+        "Developed full-stack web applications with modern TypeScript, React, and Node.js backend services",
+        "Applied rigorous unit testing and automated CI/CD workflows across projects",
+        "Built zero-build, accessible static web tools emphasizing performance and web standards"
       ]
     }
   ],
   education: [
     {
-      degree: "B.S. in Computer Science",
-      institution: "University of Technology",
-      period: "2017 - 2021",
-      details: "Focus on Software Engineering, Distributed Systems, Algorithms, and Human-Computer Interaction."
+      degree: "Bachelor of Science in Software Engineering",
+      institution: "Blekinge Institute of Technology (BTH)",
+      period: "2021 - 2025",
+      details: "Specialization in Software Engineering, Test-Driven Development (TDD), Distributed Systems, Algorithms, and Human-Computer Interaction."
     }
   ],
   certifications: [
     {
-      name: "Google Cloud Certified Professional Cloud Developer",
-      issuer: "Google Cloud",
-      year: "2024"
-    },
-    {
-      name: "Meta Frontend Developer Professional Certificate",
-      issuer: "Meta",
-      year: "2023"
+      name: "Thesis Publication: Test-Driven Development & Prompt Engineering",
+      issuer: "DiVA Academic Archive / BTH",
+      year: "2025"
     }
   ],
   skills: {
-    "Frontend": ["JavaScript (ES6+)", "TypeScript", "HTML5 & Semantic Web", "CSS3 / Modern CSS", "Tailwind CSS", "React", "Vue.js", "Web Performance"],
-    "Backend & APIs": ["Node.js", "Express", "Python", "REST APIs", "GraphQL", "PostgreSQL", "MongoDB", "Redis"],
-    "Cloud & DevOps": ["Git & GitHub", "GitHub Actions", "Docker", "Google Cloud Platform", "Firebase", "Vercel / Netlify", "CI/CD"],
-    "Tools & Practices": ["Agile / Scrum", "Test-Driven Development (Jest / Vitest)", "UI/UX Design (Figma)", "Accessibility (WCAG)", "SEO Optimization"]
+    "Core Engineering": [
+      "Test-Driven Development (TDD)", "Prompt Engineering & LLMs", "Unit & Integration Testing (Jest, Vitest)", "Clean Architecture", "Agile & Scrum"
+    ],
+    "Frontend": [
+      "TypeScript", "JavaScript (ES6+)", "React", "HTML5 & Semantic Web", "Modern CSS & Tailwind", "Web Performance"
+    ],
+    "Backend & Tools": [
+      "Node.js", "Express", "Python", "REST APIs", "Git & GitHub", "Docker", "CI/CD Workflows"
+    ],
+    "Communication & Research": [
+      "Empirical Research", "Technical Writing", "Student Governance & Leadership", "Cross-functional Collaboration"
+    ]
   }
 };
 
@@ -144,7 +148,7 @@ function renderSkills(skillsObj) {
   container.innerHTML = categories.map(([category, skills]) => `
     <div class="skill-group reveal-on-scroll">
       <h4 class="skill-group-title">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
         ${escapeHTML(category)}
       </h4>
       <div class="skill-chips-container">
