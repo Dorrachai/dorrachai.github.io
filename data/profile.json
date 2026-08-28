@@ -1,19 +1,12 @@
 {
   "name": "Theodore Reangpusri",
-  "title": "Software Engineer & Builder",
-  "bio": "Software Engineering graduate from Blekinge Institute of Technology (BTH) in Sweden. Passionate about clean architecture, Test-Driven Development (TDD), prompt engineering, and building thoughtful, resilient web applications.",
-  "location": "Sweden / Available Remote",
-  "email": "treangpusri8@gmail.com",
-  "availability": "Open to new engineering opportunities",
+  "title": "Software Engineer",
+  "bio": "Software Engineering graduate from Blekinge Institute of Technology (BTH) in Sweden. Focused on Test-Driven Development (TDD), prompt engineering, and building resilient web software.",
+  "location": "Sweden",
+  "email": "theodore.reangpusri@outlook.com",
   "socials": {
-    "github": "https://github.com/Dorrachai",
     "linkedin": "https://www.linkedin.com/in/theodore-reangpusri-a61b30162/",
-    "email": "mailto:treangpusri8@gmail.com"
-  },
-  "stats": [
-    { "label": "Degree", "value": "B.Sc. SE" },
-    { "label": "University", "value": "BTH Sweden" },
-    { "label": "Research Focus", "value": "TDD & AI" },
-    { "label": "Leadership", "value": "Student Union" }
-  ]
+    "github": "https://github.com/Dorrachai",
+    "email": "mailto:theodore.reangpusri@outlook.com"
+  }
 }

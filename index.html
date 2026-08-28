@@ -4,467 +4,288 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Theodore Reangpusri | Software Engineer</title>
-  <meta name="description" content="Personal portfolio, resume, projects, and research writings of Theodore Reangpusri — Software Engineer from Blekinge Institute of Technology (BTH).">
-  <meta name="keywords" content="Theodore Reangpusri, Software Engineer, BTH, Test-Driven Development, TDD, Prompt Engineering, Full-Stack, TypeScript, Sweden">
+  <meta name="description" content="Personal portfolio and research of Theodore Reangpusri — Software Engineer from Blekinge Institute of Technology (BTH).">
   <meta name="author" content="Theodore Reangpusri">
-
-  <!-- Open Graph / Social Sharing -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Theodore Reangpusri | Software Engineer">
-  <meta property="og:description" content="Software Engineer from BTH Sweden. Focused on Test-Driven Development, prompt engineering, and clean web applications.">
-  <meta property="og:image" content="assets/images/avatar.svg">
 
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 
-  <!-- Google Fonts (Fraunces + Plus Jakarta Sans) -->
+  <!-- Google Fonts: Fraunces & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/animations.css">
 
-  <!-- Theme Script -->
-  <script src="js/theme.js"></script>
+  <script>
+    // Immediate lightweight theme setup
+    const savedTheme = localStorage.getItem('theme-pref') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    if (savedTheme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+  </script>
 </head>
 <body>
 
-  <!-- Subtle Warm Ambient Glow -->
-  <div class="ambient-glow" aria-hidden="true"></div>
-
-  <!-- Header / Navigation -->
-  <header class="site-header">
-    <div class="container nav-container">
-      <a href="#home" class="brand-logo" aria-label="Theodore Reangpusri Home">
-        <span>Theodore<span style="color: var(--accent-primary);">.</span></span>
-      </a>
-
-      <!-- Desktop Navigation Menu -->
-      <nav aria-label="Main Navigation">
-        <ul class="nav-menu">
-          <li><a href="#home" class="nav-link active">Home</a></li>
+  <!-- Sticky Navigation -->
+  <header class="site-nav">
+    <div class="container nav-wrapper">
+      <a href="#home" class="nav-brand">Theodore R.</a>
+      <nav>
+        <ul class="nav-links">
           <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#resume" class="nav-link">Resume</a></li>
+          <li><a href="#education" class="nav-link">Education & Research</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#blog" class="nav-link">Writing</a></li>
+          <li><a href="#writing" class="nav-link">Writing</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li>
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode">
+              <span id="theme-icon">🌓</span>
+            </button>
+          </li>
         </ul>
       </nav>
-
-      <!-- Action Buttons -->
-      <div class="nav-actions">
-        <button class="btn-icon-only theme-toggle-btn" aria-label="Toggle dark/light mode" title="Toggle theme">
-          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-        </button>
-
-        <!-- Mobile Drawer Hamburger Toggle -->
-        <button class="mobile-toggle-btn" id="mobile-toggle-btn" aria-label="Open mobile menu">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-        </button>
-      </div>
     </div>
   </header>
 
-  <!-- Mobile Drawer -->
-  <aside class="mobile-nav-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
-    <div>
-      <div class="mobile-nav-header">
-        <span class="brand-logo">
-          <span>Theodore<span style="color: var(--accent-primary);">.</span></span>
-        </span>
-        <button class="btn-icon-only" id="mobile-drawer-close" aria-label="Close menu">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-        </button>
-      </div>
-      <ul class="mobile-nav-links">
-        <li><a href="#home" class="mobile-nav-link">Home</a></li>
-        <li><a href="#about" class="mobile-nav-link">About</a></li>
-        <li><a href="#resume" class="mobile-nav-link">Resume</a></li>
-        <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
-        <li><a href="#blog" class="mobile-nav-link">Writing</a></li>
-        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
-      </ul>
-    </div>
-    <div>
-      <a href="#contact" class="btn btn-primary" style="width: 100%;">Get In Touch</a>
-    </div>
-  </aside>
-  <div class="drawer-backdrop" id="drawer-backdrop"></div>
-
-  <main>
+  <main class="container">
     <!-- Hero Section -->
-    <section id="home" class="hero-section">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <div class="hero-badge reveal-on-scroll">
-            <span class="status-dot"></span>
-            <span>☕ Software Engineering Graduate • BTH Sweden</span>
+    <section id="home" class="hero">
+      <h1 class="hero-title">Theodore Reangpusri</h1>
+      <div class="hero-subtitle">Software Engineer • BTH Graduate</div>
+      <p class="hero-bio">
+        Software engineering graduate from Blekinge Institute of Technology (BTH) in Sweden. Passionate about Test-Driven Development (TDD), prompt engineering, and building resilient, thoughtful software systems.
+      </p>
+      <div class="hero-actions">
+        <a href="mailto:theodore.reangpusri@outlook.com" class="btn btn-primary">
+          <span>Get in Touch</span>
+        </a>
+        <a href="https://www.linkedin.com/in/theodore-reangpusri-a61b30162/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/Dorrachai" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          <span>GitHub</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- About & Focus -->
+    <section id="about" class="section">
+      <div class="section-header">
+        <h2 class="section-heading">About</h2>
+      </div>
+      <p style="margin-bottom: 16px;">
+        I hold a Bachelor of Science in Software Engineering from Blekinge Institute of Technology (BTH). My primary academic research investigated how AI prompt engineering can make Test-Driven Development (TDD) more accessible and effective for software engineers.
+      </p>
+      <p style="margin-bottom: 20px;">
+        Beyond technical engineering, I served as a board member in the Blekinge Student Union (Blekinge Studentkår), advocating for student welfare, curriculum quality, and cross-department collaboration.
+      </p>
+
+      <div class="pill-list">
+        <span class="pill">Test-Driven Development (TDD)</span>
+        <span class="pill">Prompt Engineering & LLMs</span>
+        <span class="pill">TypeScript & JavaScript</span>
+        <span class="pill">React</span>
+        <span class="pill">Node.js</span>
+        <span class="pill">Clean Architecture</span>
+        <span class="pill">Automated Testing (Jest / Vitest)</span>
+        <span class="pill">Git & CI/CD</span>
+      </div>
+    </section>
+
+    <!-- Education & Research Timeline -->
+    <section id="education" class="section">
+      <div class="section-header">
+        <h2 class="section-heading">Education & Experience</h2>
+      </div>
+
+      <div class="card-list">
+        <!-- Degree -->
+        <article class="item-card">
+          <div class="item-header">
+            <h3 class="item-title">B.Sc. in Software Engineering</h3>
+            <span class="item-badge">2021 – 2025</span>
           </div>
-
-          <h1 class="hero-title reveal-on-scroll reveal-delay-1">
-            Hi, I'm <span class="gradient-text">Theodore</span>.
-          </h1>
-
-          <div class="hero-subtitle reveal-on-scroll reveal-delay-2">
-            <span>I'm a </span>
-            <span id="typewriter-text" class="typewriter-text"></span>
-            <span class="typewriter-cursor">|</span>
-          </div>
-
-          <p class="hero-description reveal-on-scroll reveal-delay-3">
-            Software engineering graduate from Blekinge Institute of Technology (BTH). Focused on Test-Driven Development (TDD), prompt engineering, and building resilient web applications.
+          <div class="item-sub">Blekinge Institute of Technology (BTH) • Sweden</div>
+          <p class="item-desc">
+            Core focus on software architecture, distributed systems, algorithms, empirical software engineering, and software verification.
           </p>
+        </article>
 
-          <div class="hero-cta-group reveal-on-scroll">
-            <a href="#projects" class="btn btn-primary">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-              Explore Work
-            </a>
-            <a href="#resume" class="btn btn-secondary">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
-              View Resume
+        <!-- Thesis -->
+        <article class="item-card">
+          <div class="item-header">
+            <h3 class="item-title">Degree Thesis: Test-Driven Development & Prompt Engineering</h3>
+            <span class="item-badge">2024 – 2025</span>
+          </div>
+          <div class="item-sub">Published on DiVA Portal • Co-authored with Cassandra Flur</div>
+          <p class="item-desc">
+            Investigated prompt design patterns and LLM-assisted scaffolding for unit test creation, evaluating its impact on developer productivity and test suite quality.
+          </p>
+          <div class="project-links">
+            <a href="https://diva-portal.org" target="_blank" rel="noopener noreferrer" class="link-btn">
+              View on DiVA Archive ↗
             </a>
           </div>
+        </article>
 
-          <div class="social-links-row reveal-on-scroll">
-            <a href="https://www.linkedin.com/in/theodore-reangpusri-a61b30162/" target="_blank" rel="noopener noreferrer" class="btn-icon-only" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-            </a>
-            <a href="https://github.com/Dorrachai" target="_blank" rel="noopener noreferrer" class="btn-icon-only" aria-label="GitHub">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-            </a>
-            <a href="mailto:treangpusri8@gmail.com" class="btn-icon-only" aria-label="Email Me">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            </a>
+        <!-- Student Union -->
+        <article class="item-card">
+          <div class="item-header">
+            <h3 class="item-title">Board Member & Student Representative</h3>
+            <span class="item-badge">2023 – 2024</span>
           </div>
-        </div>
-
-        <!-- Hero Visual / Avatar Card -->
-        <div class="hero-visual reveal-on-scroll">
-          <div class="avatar-card">
-            <!-- Floating Badges -->
-            <div class="floating-stat-badge badge-top-left">
-              <div class="stat-icon-box">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
-              </div>
-              <div class="stat-info">
-                <div class="stat-number">B.Sc. SE</div>
-                <div class="stat-text">BTH Sweden</div>
-              </div>
-            </div>
-
-            <div class="floating-stat-badge badge-bottom-right">
-              <div class="stat-icon-box">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path><circle cx="12" cy="12" r="4"></circle></svg>
-              </div>
-              <div class="stat-info">
-                <div class="stat-number">TDD & AI</div>
-                <div class="stat-text">Research</div>
-              </div>
-            </div>
-
-            <div class="avatar-img-wrapper">
-              <img src="assets/images/avatar.svg" alt="Theodore Reangpusri Avatar" width="120" height="120">
-            </div>
-            <h2 class="avatar-name">Theodore</h2>
-            <p class="avatar-role">Software Engineer</p>
-            <div class="avatar-chips">
-              <span class="skill-chip">TDD</span>
-              <span class="skill-chip">TypeScript</span>
-              <span class="skill-chip">Prompt Eng</span>
-              <span class="skill-chip">React</span>
-            </div>
-          </div>
-        </div>
+          <div class="item-sub">Blekinge Studentkår (Student Union) • Karlskrona, Sweden</div>
+          <p class="item-desc">
+            Elected representative managing student governance, representing technical students on university boards, and coordinating academic initiatives.
+          </p>
+        </article>
       </div>
     </section>
 
-    <!-- About & Skills Section -->
-    <section id="about" class="section section-alt">
-      <div class="container">
-        <div class="section-header reveal-on-scroll">
-          <span class="section-tag">About Me</span>
-          <h2 class="section-title">Software Engineering with Purpose</h2>
-          <p class="section-subtitle">A glimpse into my background, research, and technical tools.</p>
-        </div>
+    <!-- Selected Projects -->
+    <section id="projects" class="section">
+      <div class="section-header">
+        <h2 class="section-heading">Selected Projects</h2>
+      </div>
 
-        <div class="about-grid">
-          <!-- Story Card -->
-          <div class="card reveal-on-scroll">
-            <h3 style="font-size: 1.45rem; margin-bottom: 16px;">Rigorous Engineering & Craft</h3>
-            <p style="margin-bottom: 16px;">
-              I hold a Bachelor of Science in Software Engineering from <strong>Blekinge Institute of Technology (BTH)</strong> in Sweden. My academic research investigated the intersection of <em>Test-Driven Development (TDD)</em> and generative AI prompt engineering.
-            </p>
-            <p style="margin-bottom: 24px;">
-              I believe in clean, well-tested code, reproducible systems, and developer tools that feel calming and delightful to use. I've also had the privilege of serving as a board member in the Blekinge Student Union, advocating for academic quality and student initiatives.
-            </p>
-
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding-top: 20px; border-top: 1px solid var(--border-color);">
-              <div>
-                <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600;">Location</div>
-                <div style="font-weight: 600; font-family: var(--font-heading);">Sweden (Remote Open)</div>
-              </div>
-              <div>
-                <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600;">Specialty</div>
-                <div style="font-weight: 600; font-family: var(--font-heading);">TDD, AI & Web Systems</div>
-              </div>
-            </div>
+      <div class="card-list">
+        <article class="item-card">
+          <div class="item-header">
+            <h3 class="item-title">TDD & Prompt Engineering Framework</h3>
+            <span class="item-badge">AI & Research</span>
           </div>
-
-          <!-- Skills Card -->
-          <div class="card reveal-on-scroll" id="skills-container">
-            <!-- Dynamic skills rendered by js/resume.js -->
+          <p class="item-desc">
+            Empirical tooling and prompt workflows designed to streamline test-first development and automated test generation with LLMs.
+          </p>
+          <div class="pill-list">
+            <span class="pill">TDD</span>
+            <span class="pill">Prompt Engineering</span>
+            <span class="pill">Testing</span>
           </div>
-        </div>
+          <div class="project-links">
+            <a href="https://github.com/Dorrachai" target="_blank" rel="noopener noreferrer" class="link-btn">Source on GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="item-card">
+          <div class="item-header">
+            <h3 class="item-title">CloudVault — Secure Storage Platform</h3>
+            <span class="item-badge">Full-Stack</span>
+          </div>
+          <p class="item-desc">
+            Encrypted file sharing application with client-side AES-GCM encryption, chunked uploads, and workspace permission management.
+          </p>
+          <div class="pill-list">
+            <span class="pill">Node.js</span>
+            <span class="pill">PostgreSQL</span>
+            <span class="pill">Web Crypto API</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Dorrachai" target="_blank" rel="noopener noreferrer" class="link-btn">Source on GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="item-card">
+          <div class="item-header">
+            <h3 class="item-title">DevFlow — CLI Workflow Automator</h3>
+            <span class="item-badge">Developer Tooling</span>
+          </div>
+          <p class="item-desc">
+            A developer CLI utility for bootstrapping projects, managing local environment configurations, and automating git workflows.
+          </p>
+          <div class="pill-list">
+            <span class="pill">CLI</span>
+            <span class="pill">GitHub Actions</span>
+            <span class="pill">Docker</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Dorrachai" target="_blank" rel="noopener noreferrer" class="link-btn">Source on GitHub ↗</a>
+          </div>
+        </article>
       </div>
     </section>
 
-    <!-- Resume & Experience Section -->
-    <section id="resume" class="section">
-      <div class="container">
-        <div class="section-header reveal-on-scroll">
-          <span class="section-tag">Journey</span>
-          <h2 class="section-title">Experience & Education</h2>
-          <p class="section-subtitle">A timeline of software research, student governance, and full-stack development.</p>
-        </div>
+    <!-- Writing / Notes -->
+    <section id="writing" class="section">
+      <div class="section-header">
+        <h2 class="section-heading">Writing & Essays</h2>
+      </div>
 
-        <div class="resume-section-wrapper">
-          <!-- Experience Column -->
-          <div>
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px;">
-              <h3 style="font-size: 1.45rem; display: flex; align-items: center; gap: 10px;">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-                Experience & Research
-              </h3>
-            </div>
-            <div class="timeline" id="experience-timeline">
-              <!-- Rendered dynamically -->
-            </div>
-          </div>
+      <div class="card-list">
+        <article class="article-item">
+          <div class="article-meta">June 2025 • Research Insights</div>
+          <h3 class="article-title">Exploring Test-Driven Development with AI Prompt Engineering</h3>
+          <p class="item-desc">
+            A summary of findings from our BTH research on how structured prompt engineering can assist developers in defining unit test boundaries and improving code quality.
+          </p>
+        </article>
 
-          <!-- Education & Certifications Column -->
-          <div>
-            <div style="margin-bottom: 40px;">
-              <h3 style="font-size: 1.45rem; display: flex; align-items: center; gap: 10px; margin-bottom: 24px;">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
-                Education
-              </h3>
-              <div class="timeline" id="education-timeline">
-                <!-- Rendered dynamically -->
-              </div>
-            </div>
-
-            <div class="card reveal-on-scroll">
-              <h3 style="font-size: 1.3rem; display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                Publications & Honors
-              </h3>
-              <div id="certifications-list">
-                <!-- Rendered dynamically -->
-              </div>
-            </div>
-          </div>
-        </div>
+        <article class="article-item">
+          <div class="article-meta">January 2026 • Web Craft</div>
+          <h3 class="article-title">The Renaissance of Zero-Build Static Websites</h3>
+          <p class="item-desc">
+            Why modern HTML5, CSS custom properties, and native ES modules make zero-dependency static web pages faster, cleaner, and more resilient than ever.
+          </p>
+        </article>
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section section-alt">
-      <div class="container">
-        <div class="section-header reveal-on-scroll">
-          <span class="section-tag">Portfolio</span>
-          <h2 class="section-title">Selected Projects & Research</h2>
-          <p class="section-subtitle">Empirical research, developer tools, and web applications I've developed.</p>
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="contact-box">
+        <h2 class="section-heading">Get in Touch</h2>
+        <p>Feel free to reach out for engineering opportunities, collaborations, or questions about my research.</p>
+        
+        <div>
+          <a href="mailto:theodore.reangpusri@outlook.com" class="contact-email">theodore.reangpusri@outlook.com</a>
         </div>
 
-        <!-- Filter Tabs -->
-        <div class="filter-tabs reveal-on-scroll">
-          <button class="filter-btn active" data-filter="all">All Work</button>
-          <button class="filter-btn" data-filter="ai">AI & Research</button>
-          <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
-          <button class="filter-btn" data-filter="tools">Developer Tools</button>
-          <button class="filter-btn" data-filter="web">Web Apps</button>
-        </div>
-
-        <!-- Projects Grid -->
-        <div class="projects-grid" id="projects-grid">
-          <!-- Rendered dynamically by js/projects.js -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section id="blog" class="section">
-      <div class="container">
-        <div class="section-header reveal-on-scroll">
-          <span class="section-tag">Writing</span>
-          <h2 class="section-title">Essays & Articles</h2>
-          <p class="section-subtitle">Research insights on Test-Driven Development, prompt engineering, and web craft.</p>
-        </div>
-
-        <!-- Search input for blog -->
-        <div style="max-width: 440px; margin: 0 auto 40px auto;" class="reveal-on-scroll">
-          <input type="text" id="blog-search-input" class="form-control" placeholder="Search essays by keyword..." aria-label="Search articles">
-        </div>
-
-        <!-- Blog Grid -->
-        <div class="blog-grid" id="blog-grid">
-          <!-- Rendered dynamically by js/blog.js -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section section-alt">
-      <div class="container">
-        <div class="section-header reveal-on-scroll">
-          <span class="section-tag">Say Hello</span>
-          <h2 class="section-title">Get In Touch</h2>
-          <p class="section-subtitle">Interested in discussing software engineering, TDD research, or potential collaborations?</p>
-        </div>
-
-        <div class="contact-grid">
-          <!-- Contact Info -->
-          <div class="card reveal-on-scroll">
-            <h3 style="font-size: 1.45rem; margin-bottom: 12px;">Contact Information</h3>
-            <p style="margin-bottom: 24px;">Feel free to send an email or connect on LinkedIn.</p>
-
-            <div class="contact-info-list">
-              <div class="contact-info-item">
-                <div class="contact-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                </div>
-                <div>
-                  <div class="contact-label">Email</div>
-                  <div class="contact-val">treangpusri8@gmail.com</div>
-                </div>
-              </div>
-
-              <div class="contact-info-item">
-                <div class="contact-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                </div>
-                <div>
-                  <div class="contact-label">LinkedIn</div>
-                  <div class="contact-val">Theodore Reangpusri</div>
-                </div>
-              </div>
-
-              <div class="contact-info-item">
-                <div class="contact-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
-                </div>
-                <div>
-                  <div class="contact-label">Location</div>
-                  <div class="contact-val">Sweden / Available Remote</div>
-                </div>
-              </div>
-            </div>
-
-            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border-color);">
-              <button id="copy-email-btn" class="btn btn-secondary btn-sm" style="width: 100%;">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                Copy Email to Clipboard
-              </button>
-            </div>
-          </div>
-
-          <!-- Contact Form -->
-          <div class="card reveal-on-scroll">
-            <h3 style="font-size: 1.45rem; margin-bottom: 20px;">Send a Message</h3>
-            <form id="contact-form">
-              <div class="form-group">
-                <label for="contact-name" class="form-label">Your Name</label>
-                <input type="text" id="contact-name" class="form-control" placeholder="Alex Morgan" required>
-              </div>
-
-              <div class="form-group">
-                <label for="contact-email" class="form-label">Your Email</label>
-                <input type="email" id="contact-email" class="form-control" placeholder="alex@example.com" required>
-              </div>
-
-              <div class="form-group">
-                <label for="contact-message" class="form-label">Your Message</label>
-                <textarea id="contact-message" class="form-control" placeholder="Hi Theodore, I'd like to discuss..." required></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-primary" style="width: 100%;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-                Send Message
-              </button>
-            </form>
-          </div>
+        <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+          <button id="copy-email-btn" class="btn btn-secondary">
+            <span>📋 Copy Email</span>
+          </button>
+          <a href="https://www.linkedin.com/in/theodore-reangpusri-a61b30162/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            <span>Connect on LinkedIn</span>
+          </a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-top">
-        <a href="#home" class="brand-logo">
-          <span>Theodore<span style="color: var(--accent-primary);">.</span></span>
-        </a>
-        <div class="social-links-row">
-          <a href="https://www.linkedin.com/in/theodore-reangpusri-a61b30162/" target="_blank" rel="noopener noreferrer" class="btn-icon-only" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-          </a>
-          <a href="https://github.com/Dorrachai" target="_blank" rel="noopener noreferrer" class="btn-icon-only" aria-label="GitHub">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-          </a>
-          <a href="mailto:treangpusri8@gmail.com" class="btn-icon-only" aria-label="Email">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-          </a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div>Handcrafted by Theodore Reangpusri</div>
-        <div>© <span id="current-year">2026</span> All rights reserved.</div>
-      </div>
+      <div>Theodore Reangpusri • Software Engineer</div>
     </div>
   </footer>
 
-  <!-- Back to top button -->
-  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
-  </button>
+  <script>
+    // Lightweight Theme Toggle
+    const toggleBtn = document.getElementById('theme-toggle');
+    const root = document.documentElement;
 
-  <!-- Project Detail Modal -->
-  <div class="modal-overlay" id="project-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
-    <div class="modal-container">
-      <div class="modal-header">
-        <h3 class="modal-title" id="project-modal-title">Project Details</h3>
-        <button class="modal-close-btn" id="project-modal-close" aria-label="Close modal">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-        </button>
-      </div>
-      <div class="modal-body" id="project-modal-body">
-        <!-- Content inserted dynamically -->
-      </div>
-    </div>
-  </div>
+    toggleBtn.addEventListener('click', () => {
+      const isDark = root.getAttribute('data-theme') === 'dark';
+      if (isDark) {
+        root.removeAttribute('data-theme');
+        localStorage.setItem('theme-pref', 'light');
+      } else {
+        root.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme-pref', 'dark');
+      }
+    });
 
-  <!-- Blog Article Reader Modal -->
-  <div class="modal-overlay" id="blog-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="blog-modal-title">
-    <div class="modal-container">
-      <div class="modal-header">
-        <h3 class="modal-title" id="blog-modal-title">Article</h3>
-        <button class="modal-close-btn" id="blog-modal-close" aria-label="Close article">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-        </button>
-      </div>
-      <div class="modal-body" id="blog-modal-body">
-        <!-- Article content inserted dynamically -->
-      </div>
-    </div>
-  </div>
-
-  <!-- Scripts -->
-  <script type="module" src="js/main.js"></script>
+    // Copy Email Action
+    const copyBtn = document.getElementById('copy-email-btn');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', () => {
+        const email = 'theodore.reangpusri@outlook.com';
+        navigator.clipboard.writeText(email).then(() => {
+          const orig = copyBtn.innerHTML;
+          copyBtn.innerHTML = '<span>✔ Copied to Clipboard</span>';
+          setTimeout(() => { copyBtn.innerHTML = orig; }, 2000);
+        }).catch(() => {
+          alert('Email: ' + email);
+        });
+      });
+    }
+  </script>
 </body>
 </html>
