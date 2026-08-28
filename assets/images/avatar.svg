@@ -1,19 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
   <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1e293b"/>
-      <stop offset="100%" stop-color="#0f172a"/>
+    <linearGradient id="warmBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f3ede2"/>
+      <stop offset="100%" stop-color="#ebe4d8"/>
     </linearGradient>
-    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#3b82f6"/>
-      <stop offset="100%" stop-color="#06b6d4"/>
+    <linearGradient id="terracottaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b86b3b"/>
+      <stop offset="100%" stop-color="#d48b55"/>
     </linearGradient>
   </defs>
-  <rect width="200" height="200" rx="100" fill="url(#bgGrad)"/>
-  <!-- Programmer / Developer Icon Motif -->
-  <circle cx="100" cy="70" r="32" fill="#38bdf8" opacity="0.9"/>
-  <path d="M50 160 C50 120, 70 115, 100 115 C130 115, 150 120, 150 160 Z" fill="#2563eb" opacity="0.95"/>
-  <!-- Code Symbol Accent -->
-  <circle cx="145" cy="55" r="18" fill="url(#primaryGrad)"/>
-  <path d="M141 50 L136 55 L141 60 M149 50 L154 55 L149 60" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <rect width="200" height="200" rx="100" fill="url(#warmBg)"/>
+  <!-- Minimalist Monogram / Soft Icon -->
+  <circle cx="100" cy="74" r="32" fill="url(#terracottaGrad)"/>
+  <path d="M52 160 C52 122, 72 118, 100 118 C128 118, 148 122, 148 160 Z" fill="#2e2824" opacity="0.85"/>
+  <!-- Gentle coffee / warm spark accent -->
+  <circle cx="146" cy="56" r="16" fill="url(#terracottaGrad)"/>
+  <text x="146" y="61" font-family="'Fraunces', serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">✦</text>
 </svg>

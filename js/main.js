@@ -33,10 +33,10 @@ function setupTypewriter() {
   if (!target) return;
 
   const roles = [
-    "Full-Stack Software Engineer",
-    "Cloud & AI Systems Builder",
-    "Open-Source Contributor",
-    "Modern Web Architect"
+    "Software Engineer & Builder",
+    "Crafting Thoughtful Web Tools",
+    "Writer & Minimalist",
+    "Cozy Systems Tinkerer"
   ];
 
   let roleIndex = 0;
