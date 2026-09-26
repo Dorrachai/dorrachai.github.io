@@ -1,5 +1,21 @@
 [
   {
+    "id": "quantitative-event-risk-engine",
+    "title": "Pulse Engine — Quantitative Time-Series & AI Event-Risk Pipeline",
+    "description": "Zero-dependency Python 3.11 screening architecture combining deterministic time-series technical regime filtering (200-day SMA & Wilder's 14-period RSI) with LLM-grounded news catalyst risk classification and idempotent CI/CD webhook dispatch.",
+    "category": "ai",
+    "featured": true,
+    "tags": ["Python 3.11", "Time-Series Analysis", "LLM Risk Classification", "GitHub Actions CI/CD", "Zero-Dependency", "TDD"],
+    "github": "https://github.com/Dorrachai",
+    "demo": "#projects",
+    "highlights": [
+      "Zero-dependency mathematical indicator core (200-period SMA, Wilder's 14-period smoothed RSI, ATR) in pure Python standard library",
+      "LLM search-grounded unstructured catalyst & regulatory disclosure classifier (APPROVED / CAUTION / AVOID) to filter statistical false positives",
+      "Stateful integer lot-sizing & capital-recycling JSON state machine with timezone-aware daily idempotency locks and 150+ oracle-verified tests",
+      "Educational software engineering & algorithmic architecture case study (non-advisory, independent of any financial institution or brokerage)"
+    ]
+  },
+  {
     "id": "tdd-prompt-engineering",
     "title": "TDD & Prompt Engineering Research",
     "description": "Degree research exploring how AI prompt engineering can assist developers in writing unit tests, structuring test cases, and adopting Test-Driven Development (TDD).",
