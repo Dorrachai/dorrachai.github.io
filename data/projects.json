@@ -1,7 +1,7 @@
 [
   {
     "id": "pulse-bot-market-scanner",
-    "title": "Pulse Bot — Market Scanner & Discord Alerts",
+    "title": "Pulse Bot - Market Scanner & Discord Alerts",
     "description": "An automated daily scanner built in pure Python that tracks market trends, checks news headlines with Gemini to spot sudden company risks, and sends clean summary cards to Discord via webhooks before the market opens.",
     "category": "ai",
     "featured": true,
@@ -9,7 +9,7 @@
     "github": "https://github.com/Dorrachai",
     "demo": "#projects",
     "highlights": [
-      "Built with pure Python standard library — zero third-party package dependencies",
+      "Built with pure Python standard library and zero third-party package dependencies",
       "Uses Gemini to scan recent news headlines and flag sudden events (profit warnings, unexpected news)",
       "Formats and sends clean, color-coded daily summary cards to Discord via webhooks",
       "Runs automatically every weekday morning on GitHub Actions with automated state tracking"
