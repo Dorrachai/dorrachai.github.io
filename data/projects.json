@@ -1,18 +1,18 @@
 [
   {
-    "id": "quantitative-event-risk-engine",
-    "title": "Pulse Engine — Quantitative Time-Series & AI Event-Risk Pipeline",
-    "description": "Zero-dependency Python 3.11 screening architecture combining deterministic time-series technical regime filtering (200-day SMA & Wilder's 14-period RSI) with LLM-grounded news catalyst risk classification and idempotent CI/CD webhook dispatch.",
+    "id": "pulse-bot-market-scanner",
+    "title": "Pulse Bot — Market Scanner & Discord Alerts",
+    "description": "An automated daily scanner built in pure Python that tracks market trends, checks news headlines with Gemini to spot sudden company risks, and sends clean summary cards to Discord via webhooks before the market opens.",
     "category": "ai",
     "featured": true,
-    "tags": ["Python 3.11", "Time-Series Analysis", "LLM Risk Classification", "GitHub Actions CI/CD", "Zero-Dependency", "TDD"],
+    "tags": ["Python", "Discord Webhooks", "GitHub Actions", "Gemini API", "Automation"],
     "github": "https://github.com/Dorrachai",
     "demo": "#projects",
     "highlights": [
-      "Zero-dependency mathematical indicator core (200-period SMA, Wilder's 14-period smoothed RSI, ATR) in pure Python standard library",
-      "LLM search-grounded unstructured catalyst & regulatory disclosure classifier (APPROVED / CAUTION / AVOID) to filter statistical false positives",
-      "Stateful integer lot-sizing & capital-recycling JSON state machine with timezone-aware daily idempotency locks and 150+ oracle-verified tests",
-      "Educational software engineering & algorithmic architecture case study (non-advisory, independent of any financial institution or brokerage)"
+      "Built with pure Python standard library — zero third-party package dependencies",
+      "Uses Gemini to scan recent news headlines and flag sudden events (profit warnings, unexpected news)",
+      "Formats and sends clean, color-coded daily summary cards to Discord via webhooks",
+      "Runs automatically every weekday morning on GitHub Actions with automated state tracking"
     ]
   },
   {

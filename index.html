@@ -296,48 +296,48 @@
         </div>
 
         <div class="split-grid">
-          <!-- Card 1: Core Problem & Technical Solution -->
+          <!-- Card 1: What it does & How it works -->
           <div class="info-card">
             <div>
-              <div class="card-label">Featured Architecture Case Study &bull; Python &amp; Applied AI</div>
-              <h3 class="card-title">Quantitative Time-Series &amp; LLM Event-Risk Pipeline</h3>
+              <div class="card-label">Automation &bull; Python &amp; LLM</div>
+              <h3 class="card-title">Automated Market Scanner &amp; Discord Alerts</h3>
 
               <p style="font-size: 0.9rem; color: var(--text-dim); line-height: 1.6; margin-bottom: 16px;">
-                An automated, zero-dependency <strong>Python 3.11</strong> data pipeline engineered to solve the classic statistical <em>&ldquo;falling knife&rdquo;</em> false-positive problem in technical time-series screening. Traditional mean-reversion indicators frequently trigger when an asset drops due to fundamental breakdowns; this system pairs deterministic mathematical regime filters with an <strong>LLM-grounded unstructured event-risk classifier</strong> that automatically vetoes high-risk anomalies before outbound webhook dispatch.
+                A daily automation tool written in pure Python that tracks market pullbacks. It runs standard technical checks (like 200-day moving averages and RSI) to identify potential setups, then asks Gemini to quickly check recent news headlines for sudden risks (such as profit warnings or unexpected company events). Every weekday morning before market open, it formats a clean summary card and sends it to a private Discord channel via webhooks.
               </p>
 
               <div class="thesis-box" style="margin-bottom: 16px;">
-                <div class="thesis-title">4-Stage Deterministic + AI Veto Pipeline</div>
-                <div class="thesis-meta">OHLCV Ingestion &rarr; SMA-200 / Wilder RSI-14 Filter &rarr; LLM Catalyst Veto &rarr; Idempotent Webhook</div>
+                <div class="thesis-title">Daily Pipeline Flow</div>
+                <div class="thesis-meta">Market Data &rarr; Technical Filters &rarr; Gemini News Check &rarr; Discord Webhook Digest</div>
               </div>
 
               <div class="stack-cat-title" style="margin-bottom: 8px; font-size: 0.75rem;">Click a badge to feed the aquarium</div>
               <div class="stack-tags">
-                <span class="stack-badge" data-tech="Python">Python 3.11 (Stdlib)</span>
-                <span class="stack-badge" data-tech="AI Agents">LLM Risk Classifier</span>
-                <span class="stack-badge" data-tech="GitLab CI">GitHub Actions Cron</span>
-                <span class="stack-badge" data-tech="REST APIs">Outbound Webhooks</span>
-                <span class="stack-badge" data-tech="TDD">150+ Oracle Tests</span>
+                <span class="stack-badge" data-tech="Python">Python 3.11</span>
+                <span class="stack-badge" data-tech="REST APIs">Discord Webhooks</span>
+                <span class="stack-badge" data-tech="GitLab CI">GitHub Actions</span>
+                <span class="stack-badge" data-tech="AI Agents">Gemini API</span>
+                <span class="stack-badge" data-tech="TDD">Automated Testing</span>
               </div>
             </div>
           </div>
 
-          <!-- Card 2: Engineering Highlights & Legal/Compliance Scope -->
+          <!-- Card 2: Key Features & Safety Note -->
           <div class="info-card">
             <div>
-              <div class="card-label">System Engineering &amp; Verification</div>
-              <h3 class="card-title">Key Architectural Pillars</h3>
+              <div class="card-label">Engineering Details</div>
+              <h3 class="card-title">How It Was Built</h3>
 
               <ul class="leadership-list" style="margin-top: 12px; margin-bottom: 16px;">
-                <li><strong>Zero-Dependency Mathematical Core:</strong> Implemented textbook 200-period Simple Moving Average (SMA) trend filters, J. Welles Wilder&rsquo;s 14-period smoothed Relative Strength Index (RSI), and Average True Range (ATR) purely in the Python standard library.</li>
-                <li><strong>Unstructured Catalyst &amp; Risk Veto Layer:</strong> Built a search-grounded LLM classification stage evaluating 7-day news catalysts and public regulatory filings to categorize setups into <code>APPROVED</code>, <code>CAUTION</code>, or <code>AVOID</code>.</li>
-                <li><strong>Stateful Lot-Sizing &amp; Idempotent CI/CD:</strong> Designed an atomic JSON state machine modeling integer unit sizing, realized-gain capital separation, timezone-aware same-day idempotency locks, and multi-window scheduled GitHub Actions workflows.</li>
-                <li><strong>4-Tier Ground-Truth Test Suite:</strong> Verified via 150+ offline unit and end-to-end tests backed by an independent mathematical oracle and 250-bar synthetic time-series fixtures.</li>
+                <li><strong>Zero External Dependencies:</strong> Written entirely with Python&rsquo;s standard library, keeping execution fast, light, and secure.</li>
+                <li><strong>News Risk Verification:</strong> Uses Gemini with Google search grounding to verify price dips aren&rsquo;t caused by bad breaking news or structural issues.</li>
+                <li><strong>Automated Discord Webhooks:</strong> Posts rich, color-coded embed cards with profit targets, stop-loss levels, and quick reference links.</li>
+                <li><strong>Scheduled Cloud Workflows:</strong> Runs automatically on GitHub Actions each weekday morning and tracks portfolio balances in a simple state file.</li>
               </ul>
 
               <div class="thesis-box">
-                <div class="thesis-title">Compliance &amp; Non-Advisory Scope</div>
-                <div class="thesis-meta">Independent open-source software engineering &amp; quantitative systems research case study. Unaffiliated with any financial institution, brokerage, or exchange; does not execute trades or constitute financial/investment advice.</div>
+                <div class="thesis-title">Note</div>
+                <div class="thesis-meta">Personal automation and software engineering project. For educational and research purposes only, not financial advice.</div>
               </div>
             </div>
           </div>
