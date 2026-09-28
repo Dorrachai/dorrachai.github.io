@@ -368,8 +368,11 @@
     </div>
   </footer>
 
-  <!-- Project Details Modal Dialog -->
-  <div class="project-modal-backdrop" id="pulse-bot-modal" role="dialog" aria-modal="true" aria-labelledby="modal-pulse-title" hidden>
+  <!-- Project Details Modal Backdrop (Independent static blur layer) -->
+  <div class="project-modal-backdrop" id="pulse-bot-modal-backdrop" hidden></div>
+
+  <!-- Project Details Modal Dialog Wrapper (Dedicated scroll context) -->
+  <div class="project-modal-wrapper" id="pulse-bot-modal" role="dialog" aria-modal="true" aria-labelledby="modal-pulse-title" hidden>
     <div class="project-modal-dialog">
       <button class="project-modal-close" id="pulse-bot-modal-close" type="button" aria-label="Close dialog">&times;</button>
       
@@ -942,6 +945,7 @@
     // Project Details Modal Dialog Controller
     const projectCard = document.getElementById('card-pulse-bot');
     const projectModal = document.getElementById('pulse-bot-modal');
+    const projectModalBackdrop = document.getElementById('pulse-bot-modal-backdrop');
     const projectModalClose = document.getElementById('pulse-bot-modal-close');
 
     function openProjectModal() {
@@ -951,8 +955,10 @@
         cancelAnimationFrame(animationFrameId);
         animationFrameId = null;
       }
+      if (projectModalBackdrop) projectModalBackdrop.hidden = false;
       projectModal.hidden = false;
       requestAnimationFrame(() => {
+        if (projectModalBackdrop) projectModalBackdrop.classList.add('is-open');
         projectModal.classList.add('is-open');
       });
       document.body.style.overflow = 'hidden';
@@ -961,6 +967,7 @@
 
     function closeProjectModal() {
       if (!projectModal) return;
+      if (projectModalBackdrop) projectModalBackdrop.classList.remove('is-open');
       projectModal.classList.remove('is-open');
       document.body.style.overflow = '';
       if (isModalOpen) {
@@ -970,6 +977,7 @@
         }
       }
       setTimeout(() => {
+        if (projectModalBackdrop) projectModalBackdrop.hidden = true;
         projectModal.hidden = true;
         if (projectCard) projectCard.focus();
       }, 250);
@@ -997,6 +1005,10 @@
       });
     }
 
+    if (projectModalBackdrop) {
+      projectModalBackdrop.addEventListener('click', closeProjectModal);
+    }
+
     if (projectModal) {
       projectModal.addEventListener('click', (e) => {
         if (e.target === projectModal) {
@@ -1008,6 +1020,32 @@
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && projectModal && !projectModal.hidden) {
         closeProjectModal();
+      }
+    });
+
+    // Keep URL completely static during navigation and scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', (e) => {
+        const hash = anchor.getAttribute('href');
+        if (!hash || hash === '#') return;
+        const target = document.querySelector(hash);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+          if (window.location.hash) {
+            history.replaceState(null, '', window.location.pathname + window.location.search);
+          }
+        }
+      });
+    });
+
+    // Strip hash if page loaded with one or if hashchange fires
+    if (window.location.hash) {
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+    window.addEventListener('hashchange', () => {
+      if (window.location.hash) {
+        history.replaceState(null, '', window.location.pathname + window.location.search);
       }
     });
 
