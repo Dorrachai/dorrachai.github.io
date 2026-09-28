@@ -101,7 +101,6 @@ body::before {
   right: -120px;
   pointer-events: none;
   z-index: 0;
-  filter: blur(90px);
 }
 
 /* Equalizer Minimal Lofi Animation */
@@ -148,16 +147,13 @@ body::before {
   left: 0;
   right: 0;
   z-index: 50;
-  background: rgba(18, 16, 19, 0.88);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(13, 19, 16, 0.95);
   border-bottom: 1px solid var(--line);
-  transform: translateZ(0);
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 [data-theme="light"] .header {
-  background: rgba(247, 244, 236, 0.90);
+  background: rgba(244, 248, 245, 0.95);
 }
 
 .nav {
@@ -390,9 +386,7 @@ body::before {
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
   position: relative;
-  transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
-  transform: translateZ(0);
-  will-change: transform;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 [data-theme="light"] .aquarium-card {
@@ -411,8 +405,6 @@ body::before {
   border-color: var(--ember);
   border-radius: 12px;
   animation: pipSlideIn 0.35s var(--ease-smooth);
-  transform: translateZ(0);
-  will-change: transform;
 }
 
 .aquarium-card.is-pip .aquarium-viewport {
@@ -1141,7 +1133,7 @@ body::before {
 
 .reveal.active {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
 
 /* ==========================================================================

@@ -947,42 +947,6 @@
     const projectModalBackdrop = document.getElementById('pulse-bot-modal-backdrop');
     const projectModalClose = document.getElementById('pulse-bot-modal-close');
 
-    // Kinetic smooth wheel interpolation for modal viewport
-    let modalTargetScroll = 0;
-    let modalCurrentScroll = 0;
-    let isModalScrolling = false;
-
-    function smoothModalScroll() {
-      if (!projectModal) return;
-      const diff = modalTargetScroll - modalCurrentScroll;
-      if (Math.abs(diff) > 0.5) {
-        modalCurrentScroll += diff * 0.12;
-        projectModal.scrollTop = modalCurrentScroll;
-        requestAnimationFrame(smoothModalScroll);
-      } else {
-        modalCurrentScroll = modalTargetScroll;
-        projectModal.scrollTop = modalCurrentScroll;
-        isModalScrolling = false;
-      }
-    }
-
-    if (projectModal) {
-      projectModal.addEventListener('wheel', (e) => {
-        const maxScroll = projectModal.scrollHeight - projectModal.clientHeight;
-        if (maxScroll <= 0) return;
-
-        e.preventDefault();
-        modalTargetScroll += e.deltaY * 0.8;
-        modalTargetScroll = Math.max(0, Math.min(modalTargetScroll, maxScroll));
-
-        if (!isModalScrolling) {
-          modalCurrentScroll = projectModal.scrollTop;
-          isModalScrolling = true;
-          requestAnimationFrame(smoothModalScroll);
-        }
-      }, { passive: false });
-    }
-
     function openProjectModal() {
       if (!projectModal) return;
       isModalOpen = true;
@@ -990,10 +954,7 @@
         cancelAnimationFrame(animationFrameId);
         animationFrameId = null;
       }
-      modalCurrentScroll = 0;
-      modalTargetScroll = 0;
       projectModal.scrollTop = 0;
-      isModalScrolling = false;
       if (projectModalBackdrop) projectModalBackdrop.hidden = false;
       projectModal.hidden = false;
       requestAnimationFrame(() => {
@@ -1006,7 +967,6 @@
 
     function closeProjectModal() {
       if (!projectModal) return;
-      isModalScrolling = false;
       if (projectModalBackdrop) projectModalBackdrop.classList.remove('is-open');
       projectModal.classList.remove('is-open');
       document.body.style.overflow = '';
