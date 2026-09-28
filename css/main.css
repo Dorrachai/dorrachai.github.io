@@ -1,5 +1,5 @@
 /* ==========================================================================
-   THEODORE REANGPUSRI — PORTFOLIO STYLES
+   THEODORE REANGPUSRI | PORTFOLIO STYLES
    Inspired by sunnypatel.net, Google Antigravity & lofi developer aesthetic
    Warm vinyl/coffee tones, full-bleed sections, hairline borders, no emojis.
    ========================================================================== */
@@ -837,51 +837,186 @@ body::before {
    Projects Laboratory Section
    ========================================================================== */
 
-.lab-container {
-  border: 1px dashed var(--line-strong);
-  background: var(--bg-surface);
-  border-radius: 10px;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
 }
 
-.lab-badge {
+.project-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 30px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: left;
+}
+
+.project-card:hover,
+.project-card:focus-visible {
+  border-color: var(--ember);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px var(--ember-glow);
+  outline: none;
+}
+
+.project-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.project-action-hint {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--ember);
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--ember);
-  background: var(--ember-subtle);
-  border: 1px solid var(--line-hover);
-  padding: 4px 10px;
-  border-radius: 4px;
-  align-self: flex-start;
+  transition: transform 0.2s ease;
 }
 
-.lab-title {
+.project-card:hover .project-action-hint {
+  transform: translateX(4px);
+}
+
+.project-card-desc {
+  font-size: 0.92rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.project-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+.project-card-footer .stack-tags {
+  margin-bottom: 0;
+}
+
+.btn-sm {
+  padding: 7px 16px;
+  font-size: 0.78rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   Project Details Modal Dialog
+   ========================================================================== */
+
+.project-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 16, 13, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.project-modal-backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.project-modal-dialog {
+  background: var(--bg-surface);
+  border: 1px solid var(--line-strong);
+  border-radius: 14px;
+  width: 100%;
+  max-width: 680px;
+  max-height: 88vh;
+  overflow-y: auto;
+  padding: 34px;
+  position: relative;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65);
+  transform: translateY(16px);
+  transition: transform 0.25s var(--ease-smooth);
+}
+
+.project-modal-backdrop.is-open .project-modal-dialog {
+  transform: translateY(0);
+}
+
+.project-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--line);
+  color: var(--text-muted);
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
   font-size: 1.4rem;
-  font-weight: 800;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.project-modal-close:hover {
+  color: var(--text-bone);
+  border-color: var(--ember);
+  background-color: var(--bg-surface-hover);
+}
+
+.modal-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 14px;
   color: var(--text-bone);
 }
 
-.lab-desc {
-  font-size: 0.95rem;
+.modal-intro {
+  font-size: 0.92rem;
   color: var(--text-dim);
-  max-width: 650px;
-  line-height: 1.6;
+  line-height: 1.65;
+  margin-bottom: 22px;
 }
 
-.lab-specs {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
+.modal-section-title {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  color: var(--text-muted);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ember);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 640px) {
+  .project-card {
+    padding: 22px 18px;
+  }
+  .project-modal-dialog {
+    padding: 24px 18px;
+    max-height: 92vh;
+  }
 }
 
 /* ==========================================================================

@@ -295,23 +295,26 @@
           </p>
         </div>
 
-        <div class="split-grid">
-          <!-- Card 1: What it does & How it works -->
-          <div class="info-card">
-            <div>
-              <div class="card-label">Automation &bull; Python &amp; LLM</div>
-              <h3 class="card-title">Automated Market Scanner &amp; Discord Alerts</h3>
+        <div class="projects-grid">
+          <!-- Clickable Project Card (Compact Overview) -->
+          <article class="project-card" id="card-pulse-bot" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open details for Pulse Bot: Market Scanner and Discord Alerts">
+            <div class="project-card-header">
+              <span class="card-label">Automation &bull; Python &amp; LLM</span>
+              <span class="project-action-hint">View details &rarr;</span>
+            </div>
 
-              <p style="font-size: 0.9rem; color: var(--text-dim); line-height: 1.6; margin-bottom: 16px;">
-                A daily automation tool written in pure Python that tracks market pullbacks. It runs standard technical checks (like 200-day moving averages and RSI) to identify potential setups, then asks Gemini to quickly check recent news headlines for sudden risks (such as profit warnings or unexpected company events). Every weekday morning before market open, it formats a clean summary card and sends it to a private Discord channel via webhooks.
-              </p>
+            <h3 class="card-title">Pulse Bot: Market Scanner &amp; Discord Alerts</h3>
 
-              <div class="thesis-box" style="margin-bottom: 16px;">
-                <div class="thesis-title">Daily Pipeline Flow</div>
-                <div class="thesis-meta">Market Data &rarr; Technical Filters &rarr; Gemini News Check &rarr; Discord Webhook Digest</div>
-              </div>
+            <p class="project-card-desc">
+              Automated daily scanner built in Python that evaluates market trends, verifies news headlines with Gemini to spot sudden company risks, and delivers structured Discord webhook alerts before market open.
+            </p>
 
-              <div class="stack-cat-title" style="margin-bottom: 8px; font-size: 0.75rem;">Click a badge to feed the aquarium</div>
+            <div class="thesis-box" style="margin-bottom: 18px;">
+              <div class="thesis-title">Pipeline Summary</div>
+              <div class="thesis-meta">Market Data &rarr; Technical Filters &rarr; Gemini News Check &rarr; Discord Webhook</div>
+            </div>
+
+            <div class="project-card-footer">
               <div class="stack-tags">
                 <span class="stack-badge" data-tech="Python">Python 3.11</span>
                 <span class="stack-badge" data-tech="REST APIs">Discord Webhooks</span>
@@ -319,26 +322,57 @@
                 <span class="stack-badge" data-tech="AI Agents">Gemini API</span>
                 <span class="stack-badge" data-tech="TDD">Automated Testing</span>
               </div>
+              <button class="btn btn-secondary btn-sm" type="button" aria-label="View system details">
+                <span>View Details</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
             </div>
-          </div>
+          </article>
+        </div>
 
-          <!-- Card 2: Key Features & Safety Note -->
-          <div class="info-card">
-            <div>
-              <div class="card-label">Engineering Details</div>
-              <h3 class="card-title">How It Was Built</h3>
+        <!-- Project Details Modal Dialog -->
+        <div class="project-modal-backdrop" id="pulse-bot-modal" role="dialog" aria-modal="true" aria-labelledby="modal-pulse-title" hidden>
+          <div class="project-modal-dialog">
+            <button class="project-modal-close" id="pulse-bot-modal-close" type="button" aria-label="Close dialog">&times;</button>
+            
+            <div class="card-label" style="margin-bottom: 6px;">System Architecture &bull; Python &amp; LLM</div>
+            <h3 class="modal-title" id="modal-pulse-title">Pulse Bot: Market Scanner &amp; Discord Alerts</h3>
+            
+            <p class="modal-intro">
+              An automated daily pipeline written in Python that tracks market pullbacks. It runs technical checks (including 200-day moving averages and RSI) to detect potential setups, then queries Gemini with search grounding to verify recent news headlines for sudden risks (such as profit warnings or unexpected management departures). Every weekday morning prior to market open, it formats a structured summary card and delivers it to a private Discord channel via webhooks.
+            </p>
 
-              <ul class="leadership-list" style="margin-top: 12px; margin-bottom: 16px;">
-                <li><strong>Zero External Dependencies:</strong> Written entirely with Python&rsquo;s standard library, keeping execution fast, light, and secure.</li>
-                <li><strong>News Risk Verification:</strong> Uses Gemini with Google search grounding to verify price dips aren&rsquo;t caused by bad breaking news or structural issues.</li>
-                <li><strong>Automated Discord Webhooks:</strong> Posts rich, color-coded embed cards with profit targets, stop-loss levels, and quick reference links.</li>
-                <li><strong>Scheduled Cloud Workflows:</strong> Runs automatically on GitHub Actions each weekday morning and tracks portfolio balances in a simple state file.</li>
-              </ul>
-
-              <div class="thesis-box">
-                <div class="thesis-title">Note</div>
-                <div class="thesis-meta">Personal automation and software engineering project. For educational and research purposes only, not financial advice.</div>
+            <div class="modal-section-title">Pipeline Workflow</div>
+            <div class="thesis-box" style="margin-bottom: 20px;">
+              <div class="thesis-title">Daily Execution Sequence</div>
+              <div class="thesis-meta">
+                1. Ingest daily market time-series data<br>
+                2. Compute 200-period SMA and 14-period RSI technical filters<br>
+                3. Query Gemini with Google search to verify news context and filter high-risk drops<br>
+                4. Dispatch formatted embed payload to Discord webhook with price targets and stop-loss levels
               </div>
+            </div>
+
+            <div class="modal-section-title">Implementation Details</div>
+            <ul class="leadership-list" style="margin-bottom: 20px;">
+              <li><strong>Zero External Dependencies:</strong> Written entirely with Python standard library modules (urllib, json, math), keeping execution fast and maintenance minimal.</li>
+              <li><strong>News Risk Verification:</strong> Uses Gemini with Google search grounding to verify price dips are not caused by severe negative corporate catalysts.</li>
+              <li><strong>Automated Discord Webhooks:</strong> Posts structured embed cards with take-profit targets, stop-loss calculations, and reference links.</li>
+              <li><strong>Scheduled Cloud Execution:</strong> Runs on GitHub Actions each weekday morning with timezone-aware idempotency locks and automated portfolio state tracking.</li>
+            </ul>
+
+            <div class="stack-cat-title" style="margin-bottom: 8px; font-size: 0.75rem;">Click a badge to feed the aquarium</div>
+            <div class="stack-tags" style="margin-bottom: 20px;">
+              <span class="stack-badge" data-tech="Python">Python 3.11</span>
+              <span class="stack-badge" data-tech="REST APIs">Discord Webhooks</span>
+              <span class="stack-badge" data-tech="GitLab CI">GitHub Actions</span>
+              <span class="stack-badge" data-tech="AI Agents">Gemini API</span>
+              <span class="stack-badge" data-tech="TDD">Automated Testing</span>
+            </div>
+
+            <div class="thesis-box">
+              <div class="thesis-title">Scope &amp; Disclaimer</div>
+              <div class="thesis-meta">Personal automation and software engineering project. For educational and research purposes only, not financial advice.</div>
             </div>
           </div>
         </div>
@@ -886,6 +920,67 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     }
+
+    // Project Details Modal Dialog Controller
+    const projectCard = document.getElementById('card-pulse-bot');
+    const projectModal = document.getElementById('pulse-bot-modal');
+    const projectModalClose = document.getElementById('pulse-bot-modal-close');
+
+    function openProjectModal() {
+      if (!projectModal) return;
+      projectModal.hidden = false;
+      requestAnimationFrame(() => {
+        projectModal.classList.add('is-open');
+      });
+      document.body.style.overflow = 'hidden';
+      if (projectModalClose) projectModalClose.focus();
+    }
+
+    function closeProjectModal() {
+      if (!projectModal) return;
+      projectModal.classList.remove('is-open');
+      document.body.style.overflow = '';
+      setTimeout(() => {
+        projectModal.hidden = true;
+        if (projectCard) projectCard.focus();
+      }, 200);
+    }
+
+    if (projectCard) {
+      projectCard.addEventListener('click', (e) => {
+        if (e.target.closest('.stack-badge')) return;
+        openProjectModal();
+      });
+
+      projectCard.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          if (e.target.closest('.stack-badge')) return;
+          e.preventDefault();
+          openProjectModal();
+        }
+      });
+    }
+
+    if (projectModalClose) {
+      projectModalClose.addEventListener('click', (e) => {
+        e.stopPropagation();
+        closeProjectModal();
+      });
+    }
+
+    if (projectModal) {
+      projectModal.addEventListener('click', (e) => {
+        if (e.target === projectModal) {
+          closeProjectModal();
+        }
+      });
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && projectModal && !projectModal.hidden) {
+        closeProjectModal();
+      }
+    });
 
     requestAnimationFrame(render);
   </script>
