@@ -300,7 +300,6 @@
           <article class="project-card" id="card-pulse-bot" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open details for Pulse Bot: Market Scanner and Discord Alerts">
             <div class="project-card-header">
               <span class="card-label">Automation &bull; Python &amp; LLM</span>
-              <span class="project-action-hint">View details &rarr;</span>
             </div>
 
             <h3 class="card-title">Pulse Bot: Market Scanner &amp; Discord Alerts</h3>
@@ -955,6 +954,7 @@
         cancelAnimationFrame(animationFrameId);
         animationFrameId = null;
       }
+      document.body.classList.add('modal-open');
       if (projectModalBackdrop) projectModalBackdrop.hidden = false;
       projectModal.hidden = false;
       requestAnimationFrame(() => {
@@ -967,6 +967,7 @@
 
     function closeProjectModal() {
       if (!projectModal) return;
+      document.body.classList.remove('modal-open');
       if (projectModalBackdrop) projectModalBackdrop.classList.remove('is-open');
       projectModal.classList.remove('is-open');
       document.body.style.overflow = '';

@@ -160,6 +160,24 @@ body::before {
   background: rgba(247, 244, 236, 0.90);
 }
 
+.header,
+main,
+.footer {
+  transition: filter 0.25s ease;
+}
+
+body.modal-open .header,
+body.modal-open main,
+body.modal-open .footer {
+  filter: blur(6px);
+  user-select: none;
+}
+
+body.modal-open .header {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
 .nav {
   display: flex;
   align-items: center;
@@ -845,8 +863,14 @@ body::before {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   gap: 24px;
+}
+
+@media (max-width: 640px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .project-card {
@@ -929,9 +953,7 @@ body::before {
 .project-modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(10, 16, 13, 0.75);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  background: rgba(10, 16, 13, 0.74);
   z-index: 9998;
   opacity: 0;
   visibility: hidden;
