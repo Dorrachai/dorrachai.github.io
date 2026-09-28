@@ -456,6 +456,7 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('active');
+          revealObserver.unobserve(entry.target);
         }
       });
     }, { threshold: 0.1 });
@@ -475,6 +476,23 @@
     let width = 0;
     let height = 0;
     let isVisible = true;
+    let isModalOpen = false;
+    let animationFrameId = null;
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        isVisible = false;
+        if (animationFrameId) {
+          cancelAnimationFrame(animationFrameId);
+          animationFrameId = null;
+        }
+      } else {
+        isVisible = true;
+        if (!animationFrameId && !isModalOpen) {
+          animationFrameId = requestAnimationFrame(render);
+        }
+      }
+    });
 
     function resizeCanvas() {
       const rect = viewport.getBoundingClientRect();
@@ -732,8 +750,8 @@
     }
 
     function render() {
-      if (!isVisible) {
-        requestAnimationFrame(render);
+      if (!isVisible || isModalOpen) {
+        animationFrameId = null;
         return;
       }
 
@@ -893,7 +911,7 @@
         drawPixelFish(f);
       });
 
-      requestAnimationFrame(render);
+      animationFrameId = requestAnimationFrame(render);
     }
 
     // 5. Picture-in-Picture Floating Mode when Scrolled Past Hero
@@ -928,6 +946,11 @@
 
     function openProjectModal() {
       if (!projectModal) return;
+      isModalOpen = true;
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+        animationFrameId = null;
+      }
       projectModal.hidden = false;
       requestAnimationFrame(() => {
         projectModal.classList.add('is-open');
@@ -940,6 +963,12 @@
       if (!projectModal) return;
       projectModal.classList.remove('is-open');
       document.body.style.overflow = '';
+      if (isModalOpen) {
+        isModalOpen = false;
+        if (!animationFrameId && isVisible) {
+          animationFrameId = requestAnimationFrame(render);
+        }
+      }
       setTimeout(() => {
         projectModal.hidden = true;
         if (projectCard) projectCard.focus();
@@ -982,7 +1011,7 @@
       }
     });
 
-    requestAnimationFrame(render);
+    animationFrameId = requestAnimationFrame(render);
   </script>
 </body>
 </html>

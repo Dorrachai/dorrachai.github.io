@@ -151,6 +151,7 @@ body::before {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
+  transform: translateZ(0);
   transition: all 0.2s ease;
 }
 
@@ -389,6 +390,8 @@ body::before {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
   position: relative;
   transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 [data-theme="light"] .aquarium-card {
@@ -407,6 +410,8 @@ body::before {
   border-color: var(--ember);
   border-radius: 12px;
   animation: pipSlideIn 0.35s var(--ease-smooth);
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 .aquarium-card.is-pip .aquarium-viewport {
@@ -923,9 +928,8 @@ body::before {
 .project-modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(10, 16, 13, 0.78);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(8, 14, 11, 0.88);
+  contain: strict;
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -949,15 +953,18 @@ body::before {
   max-width: 680px;
   max-height: 88vh;
   overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   padding: 34px;
   position: relative;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65);
-  transform: translateY(16px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+  transform: translateY(16px) translateZ(0);
+  will-change: transform, scroll-position;
   transition: transform 0.25s var(--ease-smooth);
 }
 
 .project-modal-backdrop.is-open .project-modal-dialog {
-  transform: translateY(0);
+  transform: translateY(0) translateZ(0);
 }
 
 .project-modal-close {
