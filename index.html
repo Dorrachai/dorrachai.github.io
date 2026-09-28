@@ -329,53 +329,6 @@
             </div>
           </article>
         </div>
-
-        <!-- Project Details Modal Dialog -->
-        <div class="project-modal-backdrop" id="pulse-bot-modal" role="dialog" aria-modal="true" aria-labelledby="modal-pulse-title" hidden>
-          <div class="project-modal-dialog">
-            <button class="project-modal-close" id="pulse-bot-modal-close" type="button" aria-label="Close dialog">&times;</button>
-            
-            <div class="card-label" style="margin-bottom: 6px;">System Architecture &bull; Python &amp; LLM</div>
-            <h3 class="modal-title" id="modal-pulse-title">Pulse Bot: Market Scanner &amp; Discord Alerts</h3>
-            
-            <p class="modal-intro">
-              An automated daily pipeline written in Python that tracks market pullbacks. It runs technical checks (including 200-day moving averages and RSI) to detect potential setups, then queries Gemini with search grounding to verify recent news headlines for sudden risks (such as profit warnings or unexpected management departures). Every weekday morning prior to market open, it formats a structured summary card and delivers it to a private Discord channel via webhooks.
-            </p>
-
-            <div class="modal-section-title">Pipeline Workflow</div>
-            <div class="thesis-box" style="margin-bottom: 20px;">
-              <div class="thesis-title">Daily Execution Sequence</div>
-              <div class="thesis-meta">
-                1. Ingest daily market time-series data<br>
-                2. Compute 200-period SMA and 14-period RSI technical filters<br>
-                3. Query Gemini with Google search to verify news context and filter high-risk drops<br>
-                4. Dispatch formatted embed payload to Discord webhook with price targets and stop-loss levels
-              </div>
-            </div>
-
-            <div class="modal-section-title">Implementation Details</div>
-            <ul class="leadership-list" style="margin-bottom: 20px;">
-              <li><strong>Zero External Dependencies:</strong> Written entirely with Python standard library modules (urllib, json, math), keeping execution fast and maintenance minimal.</li>
-              <li><strong>News Risk Verification:</strong> Uses Gemini with Google search grounding to verify price dips are not caused by severe negative corporate catalysts.</li>
-              <li><strong>Automated Discord Webhooks:</strong> Posts structured embed cards with take-profit targets, stop-loss calculations, and reference links.</li>
-              <li><strong>Scheduled Cloud Execution:</strong> Runs on GitHub Actions each weekday morning with timezone-aware idempotency locks and automated portfolio state tracking.</li>
-            </ul>
-
-            <div class="stack-cat-title" style="margin-bottom: 8px; font-size: 0.75rem;">Click a badge to feed the aquarium</div>
-            <div class="stack-tags" style="margin-bottom: 20px;">
-              <span class="stack-badge" data-tech="Python">Python 3.11</span>
-              <span class="stack-badge" data-tech="REST APIs">Discord Webhooks</span>
-              <span class="stack-badge" data-tech="GitLab CI">GitHub Actions</span>
-              <span class="stack-badge" data-tech="AI Agents">Gemini API</span>
-              <span class="stack-badge" data-tech="TDD">Automated Testing</span>
-            </div>
-
-            <div class="thesis-box">
-              <div class="thesis-title">Scope &amp; Disclaimer</div>
-              <div class="thesis-meta">Personal automation and software engineering project. For educational and research purposes only, not financial advice.</div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -414,6 +367,53 @@
       </div>
     </div>
   </footer>
+
+  <!-- Project Details Modal Dialog -->
+  <div class="project-modal-backdrop" id="pulse-bot-modal" role="dialog" aria-modal="true" aria-labelledby="modal-pulse-title" hidden>
+    <div class="project-modal-dialog">
+      <button class="project-modal-close" id="pulse-bot-modal-close" type="button" aria-label="Close dialog">&times;</button>
+      
+      <div class="card-label" style="margin-bottom: 6px;">System Architecture &bull; Python &amp; LLM</div>
+      <h3 class="modal-title" id="modal-pulse-title">Pulse Bot: Market Scanner &amp; Discord Alerts</h3>
+      
+      <p class="modal-intro">
+        An automated daily pipeline written in Python that tracks market pullbacks. It runs technical checks (including 200-day moving averages and RSI) to detect potential setups, then queries Gemini with search grounding to verify recent news headlines for sudden risks (such as profit warnings or unexpected management departures). Every weekday morning prior to market open, it formats a structured summary card and delivers it to a private Discord channel via webhooks.
+      </p>
+
+      <div class="modal-section-title">Pipeline Workflow</div>
+      <div class="thesis-box" style="margin-bottom: 20px;">
+        <div class="thesis-title">Daily Execution Sequence</div>
+        <div class="thesis-meta">
+          1. Ingest daily market time-series data<br>
+          2. Compute 200-period SMA and 14-period RSI technical filters<br>
+          3. Query Gemini with Google search to verify news context and filter high-risk drops<br>
+          4. Dispatch formatted embed payload to Discord webhook with price targets and stop-loss levels
+        </div>
+      </div>
+
+      <div class="modal-section-title">Implementation Details</div>
+      <ul class="leadership-list" style="margin-bottom: 20px;">
+        <li><strong>Zero External Dependencies:</strong> Written entirely with Python standard library modules (urllib, json, math), keeping execution fast and maintenance minimal.</li>
+        <li><strong>News Risk Verification:</strong> Uses Gemini with Google search grounding to verify price dips are not caused by severe negative corporate catalysts.</li>
+        <li><strong>Automated Discord Webhooks:</strong> Posts structured embed cards with take-profit targets, stop-loss calculations, and reference links.</li>
+        <li><strong>Scheduled Cloud Execution:</strong> Runs on GitHub Actions each weekday morning with timezone-aware idempotency locks and automated portfolio state tracking.</li>
+      </ul>
+
+      <div class="stack-cat-title" style="margin-bottom: 8px; font-size: 0.75rem;">Click a badge to feed the aquarium</div>
+      <div class="stack-tags" style="margin-bottom: 20px;">
+        <span class="stack-badge" data-tech="Python">Python 3.11</span>
+        <span class="stack-badge" data-tech="REST APIs">Discord Webhooks</span>
+        <span class="stack-badge" data-tech="GitLab CI">GitHub Actions</span>
+        <span class="stack-badge" data-tech="AI Agents">Gemini API</span>
+        <span class="stack-badge" data-tech="TDD">Automated Testing</span>
+      </div>
+
+      <div class="thesis-box">
+        <div class="thesis-title">Scope &amp; Disclaimer</div>
+        <div class="thesis-meta">Personal automation and software engineering project. For educational and research purposes only, not financial advice.</div>
+      </div>
+    </div>
+  </div>
 
   <!-- Toast Notification -->
   <div id="copy-toast" class="toast">Copied Theodore.Reangpusri@outlook.com to clipboard</div>
@@ -972,7 +972,7 @@
       setTimeout(() => {
         projectModal.hidden = true;
         if (projectCard) projectCard.focus();
-      }, 200);
+      }, 250);
     }
 
     if (projectCard) {

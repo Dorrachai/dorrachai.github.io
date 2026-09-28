@@ -65,6 +65,7 @@ html {
   color: var(--text-bone);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -928,8 +929,9 @@ body::before {
 .project-modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(8, 14, 11, 0.88);
-  contain: strict;
+  background: rgba(10, 16, 13, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -937,7 +939,11 @@ body::before {
   padding: 24px;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.2s ease, visibility 0.2s ease;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+[data-theme="light"] .project-modal-backdrop {
+  background: rgba(244, 248, 245, 0.75);
 }
 
 .project-modal-backdrop.is-open {
@@ -957,14 +963,17 @@ body::before {
   -webkit-overflow-scrolling: touch;
   padding: 34px;
   position: relative;
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
-  transform: translateY(16px) translateZ(0);
-  will-change: transform, scroll-position;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.45);
+  transform: translateY(16px);
   transition: transform 0.25s var(--ease-smooth);
 }
 
+[data-theme="light"] .project-modal-dialog {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
 .project-modal-backdrop.is-open .project-modal-dialog {
-  transform: translateY(0) translateZ(0);
+  transform: translateY(0);
 }
 
 .project-modal-close {
