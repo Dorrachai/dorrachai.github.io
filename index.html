@@ -327,6 +327,38 @@
               </button>
             </div>
           </article>
+
+          <!-- Clickable Project Card: Strahinja Audio Portfolio -->
+          <article class="project-card" id="card-strahinja-portfolio" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open details for Game Audio Portfolio and Media Showcase Platform">
+            <div class="project-card-header">
+              <span class="card-label">Commission &bull; React &amp; Audio UI</span>
+            </div>
+
+            <h3 class="card-title">Game Audio Portfolio &amp; Interactive Media Showcase</h3>
+
+            <p class="project-card-desc">
+              Bespoke web platform built on commission for an independent game sound designer and composer. Centered on the client request to seamlessly integrate and manage multi-source audio players (SoundCloud, YouTube, Spotify) alongside a zero-code content workflow.
+            </p>
+
+            <div class="thesis-box" style="margin-bottom: 18px;">
+              <div class="thesis-title">Commission Focus</div>
+              <div class="thesis-meta">Multi-Source Audio Embeds &rarr; Git-Driven CMS &rarr; React / Vite &rarr; GitHub Pages</div>
+            </div>
+
+            <div class="project-card-footer">
+              <div class="stack-tags">
+                <span class="stack-badge" data-tech="React">React 18</span>
+                <span class="stack-badge" data-tech="TypeScript">TypeScript</span>
+                <span class="stack-badge" data-tech="Tailwind">Tailwind CSS</span>
+                <span class="stack-badge" data-tech="Vite">Vite</span>
+                <span class="stack-badge" data-tech="REST APIs">Audio Embeds</span>
+              </div>
+              <button class="btn btn-secondary btn-sm" type="button" aria-label="View project details">
+                <span>View Details</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -413,6 +445,66 @@
       <div class="thesis-box">
         <div class="thesis-title">Scope &amp; Disclaimer</div>
         <div class="thesis-meta">Personal automation and software engineering project. For educational and research purposes only, not financial advice.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Details Modal Backdrop: Strahinja Audio Portfolio -->
+  <div class="project-modal-backdrop" id="strahinja-portfolio-modal-backdrop" hidden></div>
+
+  <!-- Project Details Modal Dialog Wrapper: Strahinja Audio Portfolio -->
+  <div class="project-modal-wrapper" id="strahinja-portfolio-modal" role="dialog" aria-modal="true" aria-labelledby="modal-strahinja-title" hidden>
+    <div class="project-modal-dialog">
+      <button class="project-modal-close" id="strahinja-modal-close" type="button" aria-label="Close dialog">&times;</button>
+      
+      <div class="card-label" style="margin-bottom: 6px;">Client Commission &bull; React &amp; Audio Architecture</div>
+      <h3 class="modal-title" id="modal-strahinja-title">Game Audio Portfolio &amp; Interactive Media Showcase</h3>
+      
+      <p class="modal-intro">
+        A bespoke portfolio engineered for an independent game sound designer and composer. The core commission was structured around two main requirements: delivering an interactive web showcase that handles diverse audio playback options directly in the browser, and giving a non-technical creator full control over content updates without ever needing to touch terminal commands or source code.
+      </p>
+
+      <div class="modal-section-title">Client Commission &amp; Requirements</div>
+      <div class="thesis-box" style="margin-bottom: 20px;">
+        <div class="thesis-title">Core Technical Challenges</div>
+        <div class="thesis-meta">
+          1. Multi-platform sound options: Seamlessly embed and stream audio from SoundCloud, YouTube, and Spotify without layout shifts or playback collisions<br>
+          2. Decoupled zero-code editing: Allow the client to publish new game projects, audio demos, and cover artwork entirely through simple GitHub browser edits<br>
+          3. Media-centric performance: Dark-mode aesthetic with fast initial loads, accessible modal galleries, and zero third-party CMS subscription costs
+        </div>
+      </div>
+
+      <div class="modal-section-title">Implementation Details</div>
+      <ul class="leadership-list" style="margin-bottom: 20px;">
+        <li><strong>Multi-Provider Audio Resolver:</strong> Built a specialized URI parser and embed generator in TypeScript that normalizes standard browser URLs from SoundCloud tracks, YouTube videos/shorts, and Spotify releases into optimized, responsive iframe players.</li>
+        <li><strong>Git-Driven Headless Data Architecture:</strong> Designed a strictly-typed configuration layer (in projects.ts and site.ts) with detailed in-code guides. This enabled the client to independently manage portfolio items, tracklists, and bios directly in their browser.</li>
+        <li><strong>Component Architecture:</strong> Developed using React 18, Vite, Tailwind CSS, and Radix UI primitives, delivering fast client-side routing, responsive image layouts, and accessible interactive overlays.</li>
+        <li><strong>Automated Static CI/CD:</strong> Configured automated GitHub Actions workflows compiling the Vite build directly to GitHub Pages, providing zero-maintenance production hosting with custom hash-routing support.</li>
+      </ul>
+
+      <div class="stack-cat-title" style="margin-bottom: 8px; font-size: 0.75rem;">Click a badge to feed the aquarium</div>
+      <div class="stack-tags" style="margin-bottom: 20px;">
+        <span class="stack-badge" data-tech="React">React 18</span>
+        <span class="stack-badge" data-tech="TypeScript">TypeScript</span>
+        <span class="stack-badge" data-tech="Tailwind">Tailwind CSS</span>
+        <span class="stack-badge" data-tech="Vite">Vite</span>
+        <span class="stack-badge" data-tech="REST APIs">Audio Embeds</span>
+        <span class="stack-badge" data-tech="GitLab CI">GitHub Actions</span>
+      </div>
+
+      <div class="modal-section-title">Project Links</div>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px;">
+        <a href="https://dorrachai.github.io/Strahinja-portfolio/#/work" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+          <span>Live Website &rarr;</span>
+        </a>
+        <a href="https://github.com/Dorrachai/Strahinja-portfolio" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+          <span>GitHub Repository &rarr;</span>
+        </a>
+      </div>
+
+      <div class="thesis-box">
+        <div class="thesis-title">Scope &amp; Delivery</div>
+        <div class="thesis-meta">Custom client commission for sound designer Strahinja. Deployed live to production with an open-source codebase on GitHub.</div>
       </div>
     </div>
   </div>
@@ -942,84 +1034,124 @@
     }
 
     // Project Details Modal Dialog Controller
-    const projectCard = document.getElementById('card-pulse-bot');
-    const projectModal = document.getElementById('pulse-bot-modal');
-    const projectModalBackdrop = document.getElementById('pulse-bot-modal-backdrop');
-    const projectModalClose = document.getElementById('pulse-bot-modal-close');
+    let activeModalWrapper = null;
+    let activeModalBackdrop = null;
 
-    function openProjectModal() {
-      if (!projectModal) return;
+    function openProjectModal(modalId, backdropId) {
+      const modal = document.getElementById(modalId);
+      const backdrop = document.getElementById(backdropId);
+      if (!modal) return;
+
+      activeModalWrapper = modal;
+      activeModalBackdrop = backdrop;
       isModalOpen = true;
+
       if (animationFrameId) {
         cancelAnimationFrame(animationFrameId);
         animationFrameId = null;
       }
-      projectModal.scrollTop = 0;
-      if (projectModalBackdrop) projectModalBackdrop.hidden = false;
-      projectModal.hidden = false;
+
+      modal.scrollTop = 0;
+      if (backdrop) backdrop.hidden = false;
+      modal.hidden = false;
+
       requestAnimationFrame(() => {
-        if (projectModalBackdrop) projectModalBackdrop.classList.add('is-open');
-        projectModal.classList.add('is-open');
+        if (backdrop) backdrop.classList.add('is-open');
+        modal.classList.add('is-open');
       });
+
       document.body.style.overflow = 'hidden';
-      if (projectModalClose) projectModalClose.focus();
+      const closeBtn = modal.querySelector('.project-modal-close');
+      if (closeBtn) closeBtn.focus();
     }
 
-    function closeProjectModal() {
-      if (!projectModal) return;
-      if (projectModalBackdrop) projectModalBackdrop.classList.remove('is-open');
-      projectModal.classList.remove('is-open');
+    function closeActiveProjectModal() {
+      if (!activeModalWrapper) return;
+      const modalToClose = activeModalWrapper;
+      const backdropToClose = activeModalBackdrop;
+
+      activeModalWrapper = null;
+      activeModalBackdrop = null;
+
+      if (backdropToClose) backdropToClose.classList.remove('is-open');
+      modalToClose.classList.remove('is-open');
       document.body.style.overflow = '';
+
       if (isModalOpen) {
         isModalOpen = false;
         if (!animationFrameId && isVisible) {
           animationFrameId = requestAnimationFrame(render);
         }
       }
+
       setTimeout(() => {
-        if (projectModalBackdrop) projectModalBackdrop.hidden = true;
-        projectModal.hidden = true;
-        if (projectCard) projectCard.focus();
+        if (backdropToClose) backdropToClose.hidden = true;
+        modalToClose.hidden = true;
       }, 250);
     }
 
-    if (projectCard) {
-      projectCard.addEventListener('click', (e) => {
-        if (e.target.closest('.stack-badge')) return;
-        openProjectModal();
-      });
+    const modalConfigs = [
+      {
+        cardId: 'card-pulse-bot',
+        modalId: 'pulse-bot-modal',
+        backdropId: 'pulse-bot-modal-backdrop'
+      },
+      {
+        cardId: 'card-strahinja-portfolio',
+        modalId: 'strahinja-portfolio-modal',
+        backdropId: 'strahinja-portfolio-modal-backdrop'
+      }
+    ];
 
-      projectCard.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
+    modalConfigs.forEach(({ cardId, modalId, backdropId }) => {
+      const card = document.getElementById(cardId);
+      const modal = document.getElementById(modalId);
+      const backdrop = document.getElementById(backdropId);
+
+      if (card) {
+        card.addEventListener('click', (e) => {
           if (e.target.closest('.stack-badge')) return;
-          e.preventDefault();
-          openProjectModal();
+          openProjectModal(modalId, backdropId);
+        });
+
+        card.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            if (e.target.closest('.stack-badge')) return;
+            e.preventDefault();
+            openProjectModal(modalId, backdropId);
+          }
+        });
+      }
+
+      if (modal) {
+        const closeBtn = modal.querySelector('.project-modal-close');
+        if (closeBtn) {
+          closeBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeActiveProjectModal();
+            if (card) card.focus();
+          });
         }
-      });
-    }
 
-    if (projectModalClose) {
-      projectModalClose.addEventListener('click', (e) => {
-        e.stopPropagation();
-        closeProjectModal();
-      });
-    }
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) {
+            closeActiveProjectModal();
+            if (card) card.focus();
+          }
+        });
+      }
 
-    if (projectModalBackdrop) {
-      projectModalBackdrop.addEventListener('click', closeProjectModal);
-    }
-
-    if (projectModal) {
-      projectModal.addEventListener('click', (e) => {
-        if (e.target === projectModal) {
-          closeProjectModal();
-        }
-      });
-    }
+      if (backdrop) {
+        backdrop.addEventListener('click', () => {
+          closeActiveProjectModal();
+          if (card) card.focus();
+        });
+      }
+    });
 
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && projectModal && !projectModal.hidden) {
-        closeProjectModal();
+      if (e.key === 'Escape' && activeModalWrapper && !activeModalWrapper.hidden) {
+        closeActiveProjectModal();
       }
     });
 
