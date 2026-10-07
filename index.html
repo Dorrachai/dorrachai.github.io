@@ -17,8 +17,10 @@
   <link rel="stylesheet" href="css/main.css">
 
   <script>
-    const savedTheme = localStorage.getItem('theme-pref') || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-    if (savedTheme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+    const savedTheme = localStorage.getItem('theme-pref');
+    if (savedTheme === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
   </script>
 </head>
 <body>
