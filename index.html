@@ -73,7 +73,7 @@
               Software engineer with a focus on internal developer tooling, automated release pipelines, distributed observability, and AI agent platforms. B.Sc. in Software Engineering from <strong>Blekinge Institute of Technology</strong> with international exchange studies at <strong>The University of Electro-Communications</strong> in Tokyo.
             </p>
             <div class="hero-actions">
-              <a href="mailto:Theodore.Reangpusri@outlook.com" class="btn btn-primary">
+              <a href="#contact" class="btn btn-primary">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                 <span>Direct Inquiries</span>
               </a>
@@ -529,6 +529,13 @@
 
     const copyHeroBtn = document.getElementById('copy-email-hero-btn');
     if (copyHeroBtn) copyHeroBtn.addEventListener('click', showCopyToast);
+
+    // Provide visual toast feedback and clipboard fallback on mailto links
+    document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+      link.addEventListener('click', () => {
+        showCopyToast();
+      });
+    });
 
     // 2. Theme Toggle
     const themeBtn = document.getElementById('theme-toggle');
