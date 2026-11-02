@@ -298,6 +298,42 @@
         </div>
 
         <div class="projects-grid">
+          <!-- Clickable Project Card: CozyCart -->
+          <article class="project-card" id="card-cozy-cart" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open details for CozyCart: Zero-Knowledge Shared Shopping &amp; Local Aisle Sorting">
+            <div class="project-card-thumb">
+              <img src="assets/images/cozy-cart/cozy-cart-desktop.png" alt="CozyCart Botanical Workspace" loading="lazy">
+            </div>
+
+            <div class="project-card-header">
+              <span class="card-label">Web App &bull; React 19 &amp; Web Crypto</span>
+            </div>
+
+            <h3 class="card-title">CozyCart: Shared Shopping &amp; Zero-Knowledge Sync</h3>
+
+            <p class="project-card-desc">
+              Shared household grocery static web application featuring client-side AES-256-GCM zero-knowledge encryption, local multilingual aisle sorting (14.6 KB on-device taxonomy), and plain-text Notes app interoperability without accounts or central tracking.
+            </p>
+
+            <div class="thesis-box" style="margin-bottom: 18px;">
+              <div class="thesis-title">Architecture Pipeline</div>
+              <div class="thesis-meta">Web Crypto (PBKDF2 / AES-GCM) &rarr; CRDT LWW Sync &rarr; Local NLP Taxonomy &rarr; GitHub Pages</div>
+            </div>
+
+            <div class="project-card-footer">
+              <div class="stack-tags">
+                <span class="stack-badge" data-tech="React">React 19</span>
+                <span class="stack-badge" data-tech="TypeScript">TypeScript</span>
+                <span class="stack-badge" data-tech="Web Crypto">Web Crypto API</span>
+                <span class="stack-badge" data-tech="Tailwind">Tailwind CSS v4</span>
+                <span class="stack-badge" data-tech="Cloud Firestore">Firestore CRDT</span>
+              </div>
+              <button class="btn btn-secondary btn-sm" type="button" aria-label="View project details">
+                <span>View Details</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </article>
+
           <!-- Clickable Project Card (Compact Overview) -->
           <article class="project-card" id="card-pulse-bot" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open details for Pulse Bot: Market Scanner and Discord Alerts">
             <div class="project-card-header">
@@ -400,6 +436,108 @@
       </div>
     </div>
   </footer>
+
+  <!-- Project Details Modal Backdrop: CozyCart -->
+  <div class="project-modal-backdrop" id="cozy-cart-modal-backdrop" hidden></div>
+
+  <!-- Project Details Modal Dialog Wrapper: CozyCart -->
+  <div class="project-modal-wrapper" id="cozy-cart-modal" role="dialog" aria-modal="true" aria-labelledby="modal-cozycart-title" hidden>
+    <div class="project-modal-dialog">
+      <button class="project-modal-close" id="cozy-cart-modal-close" type="button" aria-label="Close dialog">&times;</button>
+      
+      <div class="card-label" style="margin-bottom: 6px;">Client Architecture &bull; React 19 &amp; Web Crypto</div>
+      <h3 class="modal-title" id="modal-cozycart-title">CozyCart: Shared Household Shopping &amp; Zero-Knowledge Sync</h3>
+      
+      <p class="modal-intro">
+        Most shared grocery apps require every member of a household to create accounts, run third-party analytics SDKs, or store personal shopping habits in plaintext on central servers. CozyCart is a static web application built with React 19, TypeScript, Vite, and Tailwind CSS v4 that encrypts all lists on-device before sync, sorts groceries locally into supermarket aisles, and shares lists using human-readable capability codes with zero backend accounts.
+      </p>
+
+      <div class="modal-section-title">Visual Showcase &amp; Interface</div>
+      <div class="project-modal-gallery">
+        <div class="modal-gallery-item full-width">
+          <a href="assets/images/cozy-cart/cozy-cart-desktop.png" target="_blank" rel="noopener noreferrer" title="View high-resolution desktop view">
+            <img src="assets/images/cozy-cart/cozy-cart-desktop.png" alt="CozyCart Desktop Workspace" loading="lazy">
+            <div class="modal-gallery-caption">
+              <span>Botanical Market Ledger &bull; Desktop Workspace</span>
+              <span class="caption-tag">Open Full &rarr;</span>
+            </div>
+          </a>
+        </div>
+        <div class="modal-gallery-item">
+          <a href="assets/images/cozy-cart/cozy-cart-mobile.png" target="_blank" rel="noopener noreferrer" title="View high-resolution mobile view">
+            <img src="assets/images/cozy-cart/cozy-cart-mobile.png" alt="CozyCart Mobile View" loading="lazy">
+            <div class="modal-gallery-caption">
+              <span>Thumb-First Mobile Composer</span>
+              <span class="caption-tag">Open &rarr;</span>
+            </div>
+          </a>
+        </div>
+        <div class="modal-gallery-item">
+          <a href="assets/images/cozy-cart/cozy-cart-qr-modal.png" target="_blank" rel="noopener noreferrer" title="View QR and E2EE modal">
+            <img src="assets/images/cozy-cart/cozy-cart-qr-modal.png" alt="Zero-Knowledge QR and Friend Code Modal" loading="lazy">
+            <div class="modal-gallery-caption">
+              <span>Two-Tier Friend Code &amp; QR Modal</span>
+              <span class="caption-tag">Open &rarr;</span>
+            </div>
+          </a>
+        </div>
+        <div class="modal-gallery-item full-width">
+          <a href="assets/images/cozy-cart/cozy-cart-notes-modal.png" target="_blank" rel="noopener noreferrer" title="View Notes checklist modal">
+            <img src="assets/images/cozy-cart/cozy-cart-notes-modal.png" alt="Notes App Checklist Interop Modal" loading="lazy">
+            <div class="modal-gallery-caption">
+              <span>1-Tap Notes App Checklist Interop (Apple Notes &amp; Keep)</span>
+              <span class="caption-tag">Open &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="modal-section-title">Core Engineering Challenges</div>
+      <div class="thesis-box" style="margin-bottom: 20px;">
+        <div class="thesis-title">Distributed Privacy &amp; Offline Systems</div>
+        <div class="thesis-meta">
+          1. Zero-knowledge key derivation: Derive cryptographic keys entirely on-device from 47-bit human-readable Friend Codes without server-side disclosure<br>
+          2. Concurrent multi-device CRDT sync: Resolve simultaneous additions, deletions, and check-offs across offline and online devices using a conflict-free LWW-Element-Set<br>
+          3. Local multilingual NLP sorting: Categorize grocery items into 12 distinct supermarket aisles with zero API latency or cloud privacy leakage
+        </div>
+      </div>
+
+      <div class="modal-section-title">Implementation Details</div>
+      <ul class="leadership-list" style="margin-bottom: 20px;">
+        <li><strong>Client-Side Web Crypto Key Derivation:</strong> Capability codes (e.g. <code>H-orange-coconut-VFG54TJ</code>) pass through <code>PBKDF2-HMAC-SHA256</code> (210,000 rounds) to generate a 64-hex deterministic document ID and a non-extractable 256-bit <code>AES-GCM</code> key. Capabilities stay strictly in the <code>#join=</code> URL fragment and are never sent over HTTP.</li>
+        <li><strong>Conflict-Free CRDT Synchronization:</strong> Employs a Last-Write-Wins Element-Set (<code>LWW-Element-Set</code>) CRDT with monotonic revision increments and 30-day soft tombstones, executed inside optimistic Firestore transactions on Firebase Spark ($0 free tier) with zero server-side list enumeration allowed.</li>
+        <li><strong>Distilled Local Grocery Taxonomy:</strong> Analyzed Open Food Facts to produce a lightweight 14.6 KB gzipped JSON dictionary (2,563 terms across English, Swedish, German, Spanish, French, Italian, Dutch, Polish, Portuguese). Features Fuse.js fuzzy matching, compound-word suffix parsing, and encrypted household-learned aisle memory.</li>
+        <li><strong>Phone Notes Interoperability:</strong> One-tap clipboard parser extracts items from Apple Notes, Google Keep, and markdown checklists (<code>- [ ]</code>, <code>☐</code>, <code>☑</code>), parsing multipliers (<code>2x</code>, <code>500g</code>) and auto-sorting them into aisles instantly.</li>
+        <li><strong>Strict Security &amp; QR Hardening:</strong> Validates Friend Codes and QR codes against a strict <code>[A-Za-z0-9-]</code> grammar, pins generated URLs to the application origin, strips control characters, and enforces a strict <code>script-src 'self'</code> Content-Security-Policy.</li>
+      </ul>
+
+      <div class="stack-cat-title" style="margin-bottom: 8px; font-size: 0.75rem;">Click a badge to feed the aquarium</div>
+      <div class="stack-tags" style="margin-bottom: 20px;">
+        <span class="stack-badge" data-tech="React">React 19</span>
+        <span class="stack-badge" data-tech="TypeScript">TypeScript</span>
+        <span class="stack-badge" data-tech="Web Crypto">Web Crypto API</span>
+        <span class="stack-badge" data-tech="Tailwind">Tailwind CSS v4</span>
+        <span class="stack-badge" data-tech="Cloud Firestore">Cloud Firestore</span>
+        <span class="stack-badge" data-tech="TDD">Vitest (15 tests)</span>
+        <span class="stack-badge" data-tech="GitLab CI">GitHub Pages CI/CD</span>
+      </div>
+
+      <div class="modal-section-title">Project Links</div>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px;">
+        <a href="https://dorrachai.github.io/cozy-cart/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+          <span>Live Web Application &rarr;</span>
+        </a>
+        <a href="https://github.com/Dorrachai/cozy-cart" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+          <span>GitHub Repository &rarr;</span>
+        </a>
+      </div>
+
+      <div class="thesis-box">
+        <div class="thesis-title">Deployment &amp; Status</div>
+        <div class="thesis-meta">Production static web application hosted on GitHub Pages, backed by Firebase Spark free tier ($0/month) and client-side Web Crypto. Open-source under MIT license.</div>
+      </div>
+    </div>
+  </div>
 
   <!-- Project Details Modal Backdrop (Independent static blur layer) -->
   <div class="project-modal-backdrop" id="pulse-bot-modal-backdrop" hidden></div>
@@ -1100,6 +1238,11 @@
     }
 
     const modalConfigs = [
+      {
+        cardId: 'card-cozy-cart',
+        modalId: 'cozy-cart-modal',
+        backdropId: 'cozy-cart-modal-backdrop'
+      },
       {
         cardId: 'card-pulse-bot',
         modalId: 'pulse-bot-modal',

@@ -1,5 +1,28 @@
 [
   {
+    "id": "cozy-cart",
+    "title": "CozyCart - Zero-Knowledge Shared Shopping & Local Aisle Sorting",
+    "description": "Shared household grocery static web application featuring client-side AES-256-GCM zero-knowledge encryption, local multilingual aisle sorting (14.6 KB on-device taxonomy), and plain-text Notes app interoperability with zero accounts or central tracking.",
+    "category": "web",
+    "featured": true,
+    "tags": ["React 19", "TypeScript", "Web Crypto API", "Tailwind CSS v4", "Cloud Firestore", "CRDT"],
+    "github": "https://github.com/Dorrachai/cozy-cart",
+    "demo": "https://dorrachai.github.io/cozy-cart/",
+    "screenshots": [
+      "assets/images/cozy-cart/cozy-cart-desktop.png",
+      "assets/images/cozy-cart/cozy-cart-mobile.png",
+      "assets/images/cozy-cart/cozy-cart-qr-modal.png",
+      "assets/images/cozy-cart/cozy-cart-notes-modal.png"
+    ],
+    "highlights": [
+      "Client-side PBKDF2-HMAC-SHA256 (210,000 iter) + AES-256-GCM zero-knowledge encryption via URL fragment capabilities (#join=)",
+      "Conflict-free optimistic Firestore transaction syncing powered by a deterministic LWW-Element-Set CRDT",
+      "On-device 14.6 KB Open Food Facts taxonomy (2,563 terms, 9 languages) with Fuse.js fuzzy matching and encrypted household learning",
+      "1-tap bidirectional Notes app sync (Apple Notes, Google Keep, markdown checklists) with automatic quantity/unit parsing",
+      "Human-crafted Botanical Market Ledger aesthetic with Instrument Serif typography and 12 culinary aisle palettes"
+    ]
+  },
+  {
     "id": "pulse-bot-market-scanner",
     "title": "Pulse Bot - Market Scanner & Discord Alerts",
     "description": "An automated daily scanner built in pure Python that tracks market trends, checks news headlines with Gemini to spot sudden company risks, and sends structured summary cards to Discord via webhooks before the market opens.",
