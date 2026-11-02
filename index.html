@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -298,6 +298,39 @@
         </div>
 
         <div class="projects-grid">
+          <!-- Clickable Project Card: NeetCode Trainer -->
+          <article class="project-card" id="card-neetcode-trainer" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open details for NeetCode Trainer: Google Doc Mode Interview Simulator &amp; Spaced Repetition Suite">
+
+            <div class="project-card-header">
+              <span class="card-label">Web App &bull; React &amp; Cloud Firestore</span>
+            </div>
+
+            <h3 class="card-title">NeetCode Trainer: Technical Interview Suite</h3>
+
+            <p class="project-card-desc">
+              Interactive technical interview training suite featuring a zero-autocomplete Google Doc mode Python coding pad, phase-aware 35-minute countdown clock, in-browser WebAssembly Python execution, and zero-trust Google Cloud Firestore synchronization across devices.
+            </p>
+
+            <div class="thesis-box" style="margin-bottom: 18px;">
+              <div class="thesis-title">Architecture Pipeline</div>
+              <div class="thesis-meta">React 18 &rarr; Pyodide WASM &rarr; Google OAuth 2.0 &rarr; Cloud Firestore Partitioning &rarr; Firebase Hosting</div>
+            </div>
+
+            <div class="project-card-footer">
+              <div class="stack-tags">
+                <span class="stack-badge" data-tech="React">React 18</span>
+                <span class="stack-badge" data-tech="Tailwind">Tailwind CSS</span>
+                <span class="stack-badge" data-tech="Cloud Firestore">Cloud Firestore</span>
+                <span class="stack-badge" data-tech="Web Crypto">Firebase Auth</span>
+                <span class="stack-badge" data-tech="Python">Python 3</span>
+              </div>
+              <button class="btn btn-secondary btn-sm" type="button" aria-label="View project details">
+                <span>View Details</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </article>
+
           <!-- Clickable Project Card: CozyCart -->
           <article class="project-card" id="card-cozy-cart" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open details for CozyCart: Zero-Knowledge Shared Shopping &amp; Local Aisle Sorting">
 
@@ -642,6 +675,58 @@
       <div class="thesis-box">
         <div class="thesis-title">Scope &amp; Delivery</div>
         <div class="thesis-meta">Custom client commission for sound designer Strahinja. Deployed live to production with an open-source codebase on GitHub.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Details Modal Backdrop: NeetCode Trainer -->
+  <div class="project-modal-backdrop" id="neetcode-trainer-modal-backdrop" hidden></div>
+
+  <!-- Project Details Modal Dialog Wrapper: NeetCode Trainer -->
+  <div class="project-modal-wrapper" id="neetcode-trainer-modal" role="dialog" aria-modal="true" aria-labelledby="modal-neetcode-title" hidden>
+    <div class="project-modal-dialog">
+      <button class="project-modal-close" id="neetcode-trainer-modal-close" type="button" aria-label="Close dialog">&times;</button>
+      
+      <div class="card-label" style="margin-bottom: 6px;">Technical Interview Suite &bull; React, Pyodide &amp; Firebase</div>
+      <h3 class="modal-title" id="modal-neetcode-title">NeetCode Trainer: FAANG Interview Simulator &amp; Spaced Repetition Suite</h3>
+      
+      <p class="modal-intro">
+        A full-stack algorithmic training application designed to recreate authentic Big Tech coding interview conditions. Combines a zero-autocomplete plain-text coding pad, a 35-minute phase timer, in-browser Python execution, and zero-trust cloud sync across desktop and mobile.
+      </p>
+
+      <div class="modal-section-title">Core Systems &amp; Engineering</div>
+      <ul class="leadership-list" style="margin-bottom: 20px;">
+        <li><strong>Google Doc Mode Coding Pad:</strong> Disables all IDE autocompletion, language intelligence, and syntax highlighting to build genuine muscle memory and syntax recall under realistic technical screen conditions.</li>
+        <li><strong>Phase-Aware 35-Minute Interview Clock:</strong> Enforces the five key interview phases (Clarification &amp; Constraints 0&ndash;5m, Brute Force Baseline 5&ndash;10m, Optimized Invariants 10&ndash;15m, Plain-Editor Coding 15&ndash;30m, Dry-Run Verification 30&ndash;35m).</li>
+        <li><strong>In-Browser Python 3 Sandbox (Pyodide WebAssembly):</strong> Executes candidate Python 3 solutions locally within the browser sandbox, testing against hidden edge cases and returning execution timing and runtime traces.</li>
+        <li><strong>Zero-Trust Cloud Sync &amp; Google Auth:</strong> Users authenticate via Google OAuth 2.0 without passwords or credentials ever touching the repository. Backed by Cloud Firestore with strict security rules enforcing partition-level isolation (<code>request.auth.uid == userId</code>).</li>
+        <li><strong>Spaced Repetition Scheduler &amp; Sheets Export:</strong> Logs solve durations, auto-calculates spaced repetition intervals (+1d, +3d, +7d, +14d), and provides one-click TSV export directly to Google Sheets.</li>
+      </ul>
+
+      <div class="stack-cat-title" style="margin-bottom: 8px; font-size: 0.75rem;">Click a badge to feed the aquarium</div>
+      <div class="stack-tags" style="margin-bottom: 20px;">
+        <span class="stack-badge" data-tech="React">React 18</span>
+        <span class="stack-badge" data-tech="Vite">Vite 5</span>
+        <span class="stack-badge" data-tech="Tailwind">Tailwind CSS</span>
+        <span class="stack-badge" data-tech="Cloud Firestore">Cloud Firestore</span>
+        <span class="stack-badge" data-tech="Web Crypto">Google OAuth 2.0</span>
+        <span class="stack-badge" data-tech="Python">Python 3</span>
+        <span class="stack-badge" data-tech="GitLab CI">Firebase Hosting</span>
+      </div>
+
+      <div class="modal-section-title">Project Links</div>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px;">
+        <a href="https://neetcode-trainer-78b2a.web.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+          <span>Live Web Application &rarr;</span>
+        </a>
+        <a href="https://github.com/Dorrachai/neetcode-trainer" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+          <span>GitHub Repository &rarr;</span>
+        </a>
+      </div>
+
+      <div class="thesis-box">
+        <div class="thesis-title">Deployment &amp; Cloud Infrastructure</div>
+        <div class="thesis-meta">Deployed worldwide on Google Firebase Hosting with Cloud Firestore database backend ($0 free tier) and multi-device Google OAuth synchronization.</div>
       </div>
     </div>
   </div>
@@ -1235,6 +1320,11 @@
     }
 
     const modalConfigs = [
+      {
+        cardId: 'card-neetcode-trainer',
+        modalId: 'neetcode-trainer-modal',
+        backdropId: 'neetcode-trainer-modal-backdrop'
+      },
       {
         cardId: 'card-cozy-cart',
         modalId: 'cozy-cart-modal',
