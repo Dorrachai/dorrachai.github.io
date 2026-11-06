@@ -2,17 +2,18 @@
   {
     "id": "neetcode-trainer",
     "title": "NeetCode Trainer - FAANG & Google Interview Simulator",
-    "description": "Interactive technical interview training suite featuring a zero-autocomplete Google Doc mode Python pad, phase-aware 35-minute countdown clock, in-browser WebAssembly Python execution, and zero-trust Google Cloud Firestore synchronization across devices.",
+    "description": "Interactive technical interview training suite featuring a self-paced 14-day study calendar with cross-device completion sync, zero-autocomplete Google Doc mode Python pad, phase-aware 35-minute countdown clock, guided 'Close the Tab' pattern walkthroughs, and zero-trust Cloud Firestore synchronization across devices.",
     "category": "web",
     "featured": true,
     "tags": ["React 18", "Vite", "Tailwind CSS", "Firebase Auth", "Cloud Firestore", "Pyodide WASM", "Python 3"],
     "github": "https://github.com/Dorrachai/neetcode-trainer",
     "demo": "https://neetcode-trainer-78b2a.web.app",
     "highlights": [
+      "Self-paced 14-day Study Calendar with 'Completed / Not Completed' state tracking across phone and desktop",
       "Zero-autocomplete 'Google Doc Mode' coding environment to build authentic syntax recall for technical screens",
       "Phase-aware 35-minute interview timer guiding through Clarification, Brute Force, Optimization, Code, and Dry Run",
+      "'Close the Tab' guided solution peek for brushing up on core algorithm invariants before memory-recall coding",
       "In-browser Python 3 execution sandbox powered by Pyodide WebAssembly with unit and edge-case assertions",
-      "Interactive Variable Trace Scratchpad to dry-run test cases line-by-line before submitting code",
       "Zero-trust cross-device sync powered by Firebase Google OAuth 2.0 and strict partition Firestore security rules",
       "Automated spaced repetition review scheduler calculating recall intervals with 1-click Google Sheets TSV export"
     ]

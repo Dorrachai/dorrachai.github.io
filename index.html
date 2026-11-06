@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -308,7 +308,7 @@
             <h3 class="card-title">NeetCode Trainer: Technical Interview Suite</h3>
 
             <p class="project-card-desc">
-              Interactive technical interview training suite featuring a zero-autocomplete Google Doc mode Python coding pad, phase-aware 35-minute countdown clock, in-browser WebAssembly Python execution, and zero-trust Google Cloud Firestore synchronization across devices.
+              Interactive technical interview training suite featuring a self-paced 14-day study calendar with cross-device completion sync, zero-autocomplete Google Doc mode Python coding pad, phase-aware 35-minute countdown clock, and zero-trust Google Cloud Firestore synchronization.
             </p>
 
             <div class="thesis-box" style="margin-bottom: 18px;">
@@ -691,14 +691,15 @@
       <h3 class="modal-title" id="modal-neetcode-title">NeetCode Trainer: FAANG Interview Simulator &amp; Spaced Repetition Suite</h3>
       
       <p class="modal-intro">
-        A full-stack algorithmic training application designed to recreate authentic Big Tech coding interview conditions. Combines a zero-autocomplete plain-text coding pad, a 35-minute phase timer, in-browser Python execution, and zero-trust cloud sync across desktop and mobile.
+        A full-stack algorithmic training application designed to recreate authentic Big Tech coding interview conditions. Combines a self-paced 14-day study calendar, a zero-autocomplete plain-text coding pad, a 35-minute phase timer, and zero-trust cloud sync across desktop and mobile.
       </p>
 
       <div class="modal-section-title">Core Systems &amp; Engineering</div>
       <ul class="leadership-list" style="margin-bottom: 20px;">
+        <li><strong>Self-Paced Study Calendar &amp; Multi-Device Sync:</strong> Advent calendar-style curriculum doors (14 days of NeetCode 150 patterns) allowing users to tackle multiple days at once or skip/resume anytime with granular Completed / Not Completed states synced via Cloud Firestore.</li>
         <li><strong>Google Doc Mode Coding Pad:</strong> Disables all IDE autocompletion, language intelligence, and syntax highlighting to build genuine muscle memory and syntax recall under realistic technical screen conditions.</li>
         <li><strong>Phase-Aware 35-Minute Interview Clock:</strong> Enforces the five key interview phases (Clarification &amp; Constraints 0&ndash;5m, Brute Force Baseline 5&ndash;10m, Optimized Invariants 10&ndash;15m, Plain-Editor Coding 15&ndash;30m, Dry-Run Verification 30&ndash;35m).</li>
-        <li><strong>In-Browser Python 3 Sandbox (Pyodide WebAssembly):</strong> Executes candidate Python 3 solutions locally within the browser sandbox, testing against hidden edge cases and returning execution timing and runtime traces.</li>
+        <li><strong>&ldquo;Close the Tab&rdquo; Guided Study Guide:</strong> Interactive pattern walkthrough and reference implementation peek to study core algorithm invariants before closing the guide to code from pure memory recall.</li>
         <li><strong>Zero-Trust Cloud Sync &amp; Google Auth:</strong> Users authenticate via Google OAuth 2.0 without passwords or credentials ever touching the repository. Backed by Cloud Firestore with strict security rules enforcing partition-level isolation (<code>request.auth.uid == userId</code>).</li>
         <li><strong>Spaced Repetition Scheduler &amp; Sheets Export:</strong> Logs solve durations, auto-calculates spaced repetition intervals (+1d, +3d, +7d, +14d), and provides one-click TSV export directly to Google Sheets.</li>
       </ul>
