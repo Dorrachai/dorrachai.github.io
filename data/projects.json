@@ -1,5 +1,28 @@
 [
   {
+    "id": "zoogotchi-s3",
+    "title": "ZooGotchi S3 - Standalone AI Virtual Pet & Study Companion",
+    "description": "Pocket-sized ESP32-S3 virtual pet and spaced-repetition academy built for the Waveshare 1.69\" touch LCD. Combines 18 species across 6 categories (15 permadeath real animals incl. West Indian Manatee + 3 cross-breedable Karimono lineages), a 106-card JLPT N4-N1 & NeetCode 150 SM-2 study engine, a 42 KB on-device BM25 RAG index, and a quantized INT4 Per-Layer Embedding micro-LLM trained locally with LoRA, GRPO, and SAPO.",
+    "category": "ai",
+    "featured": true,
+    "tags": ["ESP32-S3", "C++ / LVGL", "PyTorch", "LoRA / GRPO / SAPO", "BM25 RAG", "INT4 Micro-LLM"],
+    "github": "https://github.com/Dorrachai/zoogotchi-s3",
+    "demo": "https://github.com/Dorrachai/zoogotchi-s3#readme",
+    "screenshots": [
+      "assets/images/zoogotchi-s3/zoogotchi-device-preview.png",
+      "assets/images/zoogotchi-s3/zoogotchi-web-companion.png",
+      "assets/images/zoogotchi-s3/zoogotchi-species-sprites.png",
+      "assets/images/zoogotchi-s3/zoogotchi-benchmarks.png"
+    ],
+    "highlights": [
+      "18 species across 6 categories on Waveshare ESP32-S3-Touch-LCD-1.69: 15 real-world animals with circadian schedules and permadeath + 3 cross-breedable Karimono with 12-char Base32+CRC5 genome codes",
+      "Spaced-repetition SM-2 Study Academy (106 built-in cards across NeetCode 150, Big-O, Spanish, JLPT N4-N1, and Zoo Bio + 40 phone-uploaded cards) paired with Focus sprint timers",
+      "42.2 KB packed binary BM25 RAG index (108 chunks) queried directly from PSRAM, benchmarked against host Hybrid RRF retrieval (R@1 = 1.000, nDCG@5 = 0.970 across 36 queries)",
+      "From-scratch post-training pipeline (Base SFT -> LoRA r=8 on 3.20% weights -> GRPO R=0.9381 vs SAPO 0.0021 KL drift) exported to a 3.38 MB Group-128 INT4 binary with 0.9992 C++ parity and 3-layer V_out safety guardrails",
+      "6.97 KB gzipped SoftAP phone web companion over Wi-Fi for SSE AI chat, RAG search, cross-breeding, RTC sync, and custom flashcard uploads with zero PC required"
+    ]
+  },
+  {
     "id": "neetcode-trainer",
     "title": "NeetCode Trainer - FAANG & Google Interview Simulator",
     "description": "Interactive technical interview training suite featuring a self-paced 14-day study calendar with cross-device completion sync, zero-autocomplete Google Doc mode Python pad, phase-aware 35-minute countdown clock, guided 'Close the Tab' pattern walkthroughs, and zero-trust Cloud Firestore synchronization across devices.",

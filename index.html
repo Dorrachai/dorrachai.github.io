@@ -298,6 +298,39 @@
         </div>
 
         <div class="projects-grid">
+          <!-- Clickable Project Card: ZooGotchi S3 -->
+          <article class="project-card" id="card-zoogotchi-s3" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open details for ZooGotchi S3: Standalone AI Virtual Pet &amp; Study Companion">
+
+            <div class="project-card-header">
+              <span class="card-label">Embedded AI &bull; ESP32-S3 &amp; PyTorch</span>
+            </div>
+
+            <h3 class="card-title">ZooGotchi S3: Standalone AI Pet &amp; Study Companion</h3>
+
+            <p class="project-card-desc">
+              Pocket ESP32-S3 virtual pet and SM-2 study companion featuring 18 species (15 permadeath animals + cross-breedable Karimono lineages), JLPT N4&ndash;N1 &amp; NeetCode drills, a 42 KB on-device BM25 RAG index, and an INT4 PLE micro-LLM post-trained with LoRA, GRPO, and SAPO.
+            </p>
+
+            <div class="thesis-box" style="margin-bottom: 18px;">
+              <div class="thesis-title">Architecture Pipeline</div>
+              <div class="thesis-meta">ESP32-S3 (LVGL 9.3) &rarr; BM25 RAG (PSRAM) &rarr; INT4 PLE Micro-LLM &rarr; LoRA / GRPO / SAPO</div>
+            </div>
+
+            <div class="project-card-footer">
+              <div class="stack-tags">
+                <span class="stack-badge" data-tech="C++">C++ / LVGL</span>
+                <span class="stack-badge" data-tech="ESP32-S3">ESP32-S3</span>
+                <span class="stack-badge" data-tech="PyTorch">PyTorch</span>
+                <span class="stack-badge" data-tech="AI Agents">LoRA / GRPO</span>
+                <span class="stack-badge" data-tech="Python">Python</span>
+              </div>
+              <button class="btn btn-secondary btn-sm" type="button" aria-label="View project details">
+                <span>View Details</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </article>
+
           <!-- Clickable Project Card: NeetCode Trainer -->
           <article class="project-card" id="card-neetcode-trainer" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open details for NeetCode Trainer: Google Doc Mode Interview Simulator &amp; Spaced Repetition Suite">
 
@@ -466,6 +499,108 @@
       </div>
     </div>
   </footer>
+
+  <!-- Project Details Modal Backdrop: ZooGotchi S3 -->
+  <div class="project-modal-backdrop" id="zoogotchi-s3-modal-backdrop" hidden></div>
+
+  <!-- Project Details Modal Dialog Wrapper: ZooGotchi S3 -->
+  <div class="project-modal-wrapper" id="zoogotchi-s3-modal" role="dialog" aria-modal="true" aria-labelledby="modal-zoogotchi-title" hidden>
+    <div class="project-modal-dialog">
+      <button class="project-modal-close" id="zoogotchi-s3-modal-close" type="button" aria-label="Close dialog">&times;</button>
+
+      <div class="card-label" style="margin-bottom: 6px;">Hardware AI &amp; Post-Training &bull; ESP32-S3, C++ &amp; PyTorch</div>
+      <h3 class="modal-title" id="modal-zoogotchi-title">ZooGotchi S3: Standalone AI Pet &amp; Study Companion</h3>
+
+      <p class="modal-intro">
+        Built for the Waveshare ESP32-S3-Touch-LCD-1.69 (16 MB Flash, 8 MB OPI PSRAM, 1000mAh LiPo, rechargeable RTC cell) inside a custom 3D-printed shell. Pairs 18 species across 6 categories and a 106-card spaced-repetition academy (NeetCode 150 &amp; JLPT N4&ndash;N1) with on-device BM25 RAG retrieval and a safe 3.38 MB INT4 Per-Layer Embedding micro-LLM running with zero PC required.
+      </p>
+
+      <div class="modal-section-title">Visual Showcase &amp; Benchmarks</div>
+      <div class="project-modal-gallery">
+        <div class="modal-gallery-item full-width">
+          <a href="assets/images/zoogotchi-s3/zoogotchi-device-preview.png" target="_blank" rel="noopener noreferrer" title="View ESP32-S3 hardware UI preview">
+            <img src="assets/images/zoogotchi-s3/zoogotchi-device-preview.png" alt="ZooGotchi S3 Waveshare ESP32-S3 hardware screens showing Manatee habitat, JLPT N2 quiz, and Karimono genetics" width="1600" height="760" loading="lazy" fetchpriority="low">
+            <div class="modal-gallery-caption">
+              <span>240&times;280 LVGL Hardware UI &bull; Habitat, JLPT N2 &amp; Karimono Genetics</span>
+              <span class="caption-tag">Open Full &rarr;</span>
+            </div>
+          </a>
+        </div>
+        <div class="modal-gallery-item">
+          <a href="assets/images/zoogotchi-s3/zoogotchi-web-companion.png" target="_blank" rel="noopener noreferrer" title="View SoftAP phone web companion screenshot">
+            <img src="assets/images/zoogotchi-s3/zoogotchi-web-companion.png" alt="ZooGotchi S3 6.97 KB gzipped phone web companion with SSE streaming chat and RAG citation badge" width="1000" height="936" loading="lazy" fetchpriority="low">
+            <div class="modal-gallery-caption">
+              <span>Phone SoftAP Chat &amp; RAG</span>
+              <span class="caption-tag">Open &rarr;</span>
+            </div>
+          </a>
+        </div>
+        <div class="modal-gallery-item">
+          <a href="assets/images/zoogotchi-s3/zoogotchi-species-sprites.png" target="_blank" rel="noopener noreferrer" title="View packed LittleFS sprite atlas">
+            <img src="assets/images/zoogotchi-s3/zoogotchi-species-sprites.png" alt="ZooGotchi S3 packed 64x64 RGB565+A8 LittleFS pixel-art species sprites" width="1000" height="800" loading="lazy" fetchpriority="low">
+            <div class="modal-gallery-caption">
+              <span>12 Packed LittleFS Sprites</span>
+              <span class="caption-tag">Open &rarr;</span>
+            </div>
+          </a>
+        </div>
+        <div class="modal-gallery-item full-width contain">
+          <a href="assets/images/zoogotchi-s3/zoogotchi-benchmarks.png" target="_blank" rel="noopener noreferrer" title="View LoRA, GRPO vs SAPO, and Hybrid RAG benchmark plots">
+            <img src="assets/images/zoogotchi-s3/zoogotchi-benchmarks.png" alt="ZooGotchi S3 post-training loss curves, GRPO vs SAPO reward and KL drift, and 36-query RAG benchmark plots" width="1960" height="1240" loading="lazy" fetchpriority="low">
+            <div class="modal-gallery-caption">
+              <span>Post-Training (SFT &rarr; LoRA &rarr; GRPO vs SAPO) &amp; RAG Benchmarks</span>
+              <span class="caption-tag">Open Full &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="modal-section-title">Core Engineering Challenges</div>
+      <div class="thesis-box" style="margin-bottom: 20px;">
+        <div class="thesis-title">Edge AI, Safety &amp; Hardware Co-Design</div>
+        <div class="thesis-meta">
+          1. Safety by construction on tiny quantized weights: Constrain output logits to a 1,421-token vetted domain vocabulary behind input prompt-injection &amp; leetspeak filtering<br>
+          2. SRAM-safe on-device RAG under 64 KB: Pack 108 biology, DSA, JLPT, and genetics chunks into a CRC32-verified 42.2 KB binary BM25 index queried in PSRAM without overflowing Core 0 8 KB task stacks<br>
+          3. Bit-exact PyTorch-to-C++ INT4 deployment: Train LoRA SFT + GRPO/SAPO on GPU, fold adapters cleanly (3.58e-07 delta), quantize to Group-128 INT4, and verify 0.9992 runtime cosine similarity
+        </div>
+      </div>
+
+      <div class="modal-section-title">Implementation Details</div>
+      <ul class="leadership-list" style="margin-bottom: 20px;">
+        <li><strong>6 Categories &times; 3 Species Architecture:</strong> Modular headers under <code>src/zoo/categories/</code> cover 15 real animals (Red Panda, West Indian Manatee, Barn Owl, Monarch, Chameleon, etc.) with RTC circadian rhythms and permanent memorials alongside 3 cross-breedable Karimono sharing 12-char Base32+CRC5 genome codes.</li>
+        <li><strong>Spaced-Repetition Study Academy:</strong> Modular decks in <code>src/learn/decks/</code> schedule 106 flashcards (NeetCode 150, Big-O, Spanish, JLPT N4&ndash;N1, Zoo Bio) plus 40 custom cards using SM-2 intervals backed by the PCF85063A RTC, plus 15/25/35m Focus sprint timers that feed learned terms into pet dialogue.</li>
+        <li><strong>On-Device BM25 &amp; Host Hybrid RRF RAG:</strong> <code>build_rag_index.py</code> generates the 42,216 B binary index (<code>/rag/kb.bin</code>), while the host benchmark (BM25 vs Dense SVD vs Hybrid RRF across 36 queries) achieves <code>R@1 = 1.000</code> and <code>nDCG@5 = 0.970</code> at <code>0.250 ms</code> median latency.</li>
+        <li><strong>From-Scratch Post-Training &amp; Registry:</strong> Curates zero-leakage splits (<code>1,168</code> samples, <code>0</code> prompt overlap), trains <code>Base SFT</code> (<code>R=0.4865</code>) &rarr; <code>LoRA SFT</code> (<code>r=8</code>, <code>3.20%</code> params, <code>R=0.9347</code>) &rarr; <code>GRPO</code> (<code>R=0.9381</code>, <code>100%</code> species match) vs <code>SAPO</code> (<code>0.0021</code> KL drift), and logs runs to SQLite (<code>experiments.db</code>).</li>
+        <li><strong>Zero-PC Phone Companion:</strong> Embedded HTTP server &amp; SoftAP serves a 6,971-byte gzipped PWA for SSE chat, interactive RAG lookup, IMU/touch care shortcuts, genome breeding, and custom flashcard uploads.</li>
+      </ul>
+
+      <div class="stack-cat-title" style="margin-bottom: 8px; font-size: 0.75rem;">Click a badge to feed the aquarium</div>
+      <div class="stack-tags" style="margin-bottom: 20px;">
+        <span class="stack-badge" data-tech="C++">C++ / PlatformIO</span>
+        <span class="stack-badge" data-tech="ESP32-S3">ESP32-S3 / LVGL 9.3</span>
+        <span class="stack-badge" data-tech="PyTorch">PyTorch / CUDA</span>
+        <span class="stack-badge" data-tech="AI Agents">LoRA / GRPO / SAPO</span>
+        <span class="stack-badge" data-tech="RAG">BM25 &amp; Hybrid RAG</span>
+        <span class="stack-badge" data-tech="Python">Python 3.12</span>
+        <span class="stack-badge" data-tech="GitLab CI">GitHub Actions</span>
+      </div>
+
+      <div class="modal-section-title">Project Links</div>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px;">
+        <a href="https://github.com/Dorrachai/zoogotchi-s3" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+          <span>GitHub Repository &rarr;</span>
+        </a>
+        <a href="https://github.com/Dorrachai/zoogotchi-s3/blob/main/docs/BENCHMARK_REPORT.md" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+          <span>Benchmark Report &rarr;</span>
+        </a>
+      </div>
+
+      <div class="thesis-box">
+        <div class="thesis-title">Verification &amp; Hardware Footprint</div>
+        <div class="thesis-meta">Verified locally via PlatformIO (RAM 17.5%, Flash 35.7%, LittleFS 2.62 MB) and automated Python test suite (0 unsafe V_out tokens, 0 prompt leakage, 100/100 CRC5 genome roundtrips). Apache 2.0 open source.</div>
+      </div>
+    </div>
+  </div>
 
   <!-- Project Details Modal Backdrop: CozyCart -->
   <div class="project-modal-backdrop" id="cozy-cart-modal-backdrop" hidden></div>
@@ -1321,6 +1456,11 @@
     }
 
     const modalConfigs = [
+      {
+        cardId: 'card-zoogotchi-s3',
+        modalId: 'zoogotchi-s3-modal',
+        backdropId: 'zoogotchi-s3-modal-backdrop'
+      },
       {
         cardId: 'card-neetcode-trainer',
         modalId: 'neetcode-trainer-modal',
