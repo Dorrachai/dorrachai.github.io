@@ -297,7 +297,21 @@
           </p>
         </div>
 
-        <div class="projects-grid">
+        <div class="projects-carousel" id="projects-carousel" role="region" aria-roledescription="carousel" aria-label="Featured projects">
+          <div class="carousel-toolbar">
+            <span class="carousel-counter" id="projects-carousel-counter">Showing 1&ndash;3 of 5</span>
+            <div class="carousel-controls">
+              <button class="carousel-btn" id="projects-prev-btn" type="button" data-direction="previous" aria-label="Previous projects" disabled>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+              </button>
+              <button class="carousel-btn" id="projects-next-btn" type="button" data-direction="next" aria-label="Next projects">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="carousel-track" id="projects-carousel-track" tabindex="0" role="group" aria-label="Project slides">
+            <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="1 of 5">
           <!-- Clickable Project Card: ZooGotchi S3 -->
           <article class="project-card" id="card-zoogotchi-s3" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open details for ZooGotchi S3: Standalone AI Virtual Pet &amp; Study Companion">
 
@@ -331,6 +345,8 @@
             </div>
           </article>
 
+            </div>
+            <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="2 of 5">
           <!-- Clickable Project Card: NeetCode Trainer -->
           <article class="project-card" id="card-neetcode-trainer" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open details for NeetCode Trainer: Google Doc Mode Interview Simulator &amp; Spaced Repetition Suite">
 
@@ -364,6 +380,8 @@
             </div>
           </article>
 
+            </div>
+            <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="3 of 5">
           <!-- Clickable Project Card: CozyCart -->
           <article class="project-card" id="card-cozy-cart" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open details for CozyCart: Zero-Knowledge Shared Shopping &amp; Local Aisle Sorting">
 
@@ -397,6 +415,8 @@
             </div>
           </article>
 
+            </div>
+            <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="4 of 5">
           <!-- Clickable Project Card (Compact Overview) -->
           <article class="project-card" id="card-pulse-bot" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open details for Pulse Bot: Market Scanner and Discord Alerts">
             <div class="project-card-header">
@@ -429,6 +449,8 @@
             </div>
           </article>
 
+            </div>
+            <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="5 of 5">
           <!-- Clickable Project Card: Strahinja Audio Portfolio -->
           <article class="project-card" id="card-strahinja-portfolio" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open details for Game Audio Portfolio and Media Showcase Platform">
             <div class="project-card-header">
@@ -460,6 +482,11 @@
               </button>
             </div>
           </article>
+            </div>
+          </div>
+
+          <p class="visually-hidden" id="projects-carousel-status" role="status" aria-live="polite"></p>
+          <nav class="carousel-markers" id="projects-carousel-markers" aria-label="Choose project view"></nav>
         </div>
       </div>
     </section>
@@ -1560,6 +1587,228 @@
         history.replaceState(null, '', window.location.pathname + window.location.search);
       }
     });
+
+    // Projects Horizontal Carousel Controller
+    (function initProjectsCarousel() {
+      const track = document.getElementById('projects-carousel-track');
+      const prevBtn = document.getElementById('projects-prev-btn');
+      const nextBtn = document.getElementById('projects-next-btn');
+      const markersEl = document.getElementById('projects-carousel-markers');
+      const counterEl = document.getElementById('projects-carousel-counter');
+      const statusEl = document.getElementById('projects-carousel-status');
+      if (!track || !prevBtn || !nextBtn || !markersEl) return;
+
+      const slides = Array.from(track.querySelectorAll('.carousel-slide'));
+      let stops = [0];
+      let visibleCount = 3;
+      let activeMarker = 0;
+      let lastSettled = 0;
+      let pendingStop = null;
+      let requestedFromLeft = null;
+      let lastProgrammaticAt = 0;
+      let userInitiated = false;
+      let scrollRaf = null;
+      let settleTimer = null;
+
+      function getVisibleCount() {
+        if (window.matchMedia('(max-width: 640px)').matches) return 1;
+        if (window.matchMedia('(max-width: 980px)').matches) return 2;
+        return 3;
+      }
+
+      function computeStops() {
+        visibleCount = getVisibleCount();
+        const fadePx = parseFloat(getComputedStyle(track).getPropertyValue('--fade-size')) || 0;
+        const maxScroll = Math.max(0, Math.round(track.scrollWidth - track.clientWidth));
+        const totalStops = Math.max(1, slides.length - visibleCount + 1);
+        if (maxScroll <= 2 || totalStops === 1) return [0];
+
+        const nextStops = [];
+        for (let i = 0; i < totalStops; i++) {
+          if (i === 0) nextStops.push(0);
+          else if (i === totalStops - 1) nextStops.push(maxScroll);
+          else nextStops.push(Math.min(maxScroll, Math.max(0, Math.round(slides[i].offsetLeft - fadePx))));
+        }
+        return nextStops;
+      }
+
+      function nearestStop(scrollLeft) {
+        let bestIdx = 0;
+        let bestDist = Infinity;
+        for (let i = 0; i < stops.length; i++) {
+          const d = Math.abs(scrollLeft - stops[i]);
+          if (d < bestDist) {
+            bestDist = d;
+            bestIdx = i;
+          }
+        }
+        return bestIdx;
+      }
+
+      function rangeText(stopIdx) {
+        const start = Math.min(slides.length, stopIdx + 1);
+        const end = Math.min(slides.length, stopIdx + visibleCount);
+        return visibleCount === 1
+          ? `Showing ${start} of ${slides.length}`
+          : `Showing ${start}–${end} of ${slides.length}`;
+      }
+
+      function statusText(stopIdx) {
+        const start = Math.min(slides.length, stopIdx + 1);
+        const end = Math.min(slides.length, stopIdx + visibleCount);
+        return visibleCount === 1
+          ? `Project ${start} of ${slides.length}`
+          : `Showing projects ${start} to ${end} of ${slides.length}`;
+      }
+
+      function setActiveMarker(idx) {
+        if (idx === activeMarker && markersEl.children.length === stops.length) {
+          const cur = markersEl.children[idx];
+          if (cur && cur.getAttribute('aria-current') === 'true') return;
+        }
+        activeMarker = idx;
+        Array.from(markersEl.children).forEach((btn, i) => {
+          if (i === idx) btn.setAttribute('aria-current', 'true');
+          else btn.removeAttribute('aria-current');
+        });
+      }
+
+      function updateControls(idx) {
+        const prevWasFocused = document.activeElement === prevBtn;
+        const nextWasFocused = document.activeElement === nextBtn;
+        prevBtn.disabled = idx <= 0;
+        nextBtn.disabled = idx >= stops.length - 1;
+        if (prevWasFocused && prevBtn.disabled && !nextBtn.disabled) nextBtn.focus();
+        else if (nextWasFocused && nextBtn.disabled && !prevBtn.disabled) prevBtn.focus();
+        if (counterEl) counterEl.textContent = rangeText(idx);
+      }
+
+      function scrollToStop(targetIdx) {
+        const clamped = Math.max(0, Math.min(stops.length - 1, targetIdx));
+        pendingStop = clamped;
+        requestedFromLeft = track.scrollLeft;
+        lastProgrammaticAt = performance.now();
+        userInitiated = true;
+        setActiveMarker(clamped);
+        updateControls(clamped);
+        track.scrollTo({ left: stops[clamped] });
+      }
+
+      function buildMarkers() {
+        markersEl.innerHTML = '';
+        stops.forEach((_, idx) => {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          const start = idx + 1;
+          const end = Math.min(slides.length, idx + visibleCount);
+          btn.setAttribute(
+            'aria-label',
+            visibleCount === 1 ? `Show project ${start} of ${slides.length}` : `Show projects ${start} to ${end}`
+          );
+          if (idx === activeMarker) btn.setAttribute('aria-current', 'true');
+          btn.addEventListener('click', () => scrollToStop(idx));
+          markersEl.appendChild(btn);
+        });
+      }
+
+      function handleSettle() {
+        if (pendingStop !== null) {
+          const distToTarget = Math.abs(track.scrollLeft - stops[pendingStop]);
+          const ageMs = performance.now() - lastProgrammaticAt;
+          if (
+            (requestedFromLeft !== null &&
+              Math.abs(track.scrollLeft - requestedFromLeft) < 2 &&
+              Math.abs(stops[pendingStop] - requestedFromLeft) >= 4) ||
+            (distToTarget > 6 && ageMs < 600)
+          ) {
+            return;
+          }
+        }
+        const settled = nearestStop(track.scrollLeft);
+        pendingStop = null;
+        requestedFromLeft = null;
+        setActiveMarker(settled);
+        updateControls(settled);
+        if (userInitiated && settled !== lastSettled && statusEl) {
+          statusEl.textContent = statusText(settled);
+        }
+        lastSettled = settled;
+        userInitiated = false;
+      }
+
+      ['pointerdown', 'touchstart', 'wheel'].forEach(evt => {
+        track.addEventListener(evt, () => {
+          pendingStop = null;
+          userInitiated = true;
+        }, { passive: true });
+      });
+
+      track.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+          pendingStop = null;
+          userInitiated = true;
+        }
+      });
+
+      function rebuild() {
+        const prevStopsLen = stops.length;
+        stops = computeStops();
+        const cur = Math.min(stops.length - 1, nearestStop(track.scrollLeft));
+        if (markersEl.children.length !== stops.length || stops.length !== prevStopsLen) {
+          buildMarkers();
+        }
+        setActiveMarker(cur);
+        updateControls(cur);
+        lastSettled = cur;
+      }
+
+      prevBtn.addEventListener('click', () => {
+        const base = pendingStop !== null ? pendingStop : nearestStop(track.scrollLeft);
+        scrollToStop(base - 1);
+      });
+
+      nextBtn.addEventListener('click', () => {
+        const base = pendingStop !== null ? pendingStop : nearestStop(track.scrollLeft);
+        scrollToStop(base + 1);
+      });
+
+      track.addEventListener('scroll', () => {
+        if (pendingStop === null && !scrollRaf) {
+          scrollRaf = requestAnimationFrame(() => {
+            scrollRaf = null;
+            const cur = nearestStop(track.scrollLeft);
+            setActiveMarker(cur);
+          });
+        }
+        if (!('onscrollend' in window)) {
+          clearTimeout(settleTimer);
+          settleTimer = setTimeout(handleSettle, 120);
+        }
+      }, { passive: true });
+
+      if ('onscrollend' in window) {
+        track.addEventListener('scrollend', handleSettle);
+      }
+
+      if (!CSS.supports('animation-timeline', 'scroll()') && slides.length > 1) {
+        const firstSlide = slides[0];
+        const lastSlide = slides[slides.length - 1];
+        const edgeObs = new IntersectionObserver((entries) => {
+          for (const entry of entries) {
+            if (entry.target === firstSlide) {
+              track.classList.toggle('more-start', entry.intersectionRatio < 1);
+            } else if (entry.target === lastSlide) {
+              track.classList.toggle('more-end', entry.intersectionRatio < 1);
+            }
+          }
+        }, { root: track, threshold: 1, rootMargin: '1px' });
+        edgeObs.observe(firstSlide);
+        edgeObs.observe(lastSlide);
+      }
+
+      window.addEventListener('resize', rebuild);
+      rebuild();
+    })();
 
     animationFrameId = requestAnimationFrame(render);
   </script>
